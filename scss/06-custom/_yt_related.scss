@@ -1,0 +1,66 @@
+@use "../01-abstracts/index"as *;
+@use "../02-initial/index"as *;
+
+.YT-playlist-tn {
+  width: 30rem;
+  height: 17.25rem;
+  margin: 1rem;
+
+
+  @media ($breakpoint-md) {
+    display: none;
+  }
+}
+
+
+.yt-container {
+  @include flex(column, wrap, normal);
+
+  .header { margin: 0; }
+
+  .yt-playlist,
+  .yt-content-creators {
+    @include flex(row, wrap, space-evenly);
+  }
+
+  .yt-playlist {
+    padding: 1rem 0;
+  
+  }
+
+  .yt-content-creators {
+    .card {
+      @include box-shadow;
+      @include border;
+
+      margin: 1rem; 
+      width: 20%;
+
+      .card__body {
+        text-align: center;
+        
+        img { 
+          @include border-radius;
+
+          margin: .5rem auto; 
+          max-width: 105px;
+          height: 40%;
+        }
+      }
+    }
+
+  
+    @media ($breakpoint-md) {
+      display: none;
+      
+    }
+  }
+
+
+}
+
+
+
+  
+  
+  

@@ -1,0 +1,67 @@
+a(href='/techHQ/software/softwareIndex.php') Software Home:
+
+.accordion
+  input#graphicsApps(type="checkbox")
+  label(for="graphicsApps") Graphics
+  .accordion-content
+    a(href='/techHQ/software/graphics/editors.php') Editors
+    a(href='/techHQ/software/graphics/optimizers.php') Optimizers
+    a(href='/techHQ/software/graphics/viewers.php') Viewers
+
+.accordion
+  input#multimediaApps(type="checkbox")
+  label(for="multimediaApps") Multimedia
+  .accordion-content
+    a(href='/techHQ/software/multimedia/media_players_audio.php')
+      | Media Players -
+      em Audio
+    a(href='/techHQ/software/multimedia/media_players_video.php')
+      | Media Players -
+      em Video
+    a(href='/techHQ/software/multimedia/multimediaVarious.php') Various Apps
+    a(href='/techHQ/software/multimedia/videoEditing.php') Video Editing
+
+.accordion
+  input#officeApps(type="checkbox")
+  label(for="officeApps") Office / Productivity
+  .accordion-content
+    a(href="/techHQ/software/product/coding.php") Coding
+    a(href="/techHQ/software/product/office.php") Office Suites
+    a(href="/techHQ/software/product/pdfRelated.php") PDF Related
+    a(href="/techHQ/software/product/txteditor.php") Text Editors
+    a(href="/techHQ/software/product/various.php") Various
+
+.accordion
+  input#securityApps(type="checkbox")
+  label(for="securityApps") Security
+  .accordion-content
+    a(href='/techHQ/software/security/virusANDMalwareScanners.php') Antivirus and Antimalware
+    a(href='/techHQ/software/security/cleaners.php') System Cleaners
+    a(href='/techHQ/software/security/firewalls.php') Firewalls
+
+.accordion
+  input#systemApps(type="checkbox")
+  label(for="systemApps") System Tools
+  .accordion-content
+    a(href='/techHQ/software/sTools/archivers.php') Archivers
+    a(href='/techHQ/software/sTools/backupSoftware.php') Backup Software
+    a(href='/techHQ/software/sTools/burners.php') CD/DVD/Blue Ray Burners
+    a(href='/techHQ/software/sTools/defrag.php') Defragmenters
+    br
+    | [File Managers]
+    br
+    // a(href='/techHQ/software/sTools/startupManangers.php') Startup Managers
+    a(href='/techHQ/software/sTools/systemSuites.php') System Suites
+    a(href='/techHQ/software/sTools/taskManagers.php') Task Manager
+
+.accordion.d-none.d-lg-block
+  input#externalLinks(type="checkbox")
+  label(for="externalLinks") External Links
+      .accordion-content
+        a(href='http://www.majorgeeks.com', target='_blank', rel="noreferrer")
+          img.img-fluid(src='/techHQ/graphics/portals/MajorGeeks.png', alt='MajorGeek.com graphic/link')
+        a(href='http://www.snapfiles.com', target='_blank', rel="noreferrer" )
+          img.img-fluid(src='/techHQ/graphics/portals/sflogo.png', alt='Snapfiles graphic/link')
+        a(href='http://www.softpedia.com', target='_blank', rel="noreferrer")
+          img(src='/techHQ/graphics/portals/softpedia.png', alt='SoftPedia graphic/link')
+        br/

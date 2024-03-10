@@ -1,0 +1,76 @@
+@use "mixins" as *;
+@use "functions" as *;
+
+// breakpoints
+// consider moving sm to 480px
+$breakpoint-sm: "width <= 576px";
+$breakpoint-md: "width <= 768px";
+$breakpoint-lg: "width <= 1024px";
+$breakpoint-xl: "width <= 1200px";
+
+:root {
+  ///////////////////////////////////
+  // Fonts
+  // --ffamily-verdana: verdana, geneva, arial, helvetica, sans-serif;
+  // --ffamily-times: "Times New Roman", times, serif;
+  // --ffamily-courier: "Courier New", courier, monospace;
+  --ffamily-helvetica: "Helvetica Neue", helvetica, sans-serif;
+
+  // --ffamily-ms-sansa: "MS Sans Serif", geneva, sans-serif;
+  // --ffamily-segoeUI: "Segoe UI", arial, helvetica, sans-serif;
+  // --ffamily-tahoma: tahoma, verdana, segoe, sans-serif;
+  // --ffamily-arial: arial, helvetica, san-serif;
+  --ffamily-roboto: "Roboto", -apple-system, blinkmacsystemfont, "Segoe UI",
+    roboto, "Helvetica Neue", arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol";
+
+  // --ffamily-ubuntu: "Ubuntu", -apple-system, "Segoe UI", "Roboto", "Oxygen",
+  //  "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  --ffamily-fork-awesome: forkawesome, serif;
+
+  // --ffamily-sfmono-regular:"SFMono-Regular", menlo, monaco, consolas,
+  //  "Liberation Mono", "Courier New", monospace;
+
+  // inspired by OMGUbuntu's Header fonts (June 2023)
+  --ffamily-omgubuntu: "Rubik", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+
+  // this should be named better
+  // this was snagged from OMGUbuntu"s sit e
+  --test: -apple-system, blinkmacsystemfont, "Segoe UI", helvetica, arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji";
+
+  ///////////////////////////////////////////////////////////////////////////////////
+  // font sizes
+  // i think the idea here (wait until webhost is back online to test this) is
+  // to consolidate font sizes instead of having CSS for all different sections that are
+  // slightly different sizes .. i may still have font-size: HOWEVER they will be one of these vars
+  // since i cant test this right now ... I am not sure what to use where though
+  --fs-small: 0.75rem;
+  --fs-normal: 1.05rem;
+  --fs-large: 1.15rem;
+
+  //////////////////////////////////////
+  // header font sizes
+  --h1: 3rem;
+  --h2: 2.25rem;
+  --h3: 1.5rem;
+  --h4: 1.25rem;
+
+  // guess
+  --h5: 1.1rem;
+
+  // fork awesome
+  --fa-arrow-right: "\f105";
+  --fa-arrow-down: "\f107";
+
+// idea for later - fork awesome 
+$fork-awesome: (
+  left-arrow: "\f107",
+  right-arrow: "\f105",
+);
+
+  // box shadow i saw that I like on Kaspersky's site in 2023 
+  --box-shadow-light: 0 4px 24px rgb(29 29 27 / 16%);
+  --box-shadow-dark: 0 0.5rem 1rem $theme-clr-main; 
+
+}

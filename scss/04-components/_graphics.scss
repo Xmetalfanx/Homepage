@@ -1,0 +1,62 @@
+@use "../01-abstracts/index" as *;
+
+/******************* Icon ********************/
+.icon {
+  display: inline-block;
+
+  // margin on right side only
+  margin-right: 1.1rem;
+
+  // I think this is for say Fork/Font Awesome stuff where i have links
+  a {
+    fill: var(--clr-white);
+    color: var(--clr-white);
+  }
+
+  &--size32 {
+    @include icon-variant(32px, 32px);
+  }
+
+  &--size40 {
+    @include icon-variant(40px, 40px);
+  }
+
+  &--size48 {
+    @include icon-variant(48px, 48px);
+  }
+}
+
+// For Image "Thumbnailing" in various sections
+// Example - Screenshots on Linux Distro and Desktop homepages
+
+.thumbnail {
+  padding: 2rem;
+
+  &--lg {
+    @extend .thumbnail;
+
+    max-height: 450px;
+  }
+
+  &--sm {
+    @extend .thumbnail;
+
+    max-height: 350px;
+  }
+}
+
+
+.thumbnail-fluid {
+  max-width: 100%;
+  height: auto;
+
+  &--sm {
+    @extend .thumbnail-fluid;
+    @extend .thumbnail--sm;
+  }
+
+  &--lg {
+    @extend .thumbnail-fluid;
+    @extend .thumbnail--lg;
+  }
+}

@@ -1,0 +1,199 @@
+@use "../01-abstracts/index" as *;
+
+/*********** Main Section in middle of page, between the header and footer *****/
+
+.main-section {
+  display: grid;
+  gap: 1.5rem;
+
+  // for the grid above this
+  grid-area: main-section;
+  line-height: 1.6;
+  padding: 1.5rem;
+
+
+  // card everywhere else is flex... why grid here? ... shouldn't i just switch them all to flex?
+  // was there a need for grid? ...
+  .card {
+    @include border-radius-single(10px);
+
+    // i forgot if i have a mixin for this
+    // border: 1px solid $theme-clr-accent;
+
+    box-shadow: var(--box-shadow-light);
+    margin: 1.2rem auto;
+
+    // is this width needed? ... auto = default?
+    width: auto;
+
+    &--outline {
+      @extend .card;
+
+      outline: 1px solid $theme-clr-main;
+
+    }
+
+    .card__header {
+      @include clr-bg-and-fg;
+      @include flex(row, nowrap, space-between);
+      @include clr-bg-and-fg($theme-clr-light, $theme-clr-main);
+
+      align-items: center;
+      border-color: $theme-clr-main;
+      border-radius: 10px 10px 0 0;
+      font-weight: bold;
+      font-size: var(--h4);
+      padding: 1rem;
+
+      // FOR ALL child divs of card__header
+      // June 2023 .... why div? .. could it be "> *" here?
+      div {
+        align-items: center;
+        display: inherit;
+      }
+
+      // for a div .. does this make sense?
+      // for a div but only for the first div child
+      div:first-child {
+        justify-content: flex-start;
+      }
+
+      div:nth-of-type(2) {
+        justify-content: flex-end;
+      }
+
+      // i for fork awesome graphics
+      i {
+        color: $theme-clr-dark;
+      }
+
+
+      // Oct 2021: what is this for?
+      &--wide {
+        @extend .card__header;
+
+        // for flexbox
+        justify-content: space-between;
+      }
+    }
+
+    .card__body,
+    .card__text {
+      padding: 1rem;
+      color: $theme-clr-dark;
+    }
+  }
+
+
+  // idea: overall container for "row of btns"
+  .btn-container, .list-container {
+    @include flex(row, wrap, space-around);
+
+    /* this should be generic (more detailed css can build on this) */
+    ul {
+      list-style-type: none;
+
+      @include flex(row, wrap, center);
+
+      li {
+        @include border-radius-single(1rem);
+
+        padding: 1.5rem;
+      }
+    }
+
+   .btn {
+      outline: 1px solid $theme-clr-dark;
+    }
+  }
+
+  :is(.h1, .h2, .h3, .h4, .h5) {
+    a {
+      padding: 0.25rem;
+
+      &:hover {
+        outline: 1px solid $theme-clr-accent;
+        text-decoration: none;
+      }
+    }
+  }
+
+  // This even make sense? ... with no "sidebar?"   maybe yes if i dont do grid-template-areas: in the parent class;
+  &--wide {
+    @extend .main-section;
+
+    grid-template-areas: "pContent";
+    grid-template-columns: 1fr;
+  }
+
+  &--left-wide {
+    @extend .main-section;
+
+    grid-template-areas: "pContent sidebar";
+    grid-template-columns: auto 18%;
+  }
+
+  &--right-wide {
+    @extend .main-section;
+
+    grid-template-areas: "sidebar pContent";
+    grid-template-columns: 18% auto;
+  }
+
+  /****** Sidebar *****/
+  .sidebar {
+    // not sure about the placement here
+    a {
+      color: $theme-clr-dark;
+      display: block;
+
+      // idea for better UX
+      line-height: 1.75;
+      margin: 0.25rem 0 0.25rem 1.5rem;
+
+      &:hover {
+        color: $theme-clr-accent;
+        outline: 1px solid $theme-clr-main;
+      }
+    }
+
+    img {
+      margin: 1rem 0;
+      padding: 0;
+    }
+
+  }
+
+  // the main sections of each side of the site
+  .primary-content {
+    grid-area: pContent;
+
+    // idea
+    .card:nth-child(-n + 2 of .card) {
+      margin-top: 0;
+    }
+
+    // the idea is for readability as far as the ch unit
+    p {
+      max-width: 72ch;
+    }
+
+    // @media ($breakpoint-lg) {
+    //   margin: 0 .5rem;
+    // }
+  }
+
+  @media ($breakpoint-lg) {
+    &--left-wide,
+    &--right-wide {
+      // rows / columns
+      grid-template: 1fr / 1fr;
+      grid-template-areas:
+        "sidebar"
+        "pContent";
+      max-width: 100vw;
+      margin: 0 .5rem;
+
+    }
+  }
+}

@@ -1,0 +1,76 @@
+@use "../01-abstracts/index" as *;
+
+body {
+  @include clr-bg-and-fg($theme-clr-light, $theme-clr-dark);
+  
+  display: grid;
+
+  // grid-template: row / column
+  grid-template: 1fr auto 1fr / 1fr;
+  grid-template-areas:
+    "header"
+    "main-section"
+    "footer";
+  min-height: 100%;
+
+  // color and font setup
+  color: $theme-clr-dark;
+  font-family: var(--ffamily-roboto);
+  font-size: var(--fs-normal);
+  font-weight: 400;
+  
+
+  @media ($breakpoint-md) {
+      grid-template: auto 1fr / 1fr;
+      grid-template-areas:
+        "main-section"
+        "header";
+  }
+}
+
+
+// i totally forgot what this is for
+// ::selection {
+//   @include clr-bg-and-fg;
+// }
+
+.card {
+  .card__header {
+    @include align-items-justify-content(baseline, flex-start);
+  }
+}
+
+
+
+
+// putting this here for now
+ul, ol {
+  margin: 1rem 2rem;
+
+  // no need for both ... note to self: figure out which is not needed
+  li {
+    margin: 0 1rem;
+
+    // august 2023: why is this here?  i had a reason but it messes some things up 
+      // added https://github.com/Xmetalfanx/website/commit/a4eb1f6ec9d0bf0494a21292930d2f3f2ca4074a here 
+    list-style-position: inside;
+  }
+
+  > * {
+    margin: .25rem;
+  }
+
+
+  .list-wide {
+    @include flex(row, wrap, center);
+
+    li {
+      list-style: none;
+      margin: 1rem;
+      outline: 1px solid $theme-clr-dark;
+      padding: 1rem;
+    }
+
+  }
+
+}

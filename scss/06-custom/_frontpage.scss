@@ -1,0 +1,118 @@
+@use "../01-abstracts/index" as *;
+
+// Things specific to the landing page of the site
+
+// just for the main title on the frontpage only
+.frontpage-header-title {
+  margin: 0.5rem auto;
+  font-weight: 900;
+  font-size: var(--h2);
+}
+
+// Entire Frontpage between header and footer
+.frontpage-section {
+  display: grid;
+  grid-template-areas:
+      "site-sections"
+      "git-section"
+  ;
+
+  // grid-template-rows: repeat(2, 1fr);
+  gap: 1rem;
+
+  @media ($breakpoint-lg) {
+    grid-template-areas:
+      'site-sections'
+      'git-section'
+      ;
+  };
+
+  .site-sections, .git-section {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  // main class, for both site sections 
+  .site-sections {
+      grid-area: site-sections;
+      width: 70%;
+
+      @media ($breakpoint-lg) {
+        grid-column: span 2;
+      }
+  }
+
+  // git section, at the bottom
+  .git-section {
+    grid-area: git-section;
+    width: 90%;
+
+    @media ($breakpoint-lg) {
+      grid-column: span 2;
+    }
+
+    .git-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 5rem;
+
+
+      @media ($breakpoint-lg) {
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: unset;
+        gap: 2rem;
+      }
+
+      .git-group {
+        @include border;
+        @include box-shadow;
+        @include border-radius-single(20px);
+
+        background-color: var(--clr-white);
+        padding: 2rem;
+        margin: 0 auto;
+        width: clamp(50%, 80%, 72ch);
+
+        .git-section--title {
+          @include section--title;
+        }
+
+        .git-icons {
+          @include flex(row, nowrap, space-around);
+
+          margin-bottom: 0.5rem;
+
+          a {
+            color: $theme-clr-accent;
+            margin: auto 1rem;
+
+            &:hover { color: $theme-clr-main;}
+          }
+        }
+
+        @media ($breakpoint-md) {
+          height: fit-content;
+        }
+
+      }
+
+
+    }
+
+    // for the divider in the middle of the page (for now)
+    // should i move this into the git-section due to my new idea to use grid?
+   .frontpage-title {
+      font-size: var(--h3);
+      font-weight: 600;
+      margin: 1rem auto;
+      text-align: center;
+    }
+
+    @media ($breakpoint-md) {
+      @include flex(column, nowrap, normal);
+    }
+
+  }
+
+
+}
