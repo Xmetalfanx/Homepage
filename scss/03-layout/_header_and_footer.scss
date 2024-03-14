@@ -1,0 +1,220 @@
+@use "../01-abstracts/index" as *;
+
+// @use "../05-fromBS/index" as *;
+
+header,
+footer {
+  @include flex;
+  @include clr-bg-and-fg;
+
+  font-family: var(--ffamily-helvetica);
+  font-weight: 900;
+
+  @include align-items-justify-content(center, space-between);
+
+  a {
+    @include clr-bg-and-fg;
+
+    padding: 1.5rem;
+
+      // Oct 2023 ... didn't i just add these for the mobile menu issue? 
+      // commit: https://github.com/Xmetalfanx/website/commit/3c525894078d4cc5d8fe22bcae5213e26dfc0790
+      // why? 
+      // margin: -.5rem;
+      // padding: .5rem;
+
+    &:hover,
+    &:focus {
+      @include border-radius-single(10%);
+      @include clr-bg-and-fg($theme-clr-light, $theme-clr-accent);
+
+      outline: 1px dotted $theme-clr-light;
+     
+
+    }
+  }
+
+}
+
+footer {
+  padding: 1.5rem;
+  grid-area: footer;
+
+  img {
+    display: inline;
+    margin: 0.4rem;
+    max-width: 32px;
+    max-height: 32px;
+    vertical-align: bottom;
+  }
+
+  .contacts,
+  .site-made {
+    width: 50%;
+
+    i {
+      scale: 2;
+      margin: 0 1rem;
+    }
+
+  }
+
+  // hides the ENTIRE footer on lower than a md layout
+  // useful now that the top menus are at the bottom for UX, at these layouts
+  @media ($breakpoint-md) {
+    display: none;
+  }
+
+
+  .contacts {
+    text-align: right;
+
+    @media ($breakpoint-lg) {
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  // hides site-made on md-to-lg layouts but the site will still show contacts class
+  @media ($breakpoint-lg) {
+    .site-made {
+      display: none;
+    }
+  }
+
+}
+
+
+header {
+  @include box-shadow(2px, 2px, 5px, $theme-clr-accent);
+
+  padding: 1.75rem;
+
+  // text-shadow: 2px 5px $theme-clr-dark;
+  grid-area: header;
+
+  // Xmetal Homepage, LinuxHQ or TechHQ title section
+  .section-header {
+    font-size: var(--h3);
+    margin: 1rem;
+    text-shadow:  1px 1px 1px $theme-clr-accent;
+
+    i {
+        scale: 2;
+        margin-right: 2.5rem;
+    }
+
+    @media ($breakpoint-lg) {
+      // only hides graphic
+      i {
+        display: none;
+      }
+    }
+
+    @media ($breakpoint-md) {
+      // hides both graphic and text
+      display: none;
+    }
+  }
+
+  // the menu bar to the top right - should be hidden unless on small screens
+  // oct 2023 some more global borders broke the LEFT hand title .. 
+  .topnav {
+    @include flex;
+
+    font-weight: bold;
+    font-size: var(--h3);
+    font-family: var(--ffamily-omgubuntu);
+
+    a {
+      margin: 0 .8rem;
+
+      :hover, :active {
+        @include clr-bg-and-fg($theme-clr-light, $theme-clr-main);
+      }
+    }
+
+    // for hamburger menu that should only display on mobile
+    // this is on the link ("a" tag) that wraps around the fork awesome code
+    .icon {
+      display: none;
+
+      @media ($breakpoint-md) {
+        display: block;
+        width: 100%;
+
+        // padding: 0;
+      }
+    }
+
+    @media ($breakpoint-lg) {
+      /* The "responsive" class is added to the topnav with JavaScript
+      when the user clicks on the icon. This class makes the topnav
+      look good on small screens (display the links vertically instead
+      of horizontally) */
+
+      &.responsive {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 10;
+        background: $theme-clr-main;
+        text-align: center;
+
+        // justify-content: center;
+        transition: 400ms
+
+        a {
+          display: block;
+          align-self: center;
+        }
+
+        .icon {
+          align-self: center;
+
+          // padding-top: 1.2rem;
+          translate: 0 -0.6rem;
+        }
+      }
+    }
+
+    @media ($breakpoint-md) {
+      width: 100%;
+
+      a {
+        display: none;
+
+        .icon {
+          // ... why a display of flex here?
+          @include flex(row, nowrap, center); 
+        }
+      }
+
+      &.responsive {
+        @include flex(column, nowrap, normal);
+
+        position: relative;
+        z-index: 10;
+        translate: 0 -18rem;
+
+        .hamburger-menu {
+          translate: 0 2.6rem;
+        }
+
+        a {
+          line-height: 4rem;
+          margin: 0 2rem;
+          display: block;
+
+          .icon {
+            bottom: 0;
+            display: inherit;
+            outline: inherit;
+            position: absolute;
+          }
+        }
+
+      }
+    }
+  }
+}

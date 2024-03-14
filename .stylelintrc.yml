@@ -1,0 +1,39 @@
+extends:
+  - stylelint-config-standard
+  - stylelint-config-standard-scss
+  #- stylelint-prettier/recommended
+ignoreFiles:
+  - node_modules/**/*
+plugins:
+  - stylelint-scss
+  - stylelint-order
+rules:
+  # ignored rules by setting them to null
+  at-rule-no-unknown: null
+  no-descending-specificity: null
+  selector-class-pattern: null
+  value-list-comma-newline-after: null
+  custom-property-pattern: null
+  scss/at-extend-no-missing-placeholder: null
+  declaration-colon-newline-after: null
+  declaration-block-single-line-max-declarations: null
+
+  ## STYLELINT DEPRECIATED RULES
+  max-line-length: null
+
+
+
+  font-family-name-quotes: always-where-recommended
+
+  # Qualifying types are not needed when using a naming system like BEM
+  selector-no-qualifying-type: true
+
+  # http://www.paulirish.com/2010/the-protocol-relative-url/
+  function-url-no-scheme-relative: true
+
+  # Prevents unneeded nesting selectors
+  scss/selector-no-redundant-nesting-selector: true
+
+  # Since mixins are explicit (`@include`) and parens are unnecessary for argumentless mixins, they
+  # can be omitted.
+  scss/at-mixin-argumentless-call-parentheses: never

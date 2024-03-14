@@ -1,0 +1,37 @@
+.card
+    .card-title.m-0.p-2.bg-primary.text-white
+        .row.pl-3
+            img(src="${distroGraphics}${currentDistroIcon}" alt="${currentDistroTitle} icon" style="width: 48px;height: 48px;" ) 
+            h4.font-weight-bold.pl-3 ${currentDistroTitle}
+    
+    .card-text.p-2
+        .row
+            .col.d-md-inline
+                span.font-weight-bold Homepage: 
+                a(href="${currentDistroHomepage}" target="_blank") ${currentDistroTitle}'s Homepage
+                br/
+
+                span.font-weight-bold Download: 
+                a(href="${currentDistroDownload}" target="_blank") ${currentDistroTitle}'s Download Page
+                br/
+
+                span.font-weight-bold Forums:
+                a(href="${currentDistroForum}" target="_blank") ${currentDistroTitle}'s Forum
+                br/
+
+                span.font-weight-bold Distrowatch Page: 
+                a(href="${DWPage}${currentDistroName}" blank="_blank") ${currentDistroTitle} Distrowatch Link 
+                
+                br/
+                br/
+
+                div
+                    h3.font-weight-bold.font-italic Versions
+                    span.font-weight-bold Latest Version: 
+                    
+
+            .col.d-none.d-md-inline
+                a(href="")
+                    img.img-fluid.p-2(data-src="${distroSShotTNPath}${currentDistroScreenshotTN}")
+        
+       

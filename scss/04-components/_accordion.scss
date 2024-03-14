@@ -1,0 +1,86 @@
+@use "../01-abstracts/index" as *;
+
+
+
+// hide the checkbox
+input {
+  display: none;
+}
+
+// ?? is this too global now?
+label {
+  @include border-radius(10px 10px 0 0);
+  @include clr-bg-and-fg;
+
+  display: block;
+  font-weight: 700;
+  padding: 1rem;
+  position: relative;
+}
+
+.accordion-content {
+  box-shadow: var(--box-shadow-light);
+  display: block;
+  
+  // why 3 values? ... a mistake?
+  margin: 0 0 1rem;
+  padding: 10px 25px;
+
+  // outline: 1px solid $theme-clr-dark;
+}
+
+// why do i have things broken out like this? ... 
+@media ($breakpoint-lg) {
+  label {
+    &::before {
+      font-family: var(--ffamily-fork-awesome);
+      font-weight: 900;
+      margin-right: 0.5rem;
+    }
+  }
+
+  label:hover {
+    background-color: $theme-clr-accent;
+  }
+
+  // default on small screens
+  input + .accordion-label::before {
+      content: var(--fa-arrow-right);
+  }
+
+  // down arrow
+  input:checked + .accordion-label::before {
+      content: var(--fa-arrow-down);
+  }
+
+
+  // default unchecked: hide menu
+  input ~ .accordion-content {
+    height: 0;
+    transition: 0.8s;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  // checked: show menu
+  input:checked ~ .accordion-content {
+    height: auto;
+    transition: .8s;
+
+    a {
+      margin: 2rem;
+    }
+  }
+
+
+  .accordion-content {
+    padding: 1rem 0;
+  }
+
+}
+
+@media ($breakpoint-md) {
+  .accordion {
+    max-width: 90vw;
+  }
+}

@@ -1,0 +1,63 @@
+@use "../01-abstracts/index" as *;
+@use "../01-abstracts/" as *;
+
+
+:is(h1,.h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 ) {
+  font-weight: 800;
+  color: $theme-clr-accent;
+  text-wrap: balance;
+}
+
+/////////////////////////////////////////////////////////////////////////////
+// Headers
+h1,
+.h1 {
+  font-size: var(--h1);
+}
+
+h2,
+.h2 {
+  font-size: var(--h2);
+}
+
+h3,
+.h3 {
+  font-size: var(--h3);
+}
+
+h4,
+.h4 {
+  font-size: var(--h4);
+}
+
+h5,
+.h5 {
+  font-size: var(--h5);
+}
+
+// End Header 
+////////////////////////////////////////////////////////////////////////////
+
+
+// this is a link color ON a whiteBG or (at least mainsection)
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: $theme-clr-accent;
+
+  &:hover,
+  &:focus {
+    color: $theme-clr-dark;
+  }
+}
+
+code, kbd {
+  display: inline-block;
+
+  @include clr-bg-and-fg;
+
+  font-style: initial;
+  font-weight: 600;
+  margin: 1rem;
+  padding: .75rem;
+}

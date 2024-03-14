@@ -1,0 +1,60 @@
+extends:
+  - stylelint-config-standard
+  - stylelint-config-recommended-scss
+ignoreFiles:
+  - node_modules/**/*
+plugins:
+  - stylelint-scss
+  - stylelint-order
+rules:
+  at-rule-no-unknown: null
+  no-descending-specificity: null
+
+  # Follow best practices
+  font-family-name-quotes: always-where-recommended
+  # http://stackoverflow.com/questions/2168855/is-quoting-the-value-of-url-really-necessary
+
+  # Double-quotes are our convention throughout our codebase within (S)CSS. They also reflect how
+  # attribute strings are normally quoted within the DOM.
+  string-quotes: double
+
+  # Usually if you're nesting past 3 levels deep there's a problem
+  max-nesting-depth:
+    - 4
+    - ignore:
+        - 'blockless-at-rules'
+
+  # Extremely useful for typos, and anything emergent can be ignored by this rule
+  property-no-unknown:
+    - true
+    - ignoreProperties:
+        - contain
+
+  # Qualifying types are not needed when using a naming system like BEM
+  selector-no-qualifying-type: true
+
+  # Styles for components should never need the universal selector.
+  selector-max-universal: 1
+
+  # http://www.paulirish.com/2010/the-protocol-relative-url/
+  function-url-no-scheme-relative: true
+  # TODO: and FIXME: warnings are super useful because they remind us that we should address these
+  # within our codebase
+  comment-word-disallowed-list:
+    - - /^TODO:/
+      - /^FIXME:/
+    - severity: warning
+  #number-leading-zero: always
+
+  # Prevents unneeded nesting selectors
+  scss/selector-no-redundant-nesting-selector: true
+  # Since leading underscores are not needed, they can be omitted
+  scss/at-import-no-partial-leading-underscore: true
+  # Since mixins are explicit (`@include`) and parens are unnecessary for argumentless mixins, they
+  # can be omitted.
+  scss/at-mixin-argumentless-call-parentheses: never
+
+  # For Codacy/custom
+  declaration-empty-line-before: never
+  value-keyword-case: lower
+  indentation: 2

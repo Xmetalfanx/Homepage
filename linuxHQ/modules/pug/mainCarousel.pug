@@ -1,0 +1,18 @@
+#linuxCarousel.carousel.slide.mx-auto(data-ride='carousel')
+  ol.carousel-indicators
+    li.active(data-target='#linuxCarousel' data-slide-to='0')
+    li(data-target='#linuxCarousel' data-slide-to='1')
+    li(data-target='#linuxCarousel' data-slide-to='2')
+  .carousel-inner
+    .carousel-item.active
+      img.img-fluid(src='/linuxHQ/screenshots/ubuntu/kubuntu2004.png' alt='Kubuntu 18.04 slide')
+    .carousel-item
+      img.img-fluid(src='/linuxHQ/screenshots/ubuntu/thumbnails/mint_tn.png' alt='Linux Mint slide')
+    .carousel-item
+      img.img-fluid(src='/linuxHQ/screenshots/solus/solusbudgie_tn.png' alt='Solus Budgie slide')
+  a.carousel-control-prev(href='#linuxCarousel' role='button' data-slide='prev')
+    span.carousel-control-prev-icon(aria-hidden='true')
+    span.sr-only Previous
+  a.carousel-control-next(href='#linuxCarousel' role='button' data-slide='next')
+    span.carousel-control-next-icon(aria-hidden='true')
+    span.sr-only Next

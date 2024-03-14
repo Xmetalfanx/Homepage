@@ -1,0 +1,50 @@
+[{
+        "addonname": "contextSearch",
+        "addontitle": "Context Search",
+        "currentversion": "",
+        "developer": "",
+        "browserSupport": "FF",
+        "forFF57up": "",
+        "catagory": "search",
+        "iconurl": "",
+        "firefoxurl": "https://addons.mozilla.org/en-US/firefox/addon/context-search/?src=search",
+        "chromeurl": "N/A"
+    },
+
+    {
+        "addonname": "hidecaption",
+        "addontitle": "Hide Caption Titlebar",
+        "currentversion": "",
+        "developer": "",
+        "browserSupport": "FF",
+        "forFF57up": "",
+        "catagory": "",
+        "iconurl": "",
+        "firefoxurl": "https://addons.mozilla.org/en-US/firefox/addon/hide-caption-titlebar-plus-sma/?src=search",
+        "chromeurl": ""
+    },
+    {
+        "addonname": "useragentswitcher",
+        "addontitle": "User Agent Switcher",
+        "currentversion": "",
+        "developer": "",
+        "browserSupport": "",
+        "forFF57up": "",
+        "catagory": "various",
+        "iconurl": "",
+        "firefoxurl": "https://addons.mozilla.org/en-US/firefox/addon/user-agent-switcher/?src=ss",
+        "chromeurl": ""
+    },
+    {
+        "addonname": "maf",
+        "addontitle": "Mozilla Archive Format",
+        "currentversion": "",
+        "developer": "",
+        "browserSupport": "",
+        "forFF57up": "",
+        "catagory": "download",
+        "iconurl": "",
+        "firefoxurl": "",
+        "chromeurl": ""
+    }
+]

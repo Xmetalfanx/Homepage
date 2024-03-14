@@ -1,0 +1,25 @@
+
+.card.w-95.mx-auto
+  .card__header Noop Filtering
+
+  .card__body
+    div When using Dynamic (Ublock Origin Advanced Mode) and Static Filtering (the typical filter lists that most adblockers user); together, Dynamic filtering take priority.  For example, you could use a green (allow) filter on a site to ALLOW a connection that would have been blocked in the one of the filter lists.
+    br/
+
+    div Noop filtering DISABLES the Dynamic filtering, but still allows the static filtering to block if need-be. I admit when I didn't understand Noop Filtering, I would just set something to Allow (green), though now I see this is the better option because this is sort of an "allow, IF the "
+    
+    br/
+
+    div A Way to think of the three filtering levels is this:
+    ul
+      li
+        span.green-text Green
+        | - ALLOW - Green Dynamic Filters allow the connection.  If the item is in one of the enabled blocklists (the Static filtering lists), this will allow the connection anyway... This is an alternative to for that page "turning Ublock Origin off completely", I suppose
+      li 
+        span.darkGreyText Dark Grey
+        | - Noop - This disables any dynamic filtering on that particular element but still allows static lists to block, IF the element is found in any of them.
+      li
+        span.red-text Red
+        | - BLOCK - This blocks an element/connection "no matter what".
+
+div Also remember as I said on another Ublock Origin page I have .. there are Global (this would apply for that domain no matter the page you are on) and local (only applies to that current website you are on, for the domain you are setting a rule for), rules

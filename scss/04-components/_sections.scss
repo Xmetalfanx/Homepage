@@ -1,0 +1,235 @@
+@use "../01-abstracts/index" as *;
+
+// May 2023 note: is this hyper specific section needed? really?
+
+
+// For Distro and Desktop Frontpages on the LinuxHQ side of the site
+// wait ... should this NOT be on anything other than the frontpages ?
+// ?? IS this id (forget the css) needed so the js knows where to place the content? - answer: based on prior comment i left:  YES
+#linux-primary-content {
+  @include flex(row, wrap, normal);
+  @include place-content(flex-start, space-evenly);
+
+  // Nov 2023: is this width needed? ... something seems off
+  width: 100%;
+
+  .card {
+    min-width: 300px;
+    max-width: 92%;
+  }
+
+  @media ($breakpoint-md) {
+    display: unset;
+    flex-wrap: unset;
+
+    @include place-content(unset, unset);
+
+    margin: 1.2rem 0;
+
+    .card {
+      min-width: unset;
+    }
+  }
+}
+
+// For LinuxHQ distro section and eventually more
+#linux-versions {
+  // trial syntax for me
+  // this is for the version table that sometimes has long version info that collide with other tables
+  // also consider using css and removing the "tailwind like" syntax I have there for spacing
+  .row {
+    margin: 0.75rem 0;
+    display: flex;
+
+    .col {
+      margin: 0 1.5rem;
+      word-wrap: break-word;
+    }
+  }
+
+  // the top level of the column
+  .distroBaseTitle {
+    font-weight: 900;
+    text-decoration: underline;
+  }
+
+  // The Titles of the Distro/Versions
+  .versionTitle {
+    margin-right: 0.5rem;
+  }
+
+  // the actual version number
+  .version {
+    color: $theme-clr-dark;
+  }
+}
+
+
+#browser-frontpage {
+  max-width: 100vw;
+  
+  * > a {
+    color: $theme-clr-dark;
+  }
+
+  h3 { margin: 1rem 0; }
+
+  h4 { color: $theme-clr-main; }
+
+  // useful in a few sections below
+  .icon {
+    max-height: 32px;
+    max-width: 32px;
+  }
+
+  ul {
+    @include flex(row, wrap, space-evenly);
+    @include outline(1px, solid, $theme-clr-dark);
+
+    li {
+      font-weight: 800;
+      list-style-type: none;
+      margin: .5rem 0;
+      padding: 1rem 2rem;
+    }
+
+    @media ($breakpoint-lg) {
+      @include flex(row, wrap, flex-start);
+    }
+
+  }
+
+  #browser-engines-container {
+    @include flex(row, wrap, flex-start);
+
+    div {
+      flex: 1 0 50%;
+    }
+
+    @media ($breakpoint-md) {
+      flex-flow: column nowrap;
+
+      ul {
+        // flex-direction: column;
+        margin: 0;
+      }
+
+  }
+
+    .btn a {
+      padding: 1rem 2rem 0 0 ;
+      white-space: nowrap;
+
+      @media ($breakpoint-md) {
+          white-space: wrap;
+        }
+      }
+
+    // ... what?
+    * > .btn:hover, * > .btn:focus {
+      background: $theme-clr-accent;
+      transition: .25s;
+
+      a:hover, a:focus {
+        // background-color: $theme-clr-accent;
+        color: $theme-clr-light;
+        transition: .25s;
+      }
+
+    }
+  }
+
+  #total-addons {
+    #addons-container {
+      @include flex(row, wrap, space-around);
+
+      // the class for EACH addon
+      .addon {
+        @include outline;
+
+        gap: 2rem;
+        border-radius: 20px;
+        margin: 0 2rem;
+        padding: 3rem 1rem;
+
+        // width: max(20%, 200px);
+        width: fit-content;
+
+        @media ($breakpoint-sm) {
+          margin: 1rem 2rem;
+          padding: 1rem 3rem;
+          width: 100%;
+
+          ul {
+            flex-flow: column nowrap;
+
+            li {
+              margin: 2rem 0;
+              padding: unset;
+            }
+          }
+        }
+
+        // major addon icon at the top of the "section"
+        .icon {
+          @include icon-variant;
+
+          display: block;
+          margin: 0 auto;
+        }
+
+        .addon-name, .addon-descript {
+          text-align: center;
+          margin: .5rem auto;
+        }
+
+        .addon-name { font-weight: 800; }
+
+        .addon-descript { font-style: italic; }
+
+      }
+
+    }
+
+  }
+
+  #ytvideos {
+    #yt-video-container {
+      margin: 0 auto;
+      width: fit-content;
+
+      // ul > li {
+      //   margin: 0 auto;
+      // }
+    }
+
+
+
+    @media ($breakpoint-sm) {
+      display: none;
+    }
+  }
+
+  #useful-links {
+    .link-container {
+      display: flex;
+      justify-content: space-evenly;
+
+      @media ($breakpoint-md) {
+        align-items: center;
+        flex-direction: column;
+        gap: 5rem;
+      }
+    }
+
+
+    // img {
+
+    //   @media ($breakpoint-sm) {
+    //     margin: 3rem 0;
+    //   }
+    // }
+
+  }
+
+}
