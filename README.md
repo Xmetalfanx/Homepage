@@ -6,7 +6,7 @@
 
 [![CodeFactor](https://www.codefactor.io/repository/github/xmetalfanx/homepage/badge)](https://www.codefactor.io/repository/github/xmetalfanx/homepage)
 
-# What happened to the commit history
+## What happened to the commit history
 
 While it wasn't exactly what i wanted, having this repo all the way back to 2017 apparently, and noticing the git history size (.git ~~> .pack files) was getting out of hand, I decided to slim things down, INCLUDING not tracking node_modules where issues came up from someone else's code.
 
