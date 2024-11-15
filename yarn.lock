@@ -73,17 +73,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/eslint-parser@npm:^7.23.10":
-  version: 7.23.10
-  resolution: "@babel/eslint-parser@npm:7.23.10"
+"@babel/eslint-parser@npm:^7.25.9":
+  version: 7.25.9
+  resolution: "@babel/eslint-parser@npm:7.25.9"
   dependencies:
     "@nicolo-ribaudo/eslint-scope-5-internals": "npm:5.1.1-v1"
     eslint-visitor-keys: "npm:^2.1.0"
     semver: "npm:^6.3.1"
   peerDependencies:
     "@babel/core": ^7.11.0
-    eslint: ^7.5.0 || ^8.0.0
-  checksum: 10c0/dfc091d44c86c72658d53abe66c778f7aa436672d66ae99a0b72857c968defed4749c18d2d3a35b1f61c77a193761ae7a71997dbe43c4c7cffcf945bd106bd67
+    eslint: ^7.5.0 || ^8.0.0 || ^9.0.0
+  checksum: 10c0/7dc525da9a076906aff562f82373765785732edf306e2be6497e347ed73be80d3544f2f845a77c2376bfa1c7c8c3580ea7346b12b78d8ddf4365c44fe9c35c4b
   languageName: node
   linkType: hard
 
@@ -4358,7 +4358,7 @@ __metadata:
   resolution: "homepage@workspace:."
   dependencies:
     "@babel/core": "npm:^7.26.0"
-    "@babel/eslint-parser": "npm:^7.23.10"
+    "@babel/eslint-parser": "npm:^7.25.9"
     "@effective/prettier": "npm:^0.2.1"
     "@fullhuman/postcss-purgecss": "npm:^5.0.0"
     "@popperjs/core": "npm:^2.11.8"
