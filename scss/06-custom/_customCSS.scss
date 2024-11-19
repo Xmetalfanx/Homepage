@@ -171,6 +171,10 @@ section {
     }
 
     .section--image {
+      @media ($breakpoint-md) {
+        display: none;
+      }
+
       .credits {
         font-size: .9rem;
         text-align: center;
