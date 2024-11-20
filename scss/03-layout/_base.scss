@@ -26,14 +26,6 @@ body {
 
 }
 
-@include themify($current-theme) {
-  body {
-    background-color: themed("bg");
-    color: themed("fg");
-  }
-}
-
-
 .card {
   .card__header {
     @include align-items-justify-content(baseline, flex-start);
@@ -74,12 +66,14 @@ ul, ol {
 
 }
 
-
 @include themify($current-theme) {
-  ul, ol {
-    .list-wide {
-      outline: 1px solid themed["bg"];
-    }
+  body {
+    background-color: themed("bg");
+    color: themed("fg");
+  }
+
+  ul, ol .list-wide {
+    outline: 1px solid themed["bg"];
   }
 
 }
