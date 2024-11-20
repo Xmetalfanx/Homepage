@@ -218,8 +218,8 @@ header {
 @include themify($current-theme) {
   header,
   footer {
-    color: themed('fg');
-    background-color: themed('bg');
+    color: themed['fg'];
+    background-color: themed['bg'];
 
     a {
       background-color: themed['bg'];
