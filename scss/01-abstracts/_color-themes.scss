@@ -14,12 +14,16 @@ $nov-theme: (
   light: (
     main:hsl(29deg 69% 40%),
     accent: hsl(20deg 86% 30%),
+    light: hsl(0deg 0% 94%),
+    dark: hsl(0deg 0% 20%),
     bg: hsl(0deg 0% 94%),
     fg: hsl(0deg 0% 20%),
   ),
   dark: (
     main: hsl(29deg 69% 40%),
     accent: hsl(20deg 86% 30%),
+    light: hsl(0deg 0% 94%),
+    dark: hsl(0deg 0% 20%),
     bg: hsl(0deg 0% 20%),
     fg: hsl(0deg 0% 94%),
   ),
