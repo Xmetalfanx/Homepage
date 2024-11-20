@@ -1,8 +1,6 @@
 @use "../01-abstracts/index" as *;
 
 body {
-  @include clr-bg-and-fg($theme-clr-light, $theme-clr-dark);
-  
   display: grid;
 
   // grid-template: row / column
@@ -14,11 +12,10 @@ body {
   min-height: 100%;
 
   // color and font setup
-  color: $theme-clr-dark;
+
   font-family: var(--ffamily-roboto);
   font-size: var(--fs-normal);
   font-weight: 400;
-  
 
   @media ($breakpoint-md) {
       grid-template: auto 1fr / 1fr;
@@ -26,13 +23,16 @@ body {
         "main-section"
         "header";
   }
+
 }
 
+@include themify($current-theme) {
+  body {
+    background-color: themed("bg");
+    color: themed("fg");
+  }
+}
 
-// i totally forgot what this is for
-// ::selection {
-//   @include clr-bg-and-fg;
-// }
 
 .card {
   .card__header {
@@ -67,10 +67,19 @@ ul, ol {
     li {
       list-style: none;
       margin: 1rem;
-      outline: 1px solid $theme-clr-dark;
       padding: 1rem;
     }
 
+  }
+
+}
+
+
+@include themify($current-theme) {
+  ul, ol {
+    .list-wide {
+      outline: 1px solid themed["bg"];
+    }
   }
 
 }

@@ -6,7 +6,6 @@
 header,
 footer {
   @include flex;
-  @include clr-bg-and-fg;
 
   font-family: var(--ffamily-helvetica);
   font-weight: 900;
@@ -14,13 +13,11 @@ footer {
   @include align-items-justify-content(center, space-between);
 
   a {
-    @include clr-bg-and-fg;
-
     padding: 1.5rem;
 
-      // Oct 2023 ... didn't i just add these for the mobile menu issue? 
+      // Oct 2023 ... didn't i just add these for the mobile menu issue?
       // commit: https://github.com/Xmetalfanx/website/commit/3c525894078d4cc5d8fe22bcae5213e26dfc0790
-      // why? 
+      // why?
       // margin: -.5rem;
       // padding: .5rem;
 
@@ -120,7 +117,7 @@ header {
   }
 
   // the menu bar to the top right - should be hidden unless on small screens
-  // oct 2023 some more global borders broke the LEFT hand title .. 
+  // oct 2023 some more global borders broke the LEFT hand title ..
   .topnav {
     @include flex;
 
@@ -130,10 +127,6 @@ header {
 
     a {
       margin: 0 .8rem;
-
-      :hover, :active {
-        @include clr-bg-and-fg($theme-clr-light, $theme-clr-main);
-      }
     }
 
     // for hamburger menu that should only display on mobile
@@ -188,7 +181,7 @@ header {
 
         .icon {
           // ... why a display of flex here?
-          @include flex(row, nowrap, center); 
+          @include flex(row, nowrap, center);
         }
       }
 
@@ -218,5 +211,40 @@ header {
 
       }
     }
+  }
+}
+
+
+@include themify($current-theme) {
+  header,
+  footer {
+    color: themed('fg');
+    background-color: themed('bg');
+
+    a {
+      background-color: themed['bg'];
+      color: themed['fg'];
+
+      &:hover,
+      &:focus {
+        background-color: themed['main'];
+        color: themed['fg'];
+        outline: 1px dotted themed['bg'];
+      }
+
+
+    }
+  }
+
+  header {
+      .topnav {
+        // Nov 2024: is this needed?  couldn't I do a more global option to not need this? 
+        a {
+          :hover, :active {
+            background-color: themed['bg'];
+            color: themed['main'];
+          }
+        }
+      }
   }
 }
