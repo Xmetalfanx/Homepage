@@ -218,33 +218,20 @@ header {
 @include themify($current-theme) {
   header,
   footer {
-    color: themed['fg'];
-    background-color: themed['bg'];
+    color: themed['main'];
+    background-color: themed['light'];
 
-    a {
-      background-color: themed['bg'];
-      color: themed['fg'];
-
-      &:hover,
+    a &:hover,
       &:focus {
         background-color: themed['main'];
         color: themed['fg'];
         outline: 1px dotted themed['bg'];
       }
-
-
-    }
   }
 
-  header {
-      .topnav {
-        // Nov 2024: is this needed?  couldn't I do a more global option to not need this? 
-        a {
-          :hover, :active {
-            background-color: themed['bg'];
-            color: themed['main'];
-          }
-        }
-      }
+  // Nov 2024: is this needed?  couldn't I do a more global option to not need this?
+  header .topnav a :hover, :active {
+    background-color: themed['bg'];
+    color: themed['main'];
   }
 }

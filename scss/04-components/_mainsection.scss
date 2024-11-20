@@ -208,12 +208,8 @@
 }
 
 @include themify($current-theme) {
-  .main-section {
-    .card {
-      .card__header {
-        background-color: themed['main'];
-        color: themed['fg']
-      }
-    }
+  .main-section .card .card__header {
+    background-color: themed['main'];
+    color: themed['fg']
   }
 }
