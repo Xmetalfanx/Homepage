@@ -53,10 +53,10 @@
 
 
 // Color mixins
-@mixin clr-bg-and-fg($main-color: $theme-clr-main, $light-theme-color:$theme-clr-light) {
-  background-color:$main-color;
-  color: $light-theme-color;
-}
+// @mixin clr-bg-and-fg($main-color: $theme-clr-main, $light-theme-color:$theme-clr-light) {
+//   background-color:$main-color;
+//   color: $light-theme-color;
+// }
 
 // idea only: 
 @mixin section-title($font-size: 24px, $font-weight: 700, $color: $theme-clr-accent) {
