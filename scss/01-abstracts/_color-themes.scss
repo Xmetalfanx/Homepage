@@ -11,11 +11,18 @@ $oct-theme: (
     dark: hsl(120deg 30% 15%),
 );
 $nov-theme: (
-    // main: hsl(43deg 90% 45%),
-    main: hsl(29deg, 69%, 40%),
+  light: (
+    main:hsl(29deg 69% 40%),
     accent: hsl(20deg 86% 30%),
-    light: hsl(0deg 0% 94%),
-    dark: hsl(0deg 0% 20%),
+    bg: hsl(0deg 0% 94%),
+    fg: hsl(0deg 0% 20%),
+  ),
+  dark: (
+    main: hsl(29deg 69% 40%),
+    accent: hsl(20deg 86% 30%),
+    bg: hsl(0deg 0% 20%),
+    fg: hsl(0deg 0% 94%),
+  ),
 );
 $dec-theme: (
     main: hsl(120deg 100% 20%),
