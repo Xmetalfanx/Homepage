@@ -66,6 +66,10 @@ h5,
 
 a {
   text-decoration: none;
+
+  // idea to put this here since it doesn't use themify being transparent 
+  background-color: transparent;
+
 }
 
 
@@ -79,7 +83,6 @@ code, kbd {
 
 @include themify($current-theme) {
   a {
-    background-color: transparent;
     color: themed['accent'];
 
     &:hover,

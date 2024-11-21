@@ -45,9 +45,6 @@ label {
     }
   }
 
-  label:hover {
-    background-color: $theme-clr-accent;
-  }
 
   // default on small screens
   input + .accordion-label::before {
@@ -83,6 +80,14 @@ label {
     padding: 1rem 0;
   }
 
+}
+
+@include themify($current-theme) {
+  label:hover {
+    // background-color: $theme-clr-accent;
+    
+    background-color: themify['accent'];
+  }
 }
 
 @media ($breakpoint-md) {
