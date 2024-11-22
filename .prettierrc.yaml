@@ -1,4 +1,4 @@
-trailingComma: "es6"
+trailingComma: "all"
 useTabs: false
 printWidth: 80
 tabWidth: 2
