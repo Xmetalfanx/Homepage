@@ -2,7 +2,6 @@
 
 // May 2023 note: is this hyper specific section needed? really?
 
-
 // For Distro and Desktop Frontpages on the LinuxHQ side of the site
 // wait ... should this NOT be on anything other than the frontpages ?
 // ?? IS this id (forget the css) needed so the js knows where to place the content? - answer: based on prior comment i left:  YES
@@ -64,17 +63,20 @@
   }
 }
 
-
 #browser-frontpage {
-  max-width: 100vw;
-  
+  // max-width: 100vw;
+
   * > a {
     color: $theme-clr-dark;
   }
 
-  h3 { margin: 1rem 0; }
+  h3 {
+    margin: 1rem 0;
+  }
 
-  h4 { color: $theme-clr-main; }
+  h4 {
+    color: $theme-clr-main;
+  }
 
   // useful in a few sections below
   .icon {
@@ -83,59 +85,49 @@
   }
 
   ul {
-    @include flex(row, wrap, space-evenly);
+    // @include flex(row, wrap, space-evenly);
     @include outline(1px, solid, $theme-clr-dark);
 
     li {
       font-weight: 800;
       list-style-type: none;
-      margin: .5rem 0;
+      margin: 0.5rem 0;
       padding: 1rem 2rem;
     }
 
     @media ($breakpoint-lg) {
       @include flex(row, wrap, flex-start);
     }
-
   }
 
+  // the list of browsers at the top of the browser frontpage 
   #browser-engines-container {
-    @include flex(row, wrap, flex-start);
+    @include flex(row, wrap, space-around);
 
-    div {
-      flex: 1 0 50%;
+    .card {
+      box-shadow: unset;
+      display: block;
     }
 
-    @media ($breakpoint-md) {
-      flex-flow: column nowrap;
-
-      ul {
-        // flex-direction: column;
-        margin: 0;
-      }
-
-  }
-
-    .btn a {
-      padding: 1rem 2rem 0 0 ;
-      white-space: nowrap;
-
-      @media ($breakpoint-md) {
-          white-space: wrap;
-        }
-      }
-
-    // ... what?
-    * > .btn:hover, * > .btn:focus {
-      background: $theme-clr-accent;
-      transition: .25s;
-
-      a:hover, a:focus {
+    ul li {
+      &:hover,
+      &:focus {
         // background-color: $theme-clr-accent;
         color: $theme-clr-light;
-        transition: .25s;
+        background-color: $theme-clr-accent;
+        transition: 0.25s;
       }
+    }
 
+    // a {
+    //   white-space: nowrap;
+    // }
+
+    @media ($breakpoint-md) {
+      ul {
+        margin: 0;
+        display: block;
+      }
     }
   }
 
@@ -147,9 +139,15 @@
       .addon {
         @include outline;
 
-        gap: 2rem;
+
+        .browsers {
+          display: flex;
+        }
+
+        // gap: 2rem;
         border-radius: 20px;
         padding: 3rem 1rem;
+        text-align: center;
 
         // width: max(20%, 200px);
         width: fit-content;
@@ -169,7 +167,6 @@
           }
         }
 
-        // major addon icon at the top of the "section"
         .icon {
           @include icon-variant;
 
@@ -177,16 +174,9 @@
           margin: 0 auto;
         }
 
-        .addon-descript {
-          margin: .5rem auto;
-        }
-
-        .addon-descript.fs-italics.text-center { font-style: italic; }
-
+        // major addon icon at the top of the "section"
       }
-
     }
-
   }
 
   #ytvideos {
@@ -194,12 +184,10 @@
       margin: 0 auto;
       width: fit-content;
 
-      // ul > li {
-      //   margin: 0 auto;
-      // }
+      ul > li {
+        margin: 0 auto;
+      }
     }
-
-
 
     @media ($breakpoint-sm) {
       display: none;
@@ -218,14 +206,11 @@
       }
     }
 
-
     // img {
 
     //   @media ($breakpoint-sm) {
     //     margin: 3rem 0;
     //   }
     // }
-
   }
-
 }
