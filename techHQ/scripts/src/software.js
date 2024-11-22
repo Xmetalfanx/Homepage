@@ -115,7 +115,7 @@ function softwareData(data) {
                   'beforeend',
                   headerDisplay +
                     '<div class="card__body"> ' +
-                    '<span class="font-weight-bold"> Project Status: </span>' +
+                    '<span class="fw-800"> Project Status: </span>' +
                      progStatus +
                     '<br/><br/>' +
                      description

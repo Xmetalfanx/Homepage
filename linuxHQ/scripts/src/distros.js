@@ -41,9 +41,9 @@ function displayDistroOutput(
 
   const currentDistroMoreInfoOutput = `
     <div class="py-3">
-      <span class="font-weight-bold">Target Audience: </span>${currentDistroTargetAudience}<br />
-      <span class="font-weight-bold">Featured Desktops: </span>${currentDistroFeaturesDesktops}<br />
-      <span class="font-weight-bold">Similar Distros: </span>${currentDistroSimilarDistros}<br />
+      <span class="fw-800">Target Audience: </span>${currentDistroTargetAudience}<br />
+      <span class="fw-800">Featured Desktops: </span>${currentDistroFeaturesDesktops}<br />
+      <span class="fw-800">Similar Distros: </span>${currentDistroSimilarDistros}<br />
     </div> 
     
     `;
@@ -158,26 +158,26 @@ function displayDistroOutput(
           <!-- for left hand col ... left of the screenshots -->
           <div class="d-md-inline-block">
 
-            <span class="font-weight-bold">Homepage: </span>
+            <span class="fw-800">Homepage: </span>
             <a href="${currentDistroHomepage}" target="_blank" rel='noreferrer'>${currentDistroTitle}'s Homepage
             </a>
             <br/>
 
-            <span class="font-weight-bold">Download: </span>
+            <span class="fw-800">Download: </span>
                 <a href="${currentDistroDownload}" target="_blank" rel='noreferrer'>${currentDistroTitle}'s Download Page
                 </a><br/>
 
-            <span class="font-weight-bold">Forums:</span>
+            <span class="fw-800">Forums:</span>
                 <a href="${currentDistroForum}" target="_blank" rel='noreferrer'>${currentDistroTitle}'s Forum</a><br/>
 
-            <span class="font-weight-bold">Distrowatch Page: </span>
+            <span class="fw-800">Distrowatch Page: </span>
                 <a href="${DWPage}${currentDistroName}" blank="_blank" rel='noreferrer'>${currentDistroTitle} Distrowatch Link
                     </a>
 
             <div class="py-3">
               <h4> Versions</h4>
-              <span class="font-weight-bold">Latest Version:</span> ${currentDistroLatestVersions} <br />
-              <span class="font-weight-bold">Currently Supported Versions: </span>${currentDistroSupportedVersions} <br />
+              <span class="fw-800">Latest Version:</span> ${currentDistroLatestVersions} <br />
+              <span class="fw-800">Currently Supported Versions: </span>${currentDistroSupportedVersions} <br />
             </div>
 
             ${currentDistroMoreInfoOutput}

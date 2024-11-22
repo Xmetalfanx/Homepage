@@ -149,7 +149,6 @@
 
         gap: 2rem;
         border-radius: 20px;
-        margin: 0 2rem;
         padding: 3rem 1rem;
 
         // width: max(20%, 200px);
@@ -178,14 +177,11 @@
           margin: 0 auto;
         }
 
-        .addon-name, .addon-descript {
-          text-align: center;
+        .addon-descript {
           margin: .5rem auto;
         }
 
-        .addon-name { font-weight: 800; }
-
-        .addon-descript { font-style: italic; }
+        .addon-descript.fs-italics.text-center { font-style: italic; }
 
       }
 

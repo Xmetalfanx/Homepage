@@ -16,7 +16,7 @@ function displayTICOutput(currentTICThemeName, currentTICThemeTitle, currentTICS
         `
 
           <div class="card w-33">
-            <div class="card-header bg-primary text-white font-weight-bold">${currentTICThemeTitle}</div>
+            <div class="card-header bg-primary text-white fw-800">${currentTICThemeTitle}</div>
             <div class="card-text">
                 ${currentTICSupportInfo}
                 <br/><br/>

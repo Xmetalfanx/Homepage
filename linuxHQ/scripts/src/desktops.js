@@ -38,7 +38,7 @@ function displayDEOutput(
 
   // used INSIDE the tabs below and not separately
   const deVersionsOutput = `
-            <h3 class="font-weight-bold">Versions</h3>
+            <h3 class="fw-800">Versions</h3>
             <div id="linux-versions">
                 <small> Last Updated: ${currentDEVerUpdated} </small>
             <br/>
@@ -102,7 +102,7 @@ function displayDEOutput(
         `;
 
   const deInstallOutput = `
-    <h3 class="font-weight-bold">How to Install: </h3>
+    <h3 class="fw-800">How to Install: </h3>
 
     <div class="accordion">
       <!-- Arch Start -->
@@ -129,7 +129,7 @@ function displayDEOutput(
       <label for="openSUSEInstall">openSUSE</label>
 
       <div class="content">
-        <div class="font-weight-bold">OpenSUSE: </div>
+        <div class="fw-800">OpenSUSE: </div>
           <div class="font-italic">${currentDEopensuseInstall}</div>
           <br />
 
@@ -142,7 +142,7 @@ function displayDEOutput(
           <br />
 
           <ul>
-              <li class="font-weight-bold">Tumbleweed</li>
+              <li class="fw-800">Tumbleweed</li>
                   <code class="my-3 p-2">${currentDEopensuseTWInstall}</code>
           </ul>
 
@@ -180,20 +180,20 @@ function displayDEOutput(
                 <div class="card__body">
                     <div class="row">
                         <div class="col px-3">
-                          <span class="font-weight-bold">Homepage:</span>
+                          <span class="fw-800">Homepage:</span>
                             <a href="${currentDEHomepage}" target="_blank"> ${currentDETitle}'s Homepage</a>
                           <br>
 
-                          <span class="font-weight-bold">Github URL: </span>
+                          <span class="fw-800">Github URL: </span>
                             <a href="${currentDEGithub}" target="_blank">${currentDETitle} on Github</a>
                           <br><br>
 
-                          <span class="font-weight-bold">Latest Version: </span>${currentDELatestVersion}<br>
-                          <span class="font-weight-bold">Desktop Category: </span>${currentDECategory}<br>
-                          <span class="font-weight-bold">Distros That Feature: </span>${currentDEDistroFeature}<br>
+                          <span class="fw-800">Latest Version: </span>${currentDELatestVersion}<br>
+                          <span class="fw-800">Desktop Category: </span>${currentDECategory}<br>
+                          <span class="fw-800">Distros That Feature: </span>${currentDEDistroFeature}<br>
                           <br>
 
-                          <span class="font-weight-bold">Desktop Requirements: </span>
+                          <span class="fw-800">Desktop Requirements: </span>
                           <ul>
                             <li>
                               <span class="font-italic">Required Processor: </span>${currentDEReqProc}

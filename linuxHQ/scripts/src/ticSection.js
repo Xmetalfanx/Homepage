@@ -24,15 +24,15 @@ function displayTICOutput(
 ) {
   const themeLinks = `
 
-        <span class="font-weight-bold">Gnomelook URL:</span>
+        <span class="fw-800">Gnomelook URL:</span>
         <a href="${currentTICGnomelookURL}" target="_blank" >
         ${currentTICName} on Gnome Look </a> <br />
 
-        <span class="font-weight-bold">Github URL: </span>
+        <span class="fw-800">Github URL: </span>
         <a href="${currentTICGithubURL} " target="_blank" >
         ${currentTICName} on Github </a> <br />
 
-        <span class="font-weight-bold">Deviant Art URL: </span>
+        <span class="fw-800">Deviant Art URL: </span>
         <a href="${currentTICDeviantArtURL}" target="_blank" >
         ${currentTICName} on DeviantArt </a>
         <br />
@@ -41,16 +41,16 @@ function displayTICOutput(
   const howToInstall = `
         <h3>How to Install ${currentTICName} </h3>
         <div>
-          <span class="font-weight-bold">On Arch: </span> ${archInstall} ${currentTICArchInstall}
+          <span class="fw-800">On Arch: </span> ${archInstall} ${currentTICArchInstall}
           <br />
 
-          <span class="font-weight-bold">On Fedora: </span> ${dnfInstall} ${currentTICFedoraInstall}
+          <span class="fw-800">On Fedora: </span> ${dnfInstall} ${currentTICFedoraInstall}
           <br />
 
-          <span class="font-weight-bold">On openSUSE: </span> ${zypperInstall} ${currentTICOpenSuseInstall}
+          <span class="fw-800">On openSUSE: </span> ${zypperInstall} ${currentTICOpenSuseInstall}
           <br />
 
-          <span class="font-weight-bold">On Ubuntu: </span> ${ubuntuInstall} ${currentTICUbuntuInstall}
+          <span class="fw-800">On Ubuntu: </span> ${ubuntuInstall} ${currentTICUbuntuInstall}
           <br />
 
         </div>
@@ -64,7 +64,7 @@ function displayTICOutput(
               <div class="d-flex jc-between">
                 <div class="col">
 
-                  <span class="font-weight-bold">Theme has support for: </span>
+                  <span class="fw-800">Theme has support for: </span>
                   ${currentTICSupportInfo}
                   <br/><br/>
 

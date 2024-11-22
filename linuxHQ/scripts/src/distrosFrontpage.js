@@ -27,8 +27,8 @@ function displayDistroOutput(
           <img class="d-none d-md-block thumbnail-fluid--lg" src="${distroSShotTNPath}${currentDistroScreenshotTN}" alt="${currentDistroTitle} Screenshot" loading="lazy" >
         </a>
 
-        <span class="font-weight-bold">Desktop Environment: </span>${currentDistroSSDesktop}<br/><br />
-        <span class="font-weight-bold">Theme used: </span>${currentDistroSSTheme}
+        <span class="fw-800">Desktop Environment: </span>${currentDistroSSDesktop}<br/><br />
+        <span class="fw-800">Theme used: </span>${currentDistroSSTheme}
     `;
 
   const currentDistroInfoOutput = `
@@ -47,7 +47,7 @@ function displayDistroOutput(
 
           <div class="card__body">
 
-            <span class="font-weight-bold">Homepage: </span>
+            <span class="fw-800">Homepage: </span>
             <a href="${currentDistroHomepage}" target="_blank">${currentDistroTitle}'s Homepage</a>${currentDistroSShotOutput}
 
             </div> <!-- closes card-body -->

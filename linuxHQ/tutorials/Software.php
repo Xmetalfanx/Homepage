@@ -33,8 +33,8 @@
 </ul>
 <h5>CLI Package Managers</h5>
 <ul>
-  <li class="font-weight-bold">Arch based
-    <ul><span class="font-style-italics">Pacman</span>
+  <li class="fw-800">Arch based
+    <ul><span class="fs-italics">Pacman</span>
       <ul>
         <li>Searching<kbd>sudo pacman -Ss <package></kbd></li>
         <li>Installing<kbd>sudo pacman -S <package></kbd></li>
@@ -51,9 +51,9 @@
       </ul>
     </ul>
   </li>
-  <li class="font-weight-bold">Debian / Ubuntu Based</li>
+  <li class="fw-800">Debian / Ubuntu Based</li>
   <ul>
-    <li> <span class="font-weight-bold">apt</span>
+    <li> <span class="fw-800">apt</span>
       <ul>
         <li>Searching<kbd>sudo apt search <package></kbd></li>
         <li>Installing<kbd>sudo apt install <package></kbd></li>
@@ -68,17 +68,17 @@
       </ul>
     </li>
   </ul>
-  <li class="font-weight-bold">OpenSuse</li>
+  <li class="fw-800">OpenSuse</li>
   <ul>
-    <li> <span class="font-weight-bold">zypper</span>
+    <li> <span class="fw-800">zypper</span>
       <ul> 
         <li>Searching<kbd>sudo zypper search <package></kbd></li>
         <li>Installing<kbd>sudo zypper install <package></kbd></li>
       </ul>
     </li>
   </ul>
-  <li class="font-weight-bold">Fedora</li>
-  <ul><span class="font-style-italics">dnf</span>
+  <li class="fw-800">Fedora</li>
+  <ul><span class="fs-italics">dnf</span>
     <ul> 
       <li>Searching<kbd>sudo dnf search <package></kbd></li>
       <li>Installing<kbd>sudo dnf install <package></kbd></li>

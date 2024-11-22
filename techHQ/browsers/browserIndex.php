@@ -54,7 +54,7 @@
     <div id="addons-container">
       <div class="addon">
         <img class="icon" src="/techHQ/browsers/graphics/icons/ublock-origin.svg" alt="Ublock Origin SVG Icon">
-        <div class="addon-name">Ublock Origin</div>
+        <div class="fw-800">Ublock Origin</div>
         <div class="addon-descript">Ad/Content Blocker</div>
         <ul class="browsers">
           <li><a href="https://addons.mozilla.org/en-US/firefox/addon/ublock-origin/"><img class="icon" src="/techHQ/progIcons/internet/browsers/firefox.svg" alt="Ublock Origin Firefox"></a></li>
@@ -64,7 +64,7 @@
       </div>
       <div class="addon">
         <img class="icon" src="/techHQ/browsers/graphics/icons/bit-warden.svg" alt="Bit Warden SVG Icon">
-        <div class="addon-name">Bit Warden</div>
+        <div class="fw-800">Bit Warden</div>
         <div class="addon-descript">Open-Source Password Manager</div>
         <ul class="browsers">
           <li><a href="https://addons.mozilla.org/en-US/firefox/addon/bitwarden-password-manager/" target="_blank"><img class="icon" src="/techHQ/progIcons/internet/browsers/firefox.svg" alt="Bit Warden Firefox"></a></li>

@@ -79,13 +79,13 @@ function browserData(data) {
 
                         <div class="card__body">
 
-                            <span class="font-weight-bold"> Browser Engine:</span> (TODO later)
+                            <span class="fw-800"> Browser Engine:</span> (TODO later)
 
                             <br /><br />
                             <a href="${browserDownload} " target+"blank"> Download Page</a>
 
                             <br /><br />
-                            <span class="font-weight-bold">Description: </span>
+                            <span class="fw-800">Description: </span>
                             <span >${browserDescription}
                         </div>
                     </div>

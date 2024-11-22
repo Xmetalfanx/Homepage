@@ -1,34 +1,34 @@
 .card
 
     .card__header.bg-primary.text-white
-        h3.font-weight-bold ${currentDETitle}
+        h3.fw-800 ${currentDETitle}
 
     .card-text.px-3
         .row
             .col-md-6
-                span.font-weight-bold Homepage:
+                span.fw-800 Homepage:
                 a(href='${currentDEHomepage}' target='_blank' rel="noopener") ${currentDETitle}'s Homepage
                 br
 
-                span.font-weight-bold Github URL:
+                span.fw-800 Github URL:
                 a(href='${currentDEGithub}' target='_blank' rel="noopener") ${currentDETitle} on Github
                 br
                 br
 
 
-                span.font-weight-bold Latest Version:
+                span.fw-800 Latest Version:
                 | ${currentDELatestVersion}
                 br
 
-                span.font-weight-bold Desktop Category:
+                span.fw-800 Desktop Category:
                 | ${currentDECategory}
                 br
 
-                span.font-weight-bold Distros That Feature:
+                span.fw-800 Distros That Feature:
                 | ${currentDEdistroFeature}
                 br
                 br
-                span.font-weight-bold Desktop Requirements:
+                span.fw-800 Desktop Requirements:
                 ul
                     li
                         span.font-italics Required Processor:

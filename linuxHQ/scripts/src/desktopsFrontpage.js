@@ -17,7 +17,7 @@ function displayDEOutput(currentDEName, currentDETitle, currentDEHomepage, curre
                     <img class="thumbnail-fluid--lg" src="${screenshotDIR}${currentDEScreenshotTN}" alt="{currentDETitle} Screenshot" loading="lazy">
 
                     <figcaption>
-                        <span class="font-weight-bold">Distro:</span>
+                        <span class="fw-800">Distro:</span>
                         ${currentDESShotDistro}
                     </figcaption>
                     </a>
