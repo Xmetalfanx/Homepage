@@ -12,15 +12,9 @@ rules:
   at-rule-no-unknown: null
   no-descending-specificity: null
   selector-class-pattern: null
-  value-list-comma-newline-after: null
   custom-property-pattern: null
   scss/at-extend-no-missing-placeholder: null
-  declaration-colon-newline-after: null
   declaration-block-single-line-max-declarations: null
-
-  ## STYLELINT DEPRECIATED RULES
-  max-line-length: null
-
 
 
   font-family-name-quotes: always-where-recommended
