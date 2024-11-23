@@ -106,7 +106,7 @@
     "caniuse-lite": "^1.0.30001680",
     "corepack": "^0.29.4",
     "micromatch": "^4.0.8",
-    "purgecss": "^6.0.0",
+    "purgecss": "^7.0.2",
     "stable": "^0.1.8",
     "yarn-audit-fix": "^10.1.0"
   },
