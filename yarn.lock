@@ -2287,16 +2287,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"corepack@npm:^0.29.4":
-  version: 0.29.4
-  resolution: "corepack@npm:0.29.4"
+"corepack@npm:^0.30.0":
+  version: 0.30.0
+  resolution: "corepack@npm:0.30.0"
   bin:
     corepack: ./dist/corepack.js
     pnpm: ./dist/pnpm.js
     pnpx: ./dist/pnpx.js
     yarn: ./dist/yarn.js
     yarnpkg: ./dist/yarnpkg.js
-  checksum: 10c0/7c6d57804436d0c0bc407ba662ee5628fcfe5b3c9edd0afe7e71801ba325781d6014b0b8d4cb77d3f0eb4b7f11104c9486d9c9bb748c49ca3baa569e5b373a08
+  checksum: 10c0/38c1dd302ce858124ee5b14b523bd70f5f056b457c2d9a58a5eae3c9ae37a95cc380f30f2eb17ef662f8530480ec001b03cd8f5d2175dec5ac104643f37f9c06
   languageName: node
   linkType: hard
 
@@ -3932,7 +3932,7 @@ __metadata:
     chalk: "npm:^5.3.0"
     colorguard: "npm:^1.2.1"
     core-js: "npm:^3.39.0"
-    corepack: "npm:^0.29.4"
+    corepack: "npm:^0.30.0"
     css: "npm:^3.0.0"
     cssnano: "npm:^7.0.6"
     doiuse: "npm:^6.0.5"
