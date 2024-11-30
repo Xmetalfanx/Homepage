@@ -35,7 +35,15 @@
 }
 
 @mixin outline($outline-size: 1px, $outline-style: solid, $outline-color: $theme-clr-main) {
-  outline: $outline-size $outline-style $outline-color;
+  outline: $outline-color;
+  outline-style: $outline-style;
+  outline-width: $outline-size;
+
+  @include themify($current-theme) {
+    {
+      color: themed("main");
+    }
+  }
 }
 
 @mixin border($border-size: 1px, $border-style: solid, $border-color: $theme-clr-main) {
