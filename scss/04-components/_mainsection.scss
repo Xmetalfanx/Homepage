@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use "../01-abstracts/index" as *;
 
 /*********** Main Section in middle of page, between the header and footer *****/
@@ -152,6 +153,12 @@
       margin: 0.25rem 0 0.25rem 1.5rem;
 
       &:hover {
+        background-color: color.adjust($theme-clr-light, $lightness: -2%);
+
+
+        // works elsewhere
+        // background-color: color.adjust($theme-clr-main, $lightness: 10%);
+        
         color: $theme-clr-accent;
         outline: 1px solid $theme-clr-main;
       }
