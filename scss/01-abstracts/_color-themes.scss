@@ -32,7 +32,7 @@ $tropical-theme1: (
 );
 
 // assign theme idea 
-$current-theme: $tropical-theme1;
+$current-theme: $dec-theme;
 $theme-clr-main: map.get($current-theme, main);
 $theme-clr-accent: map.get($current-theme, accent);
 $theme-clr-light: map.get($current-theme, light);
