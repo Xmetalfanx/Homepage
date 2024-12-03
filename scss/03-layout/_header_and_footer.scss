@@ -1,3 +1,4 @@
+@use 'sass:color';
 @use "../01-abstracts/index" as *;
 
 // @use "../05-fromBS/index" as *;
@@ -26,10 +27,11 @@ footer {
     &:hover,
     &:focus {
       @include border-radius-single(10%);
-      @include clr-bg-and-fg($theme-clr-light, $theme-clr-accent);
 
+      background-color: color.adjust($theme-clr-main, $lightness: 10%);
+      color: $theme-clr-light;
+      
       outline: 1px dotted $theme-clr-light;
-     
 
     }
   }
