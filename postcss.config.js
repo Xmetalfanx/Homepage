@@ -1,12 +1,10 @@
-const cssnano = require('cssnano')
-// const doiuse = require('doiuse')
-const postcssDiscardEmpty = require('postcss-discard-empty')
-// const postcssAutoreest = require('postcss-autoreset')
-const postcssPresetEnv = require('postcss-preset-env')
-const postcssSorting = require('postcss-sorting')
-const stylelint = require('stylelint')
-const purgecss = require('@fullhuman/postcss-purgecss')
-const combineSelectors = require('postcss-combine-duplicated-selectors')
+import cssnano from "cssnano";
+import postcssDiscardEmpty from "postcss-discard-empty";
+import postcssPresetEnv from "postcss-preset-env";
+import postcssSorting from "postcss-sorting";
+import stylelint from "stylelint";
+import purgecss from "@fullhuman/postcss-purgecss";
+import combineSelectors from "postcss-combine-duplicated-selectors";
 
 // is this "fs" needed? ... optimize-css-mq has it listed
 // const fs = require("fs");

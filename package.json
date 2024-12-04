@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "My Homepage",
   "main": "index.php",
+  "type": "module",
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/eslint-parser": "^7.25.9",
