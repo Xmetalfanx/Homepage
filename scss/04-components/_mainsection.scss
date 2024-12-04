@@ -46,6 +46,10 @@
       font-size: var(--h4);
       padding: 1rem;
 
+      a:focus, a:hover { 
+        color: color.adjust($theme-clr-accent, $lightness: 15%);
+      }
+
       // FOR ALL child divs of card__header
       // June 2023 .... why div? .. could it be "> *" here?
       div {
