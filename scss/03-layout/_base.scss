@@ -1,7 +1,7 @@
 @use "../01-abstracts/index" as *;
 
 body {
-  background-color: get-color(bg, light);
+  //@include color-theme($xmetal-light-theme ... );
   font-weight: 400;
   display: grid;
 
@@ -18,10 +18,10 @@ body {
   font-size: var(--fs-normal);
 
 
-  @media (prefers-color-scheme: dark) {
-    background-color: get-color(bg, dark);
-    color: get-color(fg, dark);
-  }  
+  // @media (prefers-color-scheme: dark) {
+  //   background-color: get-color(bg, dark);
+  //   color: get-color(fg, dark);
+  // }  
 
   @media ($breakpoint-md) {
       grid-template: auto 1fr / 1fr;
@@ -70,7 +70,7 @@ ul, ol {
     li {
       list-style: none;
       margin: 1rem;
-      outline: 1px solid get-color(fg, light);
+      outline: 1px solid $theme-clr-light-bg;
       padding: 1rem;
     }
 

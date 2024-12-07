@@ -3,6 +3,8 @@
 /*********** Main Section in middle of page, between the header and footer *****/
 
 .main-section {
+  //@include color-theme;
+
   display: grid;
   gap: 1.5rem;
 
@@ -29,7 +31,7 @@
     &--outline {
       @extend .card;
 
-      outline: 1px solid get-color(main,light );
+      outline: 1px solid $theme-clr-main;
 
     }
 
@@ -40,7 +42,7 @@
       // @include clr-bg-and-fg($theme-clr-light, $theme-clr-main);
 
       align-items: center;
-      border-color: get-color(main,light);
+      border-color: $theme-clr-main;
       border-radius: 10px 10px 0 0;
       font-weight: bold;
       font-size: var(--h4);
@@ -65,7 +67,7 @@
 
       // i for fork awesome graphics
       i {
-        color: get-color(fg,light);
+        color: $theme-clr-light-text
       }
 
 
@@ -81,7 +83,6 @@
     .card__body,
     .card__text {
       padding: 1rem;
-      color: get-color(fg,light);
     }
   }
 
@@ -104,7 +105,7 @@
     }
 
    .btn {
-      outline: 1px solid get-color(fg,light);
+      outline: 1px solid $theme-clr-light-text
     }
   }
 
@@ -113,7 +114,7 @@
       padding: 0.25rem;
 
       &:hover {
-        outline: 1px solid get-color(accent,light);
+        outline: 1px solid $theme-clr-accent;
         text-decoration: none;
       }
     }
@@ -145,7 +146,7 @@
   .sidebar {
     // not sure about the placement here
     a {
-      color: get-color(fg,light);
+      color: $theme-clr-light-text;
       display: block;
 
       // idea for better UX
@@ -153,8 +154,8 @@
       margin: 0.25rem 0 0.25rem 1.5rem;
 
       &:hover {
-        color: get-color(accent,light);
-        outline: 1px solid get-color(main,light);
+        color: $theme-clr-accent;
+        outline: 1px solid $theme-clr-main
       }
     }
 

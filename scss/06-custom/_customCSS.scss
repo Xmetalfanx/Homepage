@@ -92,7 +92,8 @@ figcaption {
   display: none;
  
   .bar {
-      background-color: get-color(bg,light);
+      @include color-theme($xmetal-light-theme ... );
+      
       display: block;
       width: 25px;
       height: 3px;
