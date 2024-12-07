@@ -3,11 +3,21 @@
 // Idea: mixins are better when output changes based on variables passed to the mixin
 
 // because i am always forget the default values i use
-@mixin box-shadow($xaxis: 0, $yaxis: 0.5rem, $blur: 1rem, $color: $theme-clr-main) {
+@mixin box-shadow(
+  $xaxis: 0,
+  $yaxis: 0.5rem,
+  $blur: 1rem,
+  $color: $theme-clr-main
+) {
   box-shadow: $xaxis $yaxis $blur $color;
 }
 
-@mixin drop-shadow($xaxis: 0, $yaxis: 0.5rem, $blur: 1rem, $color: $theme-clr-dark) {
+@mixin drop-shadow(
+  $xaxis: 0,
+  $yaxis: 0.5rem,
+  $blur: 1rem,
+  $color: $theme-clr-dark
+) {
   filter: drop-shadow($xaxis $yaxis $blur $color);
 }
 
@@ -28,16 +38,20 @@
 
 // shorthand for
 // align-content:  (aligns top to bottom on a "y" axis) and
-// justify-content which aligns along the "x-axis" 
+// justify-content which aligns along the "x-axis"
 @mixin place-content($ac: normal, $jc: normal) {
   place-content: $ac $jc;
 }
 
-// @mixin outline($outline-size: 1px, $outline-style: solid, $outline-color: get-color(main,light)) {
+// @mixin outline($outline-size: 1px, $outline-style: solid, $outline-color: $theme-clr-main) {
 //   outline: $outline-color $outline-style $outline-size;
 // }
 
-@mixin border($border-size: 1px, $border-style: solid, $border-color: $theme-clr-main) {
+@mixin border(
+  $border-size: 1px,
+  $border-style: solid,
+  $border-color: $theme-clr-main
+) {
   border-width: $border-size;
   border-style: $border-style;
   border-color: $border-color;
@@ -52,41 +66,48 @@
   border-radius: $tl $tr $br $bl;
 }
 
-
-// Color mixins - Dec 2024 - this may become obsolete 
-@mixin clr-bg-and-fg($bg: $theme-clr-main, $fg: $theme-clr-light ) {
-  background-color:$bg;
+// Color mixins - Dec 2024 - this may become obsolete
+@mixin clr-bg-and-fg($bg: $theme-clr-main, $fg: $theme-clr-light) {
+  background-color: $bg;
   color: $fg;
 }
 
-
 // the name can change later
-@mixin color-theme($bg: $theme-clr-main, $fg:$theme-clr-light ) {
-  @if color-scheme == "dark"
-  {
-      background-color: $fg;
-      color: $bg;
-  } @else
-  {
-    background-color:$bg;
-    color: $fg;
+@mixin color-theme($bg: $theme-clr-light, $fg: $theme-clr-dark) {
+  // @if $color-scheme == "light" {
+  //   background-color: $bg;
+  //   color: $fg;
+  // } @else {
+  //   background-color: $fg;
+  //   color: $bg;
+  // }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $fg;
+    color: $bg;
   }
+
+  background-color: $bg;
+  color: $fg;
 }
 
 ///////////////////////////////////////////////////////////////////////////
 
 // idea only:
-@mixin section--title($font-size: 24px, $font-weight: 700, $color: $theme-clr-accent) {
+@mixin section--title(
+  $font-size: 24px,
+  $font-weight: 700,
+  $color: $theme-clr-accent
+) {
   color: $color;
   font-size: $font-size;
   font-weight: $font-weight;
   margin: 1rem auto;
-
 }
 
 @mixin icon-variant($height: 32px, $width: 32px) {
   @extend .icon;
 
-    height: $height;
-    width: $width;
+  height: $height;
+  width: $width;
 }
