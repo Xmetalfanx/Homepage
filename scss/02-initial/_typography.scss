@@ -62,26 +62,14 @@ h5,
 // End styling
 /////////////////////////////////////////////////////////////
 
-
-
 a {
-  background-color: transparent;
   text-decoration: none;
-  color: get-color(accent, light);
+
+  // @include color-theme(light, accent ...);
 
   &:hover,
   &:focus {
-    color: get-color(fg, light);
-
-    // dark theme 
-    @media (prefers-color-scheme: dark) {
-      color: get-color(bg, dark);
-    }
-  }
-
-  // dark theme
-  @media (prefers-color-scheme: dark) {
-    color: get-color(accent, dark);
+    // color: get-color(fg, light);
   }
 
 }
