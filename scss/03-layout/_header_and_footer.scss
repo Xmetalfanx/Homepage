@@ -5,7 +5,10 @@
 header,
 footer {
   @include flex;
-  @include clr-bg-and-fg;
+
+  background-color: get-color(accent, light);
+
+  // @include clr-bg-and-fg;
 
   font-family: var(--ffamily-helvetica);
   font-weight: 900;
@@ -13,22 +16,17 @@ footer {
   @include align-items-justify-content(center, space-between);
 
   a {
-    @include clr-bg-and-fg;
+    // @include clr-bg-and-fg;
 
     padding: 1.5rem;
-
-      // Oct 2023 ... didn't i just add these for the mobile menu issue? 
-      // commit: https://github.com/Xmetalfanx/website/commit/3c525894078d4cc5d8fe22bcae5213e26dfc0790
-      // why? 
-      // margin: -.5rem;
-      // padding: .5rem;
 
     &:hover,
     &:focus {
       @include border-radius-single(10%);
-      @include clr-bg-and-fg($theme-clr-light, $theme-clr-accent);
 
-      outline: 1px dotted $theme-clr-light;
+      // @include clr-bg-and-fg($theme-clr-light, $theme-clr-accent);
+
+      outline: 1px dotted get-color(light, light);
      
 
     }
@@ -97,7 +95,7 @@ header {
   .section-header {
     font-size: var(--h3);
     margin: 1rem;
-    text-shadow:  1px 1px 1px $theme-clr-accent;
+    text-shadow:  1px 1px 1px get-color(accent,light);
 
     i {
         scale: 2;
@@ -130,7 +128,7 @@ header {
       margin: 0 .8rem;
 
       :hover, :active {
-        @include clr-bg-and-fg($theme-clr-light, $theme-clr-main);
+        // @include clr-bg-and-fg($theme-clr-light, $theme-clr-main);
       }
     }
 
@@ -158,7 +156,7 @@ header {
         width: 100%;
         height: 100%;
         z-index: 10;
-        background: $theme-clr-main;
+        background-color: get-color(main,light);
         text-align: center;
 
         // justify-content: center;

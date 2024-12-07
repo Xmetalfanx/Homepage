@@ -10,7 +10,8 @@ input {
 // ?? is this too global now?
 label {
   @include border-radius(10px 10px 0 0);
-  @include clr-bg-and-fg;
+
+  // @include clr-bg-and-fg;
 
   display: block;
   font-weight: 700;

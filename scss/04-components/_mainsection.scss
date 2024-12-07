@@ -29,17 +29,18 @@
     &--outline {
       @extend .card;
 
-      outline: 1px solid $theme-clr-main;
+      outline: 1px solid get-color(main,light );
 
     }
 
     .card__header {
-      @include clr-bg-and-fg;
+      // @include clr-bg-and-fg;
       @include flex(row, nowrap, space-between);
-      @include clr-bg-and-fg($theme-clr-light, $theme-clr-main);
+
+      // @include clr-bg-and-fg($theme-clr-light, $theme-clr-main);
 
       align-items: center;
-      border-color: $theme-clr-main;
+      border-color: get-color(main,light);
       border-radius: 10px 10px 0 0;
       font-weight: bold;
       font-size: var(--h4);
@@ -64,7 +65,7 @@
 
       // i for fork awesome graphics
       i {
-        color: $theme-clr-dark;
+        color: get-color(fg,light);
       }
 
 
@@ -80,7 +81,7 @@
     .card__body,
     .card__text {
       padding: 1rem;
-      color: $theme-clr-dark;
+      color: get-color(fg,light);
     }
   }
 
@@ -103,7 +104,7 @@
     }
 
    .btn {
-      outline: 1px solid $theme-clr-dark;
+      outline: 1px solid get-color(fg,light);
     }
   }
 
@@ -112,7 +113,7 @@
       padding: 0.25rem;
 
       &:hover {
-        outline: 1px solid $theme-clr-accent;
+        outline: 1px solid get-color(accent,light);
         text-decoration: none;
       }
     }
@@ -144,7 +145,7 @@
   .sidebar {
     // not sure about the placement here
     a {
-      color: $theme-clr-dark;
+      color: get-color(fg,light);
       display: block;
 
       // idea for better UX
@@ -152,8 +153,8 @@
       margin: 0.25rem 0 0.25rem 1.5rem;
 
       &:hover {
-        color: $theme-clr-accent;
-        outline: 1px solid $theme-clr-main;
+        color: get-color(accent,light);
+        outline: 1px solid get-color(main,light);
       }
     }
 

@@ -67,18 +67,29 @@ h5,
 a {
   background-color: transparent;
   text-decoration: none;
-  color: $theme-clr-accent;
+  color: get-color(accent, light);
 
   &:hover,
   &:focus {
-    color: $theme-clr-dark;
+    color: get-color(fg, light);
+
+    // dark theme 
+    @media (prefers-color-scheme: dark) {
+      color: get-color(bg, dark);
+    }
   }
+
+  // dark theme
+  @media (prefers-color-scheme: dark) {
+    color: get-color(accent, dark);
+  }
+
 }
 
 code, kbd {
   display: inline-block;
 
-  @include clr-bg-and-fg;
+ // @include clr-bg-and-fg;
 
   font-style: initial;
   font-weight: 600;

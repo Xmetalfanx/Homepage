@@ -59,7 +59,7 @@
 
   // the actual version number
   .version {
-    color: $theme-clr-dark;
+    color: get-color(fg,light);
   }
 }
 
@@ -67,7 +67,7 @@
   // max-width: 100vw;
 
   * > a {
-    color: $theme-clr-dark;
+    color: get-color(fg,light);
   }
 
   h3 {
@@ -75,7 +75,7 @@
   }
 
   h4 {
-    color: $theme-clr-main;
+    color: get-color(main,light);
   }
 
   // useful in a few sections below
@@ -86,7 +86,7 @@
 
   ul {
     // @include flex(row, wrap, space-evenly);
-    @include outline(1px, solid, $theme-clr-dark);
+    // @include outline(1px, solid, $theme-clr-dark);
 
     li {
       font-weight: 800;
@@ -113,8 +113,8 @@
       &:hover,
       &:focus {
         // background-color: $theme-clr-accent;
-        color: $theme-clr-light;
-        background-color: $theme-clr-accent;
+        color: get-color(bg,light);
+        background-color: get-color(accent,light);
         transition: 0.25s;
       }
     }
@@ -137,7 +137,7 @@
 
       // the class for EACH addon
       .addon {
-        @include outline;
+        // @include outline;
 
 
         .browsers {
