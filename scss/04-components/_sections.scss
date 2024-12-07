@@ -59,7 +59,7 @@
 
   // the actual version number
   .version {
-    color: get-color(fg,light);
+    color: $theme-clr-light-text
   }
 }
 
@@ -67,7 +67,7 @@
   // max-width: 100vw;
 
   * > a {
-    color: get-color(fg,light);
+    color: $theme-clr-light-text
   }
 
   h3 {
@@ -75,7 +75,7 @@
   }
 
   h4 {
-    color: get-color(main,light);
+    color: $theme-clr-main
   }
 
   // useful in a few sections below
@@ -113,8 +113,8 @@
       &:hover,
       &:focus {
         // background-color: $theme-clr-accent;
-        color: get-color(bg,light);
-        background-color: get-color(accent,light);
+        color: $theme-clr-light-bg;
+        background-color: $theme-clr-accent;
         transition: 0.25s;
       }
     }
