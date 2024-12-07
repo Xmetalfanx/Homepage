@@ -57,7 +57,23 @@
   color: $fg;
 }
 
-// idea only: 
+
+// the name can change later
+@mixin color-theme($bg: $theme-clr-main, $fg:$theme-clr-light ) {
+  @if color-scheme == "dark"
+  {
+      background-color: $fg;
+      color: $bg;
+  } @else
+  {
+    background-color:$bg;
+    color: $fg;
+  }
+}
+
+///////////////////////////////////////////////////////////////////////////
+
+// idea only:
 @mixin section--title($font-size: 24px, $font-weight: 700, $color: $theme-clr-accent) {
   color: $color;
   font-size: $font-size;
