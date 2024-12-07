@@ -3,64 +3,30 @@
 $amazon-main-darker-green: hsl(174deg 100% 14%);
 $amzon-sub-lighter-green: hsl(173deg 56% 22%);
 $oct-theme: (
-  light: (
-    main: hsl(18deg 80% 35%),
-    // accent: hsl(120, 50%, 20%),
-    accent: hsl(120, 50%, 30%),
-    bg: hsl(0deg 0% 94%),
-    fg: hsl(120deg 30% 15%),
-  ),
-  dark: (
-    main: hsl(18deg 80% 35%),
-    // accent: hsl(120, 50%, 20%),
-    accent: hsl(120, 50%, 30%),
-    fg: hsl(0deg 0% 94%),
-    bg: hsl(120deg 30% 15%),
-  ),
+  main: hsl(18deg 80% 35%),
+  // accent: hsl(120, 50%, 20%),
+  accent: hsl(120, 50%, 30%),
+  light: hsl(0deg 0% 94%),
+  dark: hsl(120deg 30% 15%),
 );
 $nov-theme: (
   // main: hsl(43deg 90% 45%),
-  light:
-    (
-      main: hsl(29deg, 69%, 40%),
-      accent: hsl(20deg 86% 30%),
-      bg: hsl(0deg 0% 94%),
-      fg: hsl(0deg 0% 20%),
-    ),
-  dark: (
-    main: hsl(29deg, 69%, 40%),
-    accent: hsl(20deg 86% 30%),
-    fg: hsl(0deg 0% 94%),
-    bg: hsl(0deg 0% 20%),
-  )
+  main: hsl(29deg, 69%, 40%),
+  accent: hsl(20deg 86% 30%),
+  light: hsl(0deg 0% 94%),
+  dark: hsl(0deg 0% 20%)
 );
 $dec-theme: (
-  light: (
-    main: hsl(120deg 100% 20%),
-    accent: hsl(0deg 100% 25%),
-    bg: hsl(0deg 0% 94%),
-    fg: hsl(0deg 0% 20%),
-  ),
-  dark: (
-    main: hsl(120deg 100% 20%),
-    accent: hsl(0deg 100% 25%),
-    fg: hsl(0deg 0% 94%),
-    bg: hsl(0deg 0% 20%),
-  ),
+  main: hsl(120deg 100% 20%),
+  accent: hsl(0deg 100% 25%),
+  light: hsl(0deg 0% 100%),
+  dark: hsl(0deg 0% 20%),
 );
 $tropical-theme1: (
-  light: (
-    main: hsl(34deg 100% 38%),
-    accent: hsl(160deg 100% 25%),
-    bg: hsl(0deg 0% 94%),
-    fg: hsl(0deg 0% 20%),
-  ),
-  dark: (
-    main: hsl(34deg 100% 38%),
-    accent: hsl(160deg 100% 25%),
-    fg: hsl(0deg 0% 94%),
-    bg: hsl(0deg 0% 20%),
-  ),
+  main: hsl(34deg 100% 38%),
+  accent: hsl(160deg 100% 25%),
+  light: hsl(0deg 0% 94%),
+  dark: hsl(0deg 0% 20%),
 );
 
 // assign theme idea
@@ -70,4 +36,23 @@ $theme-clr-accent: map.get($current-theme, accent);
 $theme-clr-light: map.get($current-theme, light);
 $theme-clr-dark: map.get($current-theme, dark);
 
-// things will have to move to map.get now
+
+// NOTE TO SELF: light/dark in the var name means the theme, NOT the "color"
+// Light theme 
+$theme-clr-light-bg: $theme-clr-light;
+$theme-clr-light-text: $theme-clr-dark;
+
+// dark theme 
+$theme-clr-dark-bg: $theme-clr-dark;
+$theme-clr-dark-text: $theme-clr-light;
+
+// idea for ACTUAL vars to call in the sass/css
+$xmetal-light-theme: $theme-clr-light-bg, $theme-clr-light-text;
+$xmetal-dark-theme: $theme-clr-dark-bg, $theme-clr-dark-text;
+
+
+// should I rename these for the light/dark theme ?
+// idea: i will
+// originally what i had is commented out
+// $theme-clr-light: map.get($current-theme, light);
+// $theme-clr-dark: map.get($current-theme, dark);
