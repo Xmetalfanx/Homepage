@@ -1,13 +1,15 @@
 @use "../01-abstracts/index" as *;
+@use "sass:color";
 
 // @use "../05-fromBS/index" as *;
 
 header,
 footer {
   @include flex;
+  @include color-theme($theme-clr-main, $theme-clr-light);
 
-  background-color: $theme-clr-main;
-  color: $theme-clr-light;
+  // background-color: $theme-clr-main;
+  // color: $theme-clr-light;
   font-family: var(--ffamily-helvetica);
   font-weight: 900;
 
@@ -24,11 +26,9 @@ footer {
     &:focus {
       @include border-radius-single(10%);
 
-      background-color: lighten($color: $theme-clr-main, $amount: 10);
+      background-color: color.adjust($theme-clr-main, $lightness: 10);
       outline: 1px dotted $theme-clr-light-bg;
     }
-
-
 
   }
 

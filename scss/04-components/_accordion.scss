@@ -1,7 +1,5 @@
 @use "../01-abstracts/index" as *;
 
-
-
 // hide the checkbox
 input {
   display: none;
@@ -10,8 +8,11 @@ input {
 // ?? is this too global now?
 label {
   @include border-radius(10px 10px 0 0);
+  @include color-theme($theme-clr-accent, $theme-clr-light ...);
 
-  // @include clr-bg-and-fg;
+  @media (prefers-color-scheme: dark) {
+    @include color-theme($theme-clr-dark, $theme-clr-light...);
+  }
 
   display: block;
   font-weight: 700;
@@ -20,9 +21,11 @@ label {
 }
 
 .accordion-content {
+  @include border-radius-single;
+  
   box-shadow: var(--box-shadow-light);
   display: block;
-  
+
   // why 3 values? ... a mistake?
   margin: 0 0 1rem;
   padding: 10px 25px;
@@ -30,7 +33,7 @@ label {
   // outline: 1px solid $theme-clr-dark;
 }
 
-// why do i have things broken out like this? ... 
+// why do i have things broken out like this? ...
 @media ($breakpoint-lg) {
   label {
     &::before {
@@ -46,14 +49,13 @@ label {
 
   // default on small screens
   input + .accordion-label::before {
-      content: var(--fa-arrow-right);
+    content: var(--fa-arrow-right);
   }
 
   // down arrow
   input:checked + .accordion-label::before {
-      content: var(--fa-arrow-down);
+    content: var(--fa-arrow-down);
   }
-
 
   // default unchecked: hide menu
   input ~ .accordion-content {
@@ -66,18 +68,16 @@ label {
   // checked: show menu
   input:checked ~ .accordion-content {
     height: auto;
-    transition: .8s;
+    transition: 0.8s;
 
     a {
       margin: 2rem;
     }
   }
 
-
   .accordion-content {
     padding: 1rem 0;
   }
-
 }
 
 @media ($breakpoint-md) {

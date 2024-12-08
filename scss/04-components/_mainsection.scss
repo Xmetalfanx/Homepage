@@ -1,4 +1,5 @@
 @use "../01-abstracts/index" as *;
+@use "sass:color";
 
 /*********** Main Section in middle of page, between the header and footer *****/
 
@@ -12,7 +13,6 @@
   grid-area: main-section;
   line-height: 1.6;
   padding: 1.5rem;
-
 
   // card everywhere else is flex... why grid here? ... shouldn't i just switch them all to flex?
   // was there a need for grid? ...
@@ -32,7 +32,6 @@
       @extend .card;
 
       outline: 1px solid $theme-clr-main;
-
     }
 
     .card__header {
@@ -67,9 +66,8 @@
 
       // i for fork awesome graphics
       i {
-        color: $theme-clr-light-text
+        color: $theme-clr-light-text;
       }
-
 
       // Oct 2021: what is this for?
       &--wide {
@@ -86,9 +84,9 @@
     }
   }
 
-
   // idea: overall container for "row of btns"
-  .btn-container, .list-container {
+  .btn-container,
+  .list-container {
     @include flex(row, wrap, space-around);
 
     /* this should be generic (more detailed css can build on this) */
@@ -104,8 +102,8 @@
       }
     }
 
-   .btn {
-      outline: 1px solid $theme-clr-light-text
+    .btn {
+      outline: 1px solid $theme-clr-light-text;
     }
   }
 
@@ -146,7 +144,7 @@
   .sidebar {
     // not sure about the placement here
     a {
-      color: $theme-clr-light-text;
+      //color: $theme-clr-light-text;
       display: block;
 
       // idea for better UX
@@ -154,8 +152,8 @@
       margin: 0.25rem 0 0.25rem 1.5rem;
 
       &:hover {
-        color: $theme-clr-accent;
-        outline: 1px solid $theme-clr-main
+        background-color: color.adjust($theme-clr-light, $lightness: -10);
+        outline: 1px solid $theme-clr-main;
       }
     }
 
@@ -163,7 +161,6 @@
       margin: 1rem 0;
       padding: 0;
     }
-
   }
 
   // the main sections of each side of the site
@@ -194,8 +191,7 @@
         "sidebar"
         "pContent";
       max-width: 100vw;
-      margin: 0 .5rem;
-
+      margin: 0 0.5rem;
     }
   }
 }
