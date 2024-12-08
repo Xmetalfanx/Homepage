@@ -1,4 +1,5 @@
 @use "color-themes" as *;
+@use "sass:color";
 
 // Idea: mixins are better when output changes based on variables passed to the mixin
 
@@ -66,22 +67,8 @@
   border-radius: $tl $tr $br $bl;
 }
 
-// Color mixins - Dec 2024 - this may become obsolete
-@mixin clr-bg-and-fg($bg: $theme-clr-main, $fg: $theme-clr-light) {
-  background-color: $bg;
-  color: $fg;
-}
-
 // the name can change later
-@mixin color-theme($bg: $theme-clr-light, $fg: $theme-clr-dark) {
-  // @if $color-scheme == "light" {
-  //   background-color: $bg;
-  //   color: $fg;
-  // } @else {
-  //   background-color: $fg;
-  //   color: $bg;
-  // }
-
+@mixin color-theme($bg: transparent, $fg: transparent) {
   @media (prefers-color-scheme: dark) {
     background-color: $fg;
     color: $bg;
@@ -90,6 +77,14 @@
   background-color: $bg;
   color: $fg;
 }
+
+// @mixin color-lighten($color: null, $amount: 10) {
+//   color.adjust($color, $lightness: $amount);
+// }
+
+// @mixin color-darken($color: null, $amount: -10) {
+//   color.adjust($color, $lightness: $amount);
+// }
 
 ///////////////////////////////////////////////////////////////////////////
 
