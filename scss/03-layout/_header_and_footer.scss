@@ -119,6 +119,7 @@ header {
   // oct 2023 some more global borders broke the LEFT hand title .. 
   .topnav {
     @include flex;
+    @include color-theme($theme-clr-main, $theme-clr-light ... );
 
     font-weight: bold;
     font-size: var(--h3);
@@ -152,15 +153,10 @@ header {
       of horizontally) */
 
       &.responsive {
-        @include color-theme(main, light);
-        
-        position: relative;
-        width: 100%;
-        height: 100%;
+        align-items: center;
         z-index: 10;
-        text-align: center;
 
-        // justify-content: center;
+        // transform: translate(0 -3rem);
         transition: 400ms
 
         a {
@@ -168,12 +164,6 @@ header {
           align-self: center;
         }
 
-        .icon {
-          align-self: center;
-
-          // padding-top: 1.2rem;
-          translate: 0 -0.6rem;
-        }
       }
     }
 
@@ -185,7 +175,7 @@ header {
 
         .icon {
           // ... why a display of flex here?
-          @include flex(row, nowrap, center); 
+          @include flex(row, nowrap, center);
         }
       }
 
@@ -196,9 +186,9 @@ header {
         z-index: 10;
         translate: 0 -18rem;
 
-        .hamburger-menu {
-          translate: 0 2.6rem;
-        }
+        // .hamburger-menu {
+        //   translate: 0 2.6rem;
+        // }
 
         a {
           line-height: 4rem;
@@ -215,5 +205,14 @@ header {
 
       }
     }
+  }
+
+  // the main footer on smaller layouts 
+  @media ($breakpoint-lg) {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 0;
+    height: 100px;
   }
 }
