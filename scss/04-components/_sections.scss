@@ -58,16 +58,23 @@
   }
 
   // the actual version number
-  .version {
-    color: $theme-clr-dark;
+   @include themify($current-theme) {
+    // Nov 2024: this seems hyper-specific 
+    .version {
+      color: themed("text");
+      background-color: themed("bg");
+    }
   }
 }
 
 #browser-frontpage {
   // max-width: 100vw;
 
-  * > a {
-    color: $theme-clr-dark;
+  @include themify($current-theme) {
+    * > a {
+      color: themed("dark");
+      background-color: themed("bg");
+    }
   }
 
   h3 {
@@ -138,7 +145,6 @@
       // the class for EACH addon
       .addon {
         @include outline;
-
 
         .browsers {
           display: flex;
