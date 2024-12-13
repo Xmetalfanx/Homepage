@@ -17,12 +17,12 @@ label {
   position: relative;
 }
 
-@include themify($current-theme) {
-  label {
-    color: themed("fg");
-    background-color: themed("bg");
-  }
-}
+// @include themify($current-theme) {
+//   label {
+//     color: themed("fg");
+//     background-color: themed("bg");
+//   }
+// }
 
 .accordion-content {
   box-shadow: var(--box-shadow-light);
@@ -82,13 +82,13 @@ label {
 
 }
 
-@include themify($current-theme) {
-  label:hover {
-    // background-color: $theme-clr-accent;
+// @include themify($current-theme) {
+//   label:hover {
+//     // background-color: $theme-clr-accent;
     
-    background-color: themify['accent'];
-  }
-}
+//     background-color: themify['accent'];
+//   }
+// }
 
 @media ($breakpoint-md) {
   .accordion {

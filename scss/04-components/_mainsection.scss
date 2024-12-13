@@ -75,27 +75,27 @@
       }
     }
 
-    @include themify($current-theme) {
-      // i for fork awesome graphics
-      i {
-        color: themed("dark");
-        background-color: themed("light");
-      }
-    }
+    // @include themify($current-theme) {
+    //   // i for fork awesome graphics
+    //   i {
+    //     color: themed("dark");
+    //     background-color: themed("light");
+    //   }
+    // }
 
     .card__body,
     .card__text {
       padding: 1rem;
     }
 
-    @include themify($current-theme) {
-      // i for fork awesome graphics
-      .card__body,
-      .card__text {
-        color: themed("fg");
-        background-color: themed("bg");
-      }
-    }
+    // @include themify($current-theme) {
+    //   // i for fork awesome graphics
+    //   .card__body,
+    //   .card__text {
+    //     color: themed("fg");
+    //     background-color: themed("bg");
+    //   }
+    // }
   }
 
 
@@ -121,12 +121,12 @@
       outline-style: solid;
     }
 
-    @include themify($current-theme) {
-      .btn {
-        color: themed("dark");
-        background-color: themed("bg");
-      }
-    }
+    // @include themify($current-theme) {
+    //   .btn {
+    //     color: themed("dark");
+    //     background-color: themed("bg");
+    //   }
+    // }
 
   }
 
@@ -184,17 +184,17 @@
         outline: 1px solid $theme-clr-main;
       }
 
-      @include themify($current-theme) {
-        a {
-          color: themed("accent");
-          background-color: themed("light");
+      // @include themify($current-theme) {
+      //   a {
+      //     color: themed("accent");
+      //     background-color: themed("light");
 
-          &:hover {
-            color: themed("main");
-            background-color: themed("light");
-          }
-        }
-      }
+      //     &:hover {
+      //       color: themed("main");
+      //       background-color: themed("light");
+      //     }
+      //   }
+      // }
     }
 
     img {
@@ -238,9 +238,9 @@
   }
 }
 
-@include themify($current-theme) {
-  .main-section .card .card__header {
-    background-color: themed['main'];
-    color: themed['fg']
-  }
-}
+// @include themify($current-theme) {
+//   .main-section .card .card__header {
+//     background-color: themed['main'];
+//     color: themed['fg']
+//   }
+// }

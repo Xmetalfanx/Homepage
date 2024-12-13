@@ -66,14 +66,14 @@ ul, ol {
 
 }
 
-@include themify($current-theme) {
-  body {
-    background-color: themed("bg");
-    color: themed("fg");
-  }
+// @include themify($current-theme) {
+//   body {
+//     background-color: themed("bg");
+//     color: themed("fg");
+//   }
 
-  ul, ol .list-wide {
-    outline: 1px solid themed["bg"];
-  }
+//   ul, ol .list-wide {
+//     outline: 1px solid themed["bg"];
+//   }
 
-}
+// }
