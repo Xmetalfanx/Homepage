@@ -6,6 +6,7 @@
 header,
 footer {
   @include flex;
+  @include color-theme($theme-clr-main, $theme-clr-light);
 
   font-family: var(--ffamily-helvetica);
   font-weight: 900;
@@ -20,14 +21,13 @@ footer {
       // why?
       // margin: -.5rem;
       // padding: .5rem;
+      @include color-theme(transparent, $theme-clr-light);
 
     &:hover,
     &:focus {
       @include border-radius-single(10%);
 
       background-color: color.adjust($theme-clr-main, $lightness: 10%);
-      color: $theme-clr-light;
-      
       outline: 1px dotted $theme-clr-light;
 
     }

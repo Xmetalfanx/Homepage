@@ -1,7 +1,5 @@
 @use "../01-abstracts/index" as *;
 
-
-
 // hide the checkbox
 input {
   display: none;
@@ -10,6 +8,7 @@ input {
 // ?? is this too global now?
 label {
   @include border-radius(10px 10px 0 0);
+  @include color-theme($theme-clr-accent, $theme-clr-light);
 
   display: block;
   font-weight: 700;
@@ -33,6 +32,8 @@ label {
   padding: 10px 25px;
 
   // outline: 1px solid $theme-clr-dark;
+
+  a { color: $theme-clr-main; }
 }
 
 // why do i have things broken out like this? ... 
