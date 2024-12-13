@@ -39,11 +39,7 @@
   outline-style: $outline-style;
   outline-width: $outline-size;
 
-  @include themify($current-theme) {
-    {
-      color: themed("main");
-    }
-  }
+
 }
 
 @mixin border($border-size: 1px, $border-style: solid, $border-color: $theme-clr-main) {
@@ -82,15 +78,30 @@
     width: $width;
 }
 
-@mixin themify($current-theme) {
-  @each $name, $values in $current-theme {
-    .#{$name}-theme {
-      $theme-map: $values !global;
-      @content;
-    }
+@mixin color-theme($bg: $theme-clr-light, $fg:$theme-clr-dark)
+{
+  background-color: $bg;
+  color: $fg;
+
+  @media (prefers-color-scheme: dark) {
+    background-color: $fg;
+    color: $bg;
   }
 }
 
-@function themed($key) {
-  @return map.get($theme-map, $key);
-}
+
+////////////////////////////////////////////////////////////////
+// Themings got goofy with git feature branch mishaps and i dont reconginze the code below 
+
+// @mixin themify($current-theme) {
+//   @each $name, $values in $current-theme {
+//     .#{$name}-theme {
+//       $theme-map: $values !global;
+//       @content;
+//     }
+//   }
+// }
+
+// @function themed($key) {
+//   @return map.get($current-theme, $key);
+// }
