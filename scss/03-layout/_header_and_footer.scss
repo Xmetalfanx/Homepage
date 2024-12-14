@@ -54,12 +54,6 @@ footer {
     i {
       scale: 2;
       margin: 0 1rem;
-
-      @media ($breakpoint-lg) {
-        scale: unset;
-        margin: 0 .5rem;
-
-      }
     }
 
   }
