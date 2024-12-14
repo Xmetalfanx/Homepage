@@ -111,9 +111,8 @@ header {
 
     @media ($breakpoint-lg) {
       // only hides graphic
-      i {
-        display: none;
-      }
+
+      display: none;
     }
 
     @media ($breakpoint-md) {
