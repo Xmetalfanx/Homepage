@@ -49,11 +49,17 @@ footer {
 
   .contacts,
   .site-made {
-    width: 50%;
+    width: fit-content;
 
     i {
       scale: 2;
       margin: 0 1rem;
+
+      @media ($breakpoint-lg) {
+        scale: unset;
+        margin: 0 .5rem;
+
+      }
     }
 
   }
