@@ -70,10 +70,9 @@ function softwareData(data) {
                 // const windowsIcon =
                 //   '<img src="/graphics/simpleIcons/darkBG/windows.svg" alt="Windows Icon SVG" class="icon--size32" />';
                 const linuxIcon = 
-                    '<i class="fa fa-2x fa-linux mr-4" aria-hidden="true"></i>';
+                    '<i class="fa-brands fa-2x fa-linux mr-4" aria-hidden="true"></i>';
                 const windowsIcon =
-                    '<i class="fa fa-2x fa-windows" aria-hidden="true"></i>'
-
+                    '<i class="fa-brands fa-2x fa-windows" aria-hidden="true"></i>'
 
                 const cpIcon = linuxIcon + windowsIcon;
 

@@ -29,5 +29,5 @@
 <div class="accordion">
   <input id="links" type="checkbox">
   <label for="links">External Links</label>
-  <div class="accordion-content"><a href="https://www.deviantart.com/" target="_blank" aria-label="Deviant Art Site Link">DevianArt<i class="fa fa-4x fa-deviantart text-dark m-2" aria-hidden="true"></i></a></div>
+  <div class="accordion-content"><a href="https://www.deviantart.com/" target="_blank" aria-label="Deviant Art Site Link">DevianArt<i class="fa-brands fa-4x fa-deviantart text-dark m-2" aria-hidden="true"></i></a></div>
 </div>
