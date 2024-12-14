@@ -38,6 +38,7 @@ footer {
 footer {
   padding: 1.5rem;
   grid-area: footer;
+  flex-wrap: wrap;
 
   img {
     display: inline;
@@ -58,13 +59,6 @@ footer {
 
   }
 
-  // hides the ENTIRE footer on lower than a md layout
-  // useful now that the top menus are at the bottom for UX, at these layouts
-  @media ($breakpoint-md) {
-    display: none;
-  }
-
-
   .contacts {
     text-align: right;
 
@@ -79,6 +73,12 @@ footer {
     .site-made {
       display: none;
     }
+  }
+
+    // hides the ENTIRE footer on lower than a md layout
+  // useful now that the top menus are at the bottom for UX, at these layouts
+  @media ($breakpoint-md) {
+    display: none;
   }
 
 }
