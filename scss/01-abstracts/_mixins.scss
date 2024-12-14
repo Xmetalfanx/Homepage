@@ -55,14 +55,6 @@
   border-radius: $tl $tr $br $bl;
 }
 
-
-// Color mixins
-// @mixin clr-bg-and-fg($main-color: $theme-clr-main, $light-theme-color:$theme-clr-light) {
-//   background-color:$main-color;
-//   color: $light-theme-color;
-// }
-
-// idea only: 
 @mixin section-title($font-size: 24px, $font-weight: 700, $color: $theme-clr-accent) {
   color: $color;
   font-size: $font-size;
@@ -83,9 +75,13 @@
   background-color: $bg;
   color: $fg;
 
+}
+
+@mixin color-theme-dark($bg: $theme-clr-dark, $fg:$theme-clr-light)
+{
   @media (prefers-color-scheme: dark) {
-    background-color: $fg;
-    color: $bg;
+    background-color: $bg;
+    color: $fg;
   }
 }
 
