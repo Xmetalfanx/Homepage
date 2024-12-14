@@ -153,6 +153,11 @@ header {
       look good on small screens (display the links vertically instead
       of horizontally) */
 
+      width: 100vw;
+      justify-content: center;
+      
+
+
       &.responsive {
         position: relative;
         width: 100%;
