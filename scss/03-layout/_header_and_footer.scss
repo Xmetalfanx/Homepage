@@ -190,7 +190,8 @@ header {
 
         position: relative;
         z-index: 10;
-        translate: 0 -18rem;
+
+        // transform: translate(0 -18rem);
 
         .hamburger-menu {
           translate: 0 2.6rem;
@@ -218,6 +219,7 @@ header {
   bottom: 0;
   position: fixed;
   width: 100vw;
+  z-index: 100;
   }
 }
 
