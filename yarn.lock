@@ -3904,7 +3904,6 @@ __metadata:
     remark-stringify: "npm:^11.0.0"
     sass: "npm:^1.83.0"
     sitemap: "npm:^8.0.0"
-    stable: "npm:^0.1.8"
     stylelint: "npm:^16.11.0"
     stylelint-config-standard: "npm:^36.0.1"
     stylelint-config-standard-scss: "npm:^14.0.0"
@@ -8317,13 +8316,6 @@ __metadata:
   dependencies:
     minipass: "npm:^7.0.3"
   checksum: 10c0/e5a1e23a4057a86a97971465418f22ea89bd439ac36ade88812dd920e4e61873e8abd6a9b72a03a67ef50faa00a2daf1ab745c5a15b46d03e0544a0296354227
-  languageName: node
-  linkType: hard
-
-"stable@npm:^0.1.8":
-  version: 0.1.8
-  resolution: "stable@npm:0.1.8"
-  checksum: 10c0/df74b5883075076e78f8e365e4068ecd977af6c09da510cfc3148a303d4b87bc9aa8f7c48feb67ed4ef970b6140bd9eabba2129e28024aa88df5ea0114cba39d
   languageName: node
   linkType: hard
 
