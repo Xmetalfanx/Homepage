@@ -2,7 +2,7 @@
 
   <div class="section-header">
     <a href="/linuxHQ/index.php">
-      <i class="fa fa-linux" aria-hidden="true"></i>
+      <i class="fa-brands fa-linux" aria-hidden="true"></i>
       <div class="d-inline-block">LinuxHQ</div>
     </a>
   </div>

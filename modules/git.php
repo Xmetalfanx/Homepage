@@ -4,7 +4,15 @@
   <div class="git-container">
     <div class="git-group">
       <div class="git-section-title">Linux Setup  </div>
-      <div class="git-icons"><a href="https://github.com/Xmetalfanx/linuxSetup" target="_blank" rel="noopener" aria-label="Link to Xmetal's Github page for LinuxSetup scripts"><i class="fa fa-3x fa-github" aria-hidden="true"></i></a><a href="https://gitlab.com/Xmetal/linuxSetup" target="_blank" rel="noopener" aria-label="Link to Xmetal's Gitlab page for LinuxSetup scripts"><i class="fa fa-3x fa-gitlab" aria-hidden="true"></i></a></div>
+      <div class="git-icons">
+        <a href="https://github.com/Xmetalfanx/linuxSetup" target="_blank" rel="noopener" aria-label="Link to Xmetal's Github page for LinuxSetup scripts">
+          <i class="fa-brands fa-github fa-3x" aria-hidden="true"></i>
+      </a>
+        
+        <a href="https://gitlab.com/Xmetal/linuxSetup" target="_blank" rel="noopener" aria-label="Link to Xmetal's Gitlab page for LinuxSetup scripts">
+          <i class="fa-brands fa-gitlab fa-3x" aria-hidden="true"></i>
+      </a>
+      </div>
       <div>Helps a user setup Linux by:</div>
       <ul>
         <li>Installing Updates and (when appropriate) Optimizing mirrors</li>
@@ -22,7 +30,15 @@
     </div>
     <div class="git-group">
       <div class="git-section-title">Linux Theming</div>
-      <div class="git-icons"><a href="https://github.com/Xmetalfanx/linuxThemes" target="_blank" rel="noopener" aria-label="Link to Xmetal's Github page for Linux Theming scripts"><i class="fa fa-3x fa-github" aria-hidden="true"></i></a><a href="https://gitlab.com/Xmetal/linuxThemes" target="_blank" rel="noopener" aria-label="Link to Xmetal's Gitlab page for Linux Theming scripts"><i class="fa fa-3x fa-gitlab" aria-hidden="true"></i></a></div>
+      <div class="git-icons">
+        <a href="https://github.com/Xmetalfanx/linuxThemes" target="_blank" rel="noopener" aria-label="Link to Xmetal's Github page for Linux Theming scripts">
+          <i class="fa-brands fa-github fa-3x" aria-hidden="true"></i>
+        </a>
+
+        <a href="https://gitlab.com/Xmetal/linuxThemes" target="_blank" rel="noopener" aria-label="Link to Xmetal's Gitlab page for Linux Theming scripts">
+          <i class="fa-brands fa-gitlab fa-3x" aria-hidden="true"></i>
+        </a>
+      </div>
       <div>This originally was going to be a part of the LinuxSetup scripts, though it grew too much and I decided to branch it out. This installs themes and icon packs of well liked Linux Themes into your system. I have alot of plans for this for version and distro detection.</div>
     </div>
   </div>
