@@ -33,7 +33,10 @@ label {
 
   // outline: 1px solid $theme-clr-dark;
 
-  a { color: $theme-clr-main; }
+  a {
+    @include color-theme(transparent, $theme-clr-main);
+    @include color-theme-dark(transparent, $theme-clr-light);
+  }
 }
 
 // why do i have things broken out like this? ... 

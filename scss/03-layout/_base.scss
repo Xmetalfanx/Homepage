@@ -1,6 +1,8 @@
 @use "../01-abstracts/index" as *;
 
 body {
+  @include color-theme-dark(transparent, $theme-clr-light);
+
   display: grid;
 
   // grid-template: row / column

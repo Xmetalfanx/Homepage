@@ -7,6 +7,8 @@
   display: grid;
   gap: 1.5rem;
 
+  @include color-theme-dark;
+
   // for the grid above this
   grid-area: main-section;
   line-height: 1.6;
