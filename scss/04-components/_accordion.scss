@@ -9,6 +9,7 @@ input {
 label {
   @include border-radius(10px 10px 0 0);
   @include color-theme($theme-clr-accent, $theme-clr-light);
+  @include color-theme-dark(#000000, $theme-clr-light);
 
   display: block;
   font-weight: 700;
@@ -26,6 +27,11 @@ label {
 .accordion-content {
   box-shadow: var(--box-shadow-light);
   display: block;
+  
+  @media (prefers-color-scheme: dark) {
+    border: 1px solid $theme-clr-light;
+  }
+  
   
   // why 3 values? ... a mistake?
   margin: 0 0 1rem;

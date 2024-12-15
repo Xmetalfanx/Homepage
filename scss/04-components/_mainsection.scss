@@ -226,6 +226,9 @@
   }
 
   @media ($breakpoint-lg) {
+    // not sure why !important is needed atm
+    margin: 0 !important;
+
     &--left-wide,
     &--right-wide {
       // rows / columns
