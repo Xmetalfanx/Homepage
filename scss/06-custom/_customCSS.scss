@@ -82,15 +82,6 @@ figcaption {
   padding: 1rem;
 }
 
-
-// @include themify($current-theme) {
-//   header {
-//     color: themed("fg");
-//     background-color: themed("bg");
-//   }
-// }
-
-
 // for custom hamburger (moving away from fork awesome) menu
 // why is this here? ... should it be in header_and_footer.scss?
 // Oct 2023: this is there too ... what did i do?
@@ -113,12 +104,7 @@ figcaption {
   }
 }
 
-// @include themify($current-theme) {
-//   .hamburger-menu .bar {
-//     // if i remember this shouldn't change based on the l/d theme
-//     background-color: themify['light']
-//   }
-// }
+
 
 // JUST an idea
 .cardContainer {
