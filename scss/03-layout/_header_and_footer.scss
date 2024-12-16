@@ -172,7 +172,8 @@ header {
           align-self: center;
 
           // padding-top: 1.2rem;
-          translate: 0 -0.6rem;
+          // translate: 0 -0.6rem;
+          transform: translate(0 -0.6rem);
         }
       }
     }
@@ -198,7 +199,8 @@ header {
         // transform: translate(0 -18rem);
 
         .hamburger-menu {
-          translate: 0 2.6rem;
+          // translate: 0 2.6rem;
+          transform: translate(0 2.6rem);
         }
 
         a {
