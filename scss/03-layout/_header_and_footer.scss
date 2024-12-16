@@ -161,7 +161,8 @@ header {
         text-align: center;
 
         // justify-content: center;
-        transition: 400ms
+        transition: 1000ms;
+        transform: translate(0, -1rem);
 
         a {
           display: block;
