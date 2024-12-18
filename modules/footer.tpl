@@ -3,17 +3,20 @@
     <!-- SASS -->
     <a href="https://www.sass-lang.com/" target="_blank" aria-label="SASS Developer site" rel="noopener">
       <i class="fa-brands fa-sass" aria-hidden="true"></i>
-      <span class="hiddenAccessLinkText">SASS Developer site</span></a>
+      <span class="hiddenAccessLinkText">SASS Developer site</span>
+    </a>
 
     <!-- HTML 5-->
     <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" aria-label="Mozilla Developer Site for HTML5" target="_blank" rel="noopener">
       <i class="fa-brands fa-html5" aria-hidden="true"></i>
-      <span class="hiddenAccessLinkText">Mozilla Developer Site for HTML5</span></a>
+      <span class="hiddenAccessLinkText">Mozilla Developer Site for HTML5</span>
+    </a>
 
     <!-- CSS 3-->
     <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" aria-label="Mozilla Developer Site for CSS3" target="_blank" rel="noopener">
       <i class="fa-brands fa-css" aria-hidden="true"></i>
-      <span class="hiddenAccessLinkText">Mozilla Developer Site for CSS3</span></a>
+      <span class="hiddenAccessLinkText">Mozilla Developer Site for CSS3</span>
+    </a>
 
     <!-- Javascript-->
     <i class="fa-brands fa-js"></i>
@@ -46,17 +49,17 @@
 
     <!-- Mastodon -->
     <a href="https://fosstodon.org/@Xmetal" aria-label="Xmetalfanx on Mastodon" target="_blank" rel="noopener">
-      <i class="fa-brands fa-mastodon"  aria-hidden="true"></i>
+      <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
       <span class="hiddenAccessLinkText">Find me on Mastodon</span>
     </a>
 
-    <!-- Bluesky --> 
+    <!-- Bluesky -->
     <a href="xmetal.bsky.social" aria-label="Xmetalfanx on Bluesky" target="_blank" rel="noopener">
       <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
       <span class="hiddenAccessLinkText">Find me on Bluesky</span>
     </a>
 
-    <!-- Twitter --> 
+    <!-- Twitter -->
     <a href="https://twitter.com/Xmetalfanx" aria-label="Xmetalfanx on Twitter" target="_blank" rel="noopener">
       <i class="fa-brands fa-twitter" aria-hidden="true"></i>
       <span class="hiddenAccessLinkText">Find me on Twitter</span>

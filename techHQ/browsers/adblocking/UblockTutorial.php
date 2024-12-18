@@ -23,10 +23,12 @@
   <div class="card-text mx-auto p-3">
     <ul>
       <li>Ublock Enabled (note: Blue Color)
-      <img src="/techHQ/browsers/adblocking/screenshots/ublock/ublockEnabled.jpg" alt="Ublock Enabled"></li>
+      <img src="/techHQ/browsers/adblocking/screenshots/ublock/ublockEnabled.jpg" alt="Ublock Enabled">
+    </li>
       <br/> 
       <li>Ublock Disabled (note: Grey Color)
-      <img src="/techHQ/browsers/adblocking/screenshots/ublock/ublockDisabled.jpg" alt="Ublock Disabled"></li>
+      <img src="/techHQ/browsers/adblocking/screenshots/ublock/ublockDisabled.jpg" alt="Ublock Disabled">
+    </li>
     </ul>
   </div>
 </div>
@@ -40,4 +42,9 @@
   </div>
 </div>
 
-<?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>
+
+<!-- test -->
+</div>
+
+<!-- include tech footer, than the startpage box and then the regular footer -->
+<?php include($siteRoot . '/modules/tech/baseTechFooter.tpl'); ?>

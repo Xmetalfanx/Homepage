@@ -46,4 +46,11 @@
 
 <div>Also remember as I said on another Ublock Origin page I have .. there are Global (this would apply for that domain no matter the page you are on) and local (only applies to that current website you are on, for the domain you are setting a rule for), rules</div>
 
-<?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>
+
+<!-- test -->
+</div>
+
+
+
+<!-- include tech footer, than the startpage box and then the regular footer -->
+<?php include($siteRoot . '/modules/tech/baseTechFooter.tpl'); ?>

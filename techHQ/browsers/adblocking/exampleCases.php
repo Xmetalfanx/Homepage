@@ -36,6 +36,8 @@
   </div>
 </div>
 
+<!-- test -->
+</div>
 
 
 <?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>

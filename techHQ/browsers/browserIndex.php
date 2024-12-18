@@ -91,6 +91,8 @@
         </div>
       </div>
     </div>
+
+
   <div id="total-addons">
     <h3>Browser Addons</h3>
     <div id="addons-container">
@@ -142,8 +144,9 @@
   </div>
 </div>
 
-<!-- why are these here? -->
+
 </div>
 	</div>
 
-<?php include($siteRoot . '/modules/baseTechFooter.tpl'); ?>
+<!-- include tech footer, than the startpage box and then the regular footer -->
+<?php include($siteRoot . '/modules/tech/baseTechFooter.tpl'); ?>

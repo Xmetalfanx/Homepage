@@ -88,4 +88,8 @@
 <div>Remember you can set these things Globally (effects that domain's connection on all/any sites you visit), or locally (JUST the current website/domain you are currently on, for the domain that you are setting the rule for)</div>
 <div>Years ago I use to not understand Noop, and I would just set Dynamic Filters to Allow (Green), and now I think that was a bad idea ... well not "bad" ... but it's better to use Noop as it will ALLOW the connection, and only block it stuff if some ad/tracking list has that domain listed in it.</div>
 
-<?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>
+
+</div>
+
+<!-- include tech footer, than the startpage box and then the regular footer -->
+<?php include($siteRoot . '/modules/tech/baseTechFooter.tpl'); ?>
