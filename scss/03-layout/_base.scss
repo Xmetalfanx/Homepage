@@ -1,6 +1,7 @@
 @use "../01-abstracts/index" as *;
 
 body {
+  @include color-theme;
   @include color-theme-dark(transparent, $theme-clr-light);
 
   display: grid;
@@ -19,13 +20,24 @@ body {
   font-size: var(--fs-normal);
   font-weight: 400;
 
-  @media ($breakpoint-md) {
-      grid-template: auto 1fr / 1fr;
-      grid-template-areas:
-        "main-section"
-        "header";
+  // idea: for main section that doesn't have to be put there
+  a {
+    text-decoration: none;
+
+    @include color-theme(transparent, $theme-clr-accent);
+
+    &:focus,&:hover {
+      outline: 1px solid $theme-clr-dark;
+    }
+
   }
 
+  @media ($breakpoint-md) {
+    grid-template: auto 1fr / 1fr;
+    grid-template-areas:
+      "main-section"
+      "header";
+  }
 }
 
 .card {
@@ -34,26 +46,23 @@ body {
   }
 }
 
-
-
-
 // putting this here for now
-ul, ol {
+ul,
+ol {
   margin: 1rem 2rem;
 
   // no need for both ... note to self: figure out which is not needed
   li {
     margin: 0 1rem;
 
-    // august 2023: why is this here?  i had a reason but it messes some things up 
-      // added https://github.com/Xmetalfanx/website/commit/a4eb1f6ec9d0bf0494a21292930d2f3f2ca4074a here 
+    // august 2023: why is this here?  i had a reason but it messes some things up
+    // added https://github.com/Xmetalfanx/website/commit/a4eb1f6ec9d0bf0494a21292930d2f3f2ca4074a here
     list-style-position: inside;
   }
 
   > * {
-    margin: .25rem;
+    margin: 0.25rem;
   }
-
 
   .list-wide {
     @include flex(row, wrap, center);
@@ -63,8 +72,5 @@ ul, ol {
       margin: 1rem;
       padding: 1rem;
     }
-
   }
-
 }
-
