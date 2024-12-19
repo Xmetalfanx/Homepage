@@ -91,28 +91,6 @@ figcaption {
 // }
 
 
-// for custom hamburger (moving away from fork awesome) menu
-// why is this here? ... should it be in header_and_footer.scss?
-// Oct 2023: this is there too ... what did i do?
-.hamburger-menu {
-  display: none;
-
-  .bar {
-      display: block;
-      width: 25px;
-      height: 3px;
-      margin: 3px auto;
-      transition: all 0.8s ease-in-out;
-    }
-
-  @media ($breakpoint-md) {
-    @include flex(column, nowrap, normal);
-
-    margin: 0 auto;
-
-  }
-}
-
 // @include themify($current-theme) {
 //   .hamburger-menu .bar {
 //     // if i remember this shouldn't change based on the l/d theme
