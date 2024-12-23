@@ -1,0 +1,42 @@
+@use "sass:map";
+@use "color-themes" as *;
+
+// @mixin clr-lighten() {
+  
+
+// }
+
+// @mixin clr-darken() {
+
+
+// }
+
+////////////////////////////////////////////////////////////
+
+@mixin color-theme($bg: $theme-clr-light, $fg: $theme-clr-dark) {
+  background-color: $bg;
+  color: $fg;
+}
+
+@mixin color-theme-dark($bg: $theme-clr-dark, $fg: $theme-clr-light) {
+  @media (prefers-color-scheme: dark) {
+    background-color: $bg;
+    color: $fg;
+  }
+}
+
+////////////////////////////////////////////////////////////////
+// Themings got goofy with git feature branch mishaps and i dont reconginze the code below
+
+// @mixin themify($current-theme) {
+//   @each $name, $values in $current-theme {
+//     .#{$name}-theme {
+//       $theme-map: $values !global;
+//       @content;
+//     }
+//   }
+// }
+
+// @function themed($key) {
+//   @return map.get($current-theme, $key);
+// }

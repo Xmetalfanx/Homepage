@@ -1,59 +1,10 @@
+@forward "_mixins_colors";
+@forward "_mixins_base";
+
+// still needed here? 
 @use "sass:map";
 @use "color-themes" as *;
 
-// Idea: mixins are better when output changes based on variables passed to the mixin
-
-// because i am always forget the default values i use
-@mixin box-shadow($xaxis: 0, $yaxis: 0.5rem, $blur: 1rem, $color: $theme-clr-main) {
-  box-shadow: $xaxis $yaxis $blur $color;
-}
-
-@mixin drop-shadow($xaxis: 0, $yaxis: 0.5rem, $blur: 1rem, $color: $theme-clr-dark) {
-  filter: drop-shadow($xaxis $yaxis $blur $color);
-}
-
-@mixin span2 {
-  grid-column: span 2;
-}
-
-@mixin flex($flex-direction: row, $flex-wrap: nowrap, $jc: normal) {
-  display: flex;
-  flex-flow: $flex-direction $flex-wrap;
-  justify-content: $jc;
-}
-
-@mixin align-items-justify-content($align-items, $justify-content) {
-  align-items: $align-items;
-  justify-content: $justify-content;
-}
-
-// shorthand for
-// align-content:  (aligns top to bottom on a "y" axis) and
-// justify-content which aligns along the "x-axis" 
-@mixin place-content($ac: normal, $jc: normal) {
-  place-content: $ac $jc;
-}
-
-@mixin outline($outline-size: 1px, $outline-style: solid, $outline-color: $theme-clr-main) {
-  outline: $outline-color;
-  outline-style: $outline-style;
-  outline-width: $outline-size;
-
-
-}
-
-@mixin border($border-size: 1px, $border-style: solid, $border-color: $theme-clr-main) {
-  border: $border-size $border-style $border-color;
-}
-
-@mixin border-radius-single($border-radius: 20%) {
-  border-radius: $border-radius;
-}
-
-// tl: top left, tr: top right,  br: bottom right, bl: bottom left,
-@mixin border-radius($tl: 20%, $tr: 20%, $bl: 20%, $br: 20%) {
-  border-radius: $tl $tr $br $bl;
-}
 
 @mixin section-title($font-size: 24px, $font-weight: 700, $color: $theme-clr-accent) {
   color: $color;
@@ -69,35 +20,3 @@
     height: $height;
     width: $width;
 }
-
-@mixin color-theme($bg: $theme-clr-light, $fg:$theme-clr-dark)
-{
-  background-color: $bg;
-  color: $fg;
-
-}
-
-@mixin color-theme-dark($bg: $theme-clr-dark, $fg:$theme-clr-light)
-{
-  @media (prefers-color-scheme: dark) {
-    background-color: $bg;
-    color: $fg;
-  }
-}
-
-
-////////////////////////////////////////////////////////////////
-// Themings got goofy with git feature branch mishaps and i dont reconginze the code below 
-
-// @mixin themify($current-theme) {
-//   @each $name, $values in $current-theme {
-//     .#{$name}-theme {
-//       $theme-map: $values !global;
-//       @content;
-//     }
-//   }
-// }
-
-// @function themed($key) {
-//   @return map.get($current-theme, $key);
-// }
