@@ -1,15 +1,29 @@
 @use "sass:map";
+@use "sass:color";
 @use "color-themes" as *;
 
-// @mixin clr-lighten() {
-  
+// location for now means bg or c  for where to put this
+// I know there has to be a better way but i can refactor later
 
-// }
+@mixin clr-lighten($location, $color, $amount: 10%) {
+  @if $location == "bg" {
+    background-color: color.adjust($color, $lightness: $amount);
+  }
 
-// @mixin clr-darken() {
+  @if $location == "c" {
+    color: color.adjust($color, $lightness: $amount);
+  }
+}
 
+@mixin clr-darken($location, $color, $amount: 10%) {
+  @if $location == "bg" {
+    background-color: color.adjust($color, $lightness: -$amount);
+  }
 
-// }
+  @if $location == "c" {
+    color: color.adjust($color, $lightness: -$amount);
+  }
+}
 
 ////////////////////////////////////////////////////////////
 
