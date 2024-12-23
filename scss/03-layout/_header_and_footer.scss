@@ -7,6 +7,7 @@ header,
 footer {
   @include flex;
   @include color-theme($theme-clr-main, $theme-clr-light);
+  @include color-theme-dark($theme-clr-dark, $theme-clr-light);
 
   font-family: var(--ffamily-helvetica);
   font-weight: 900;
@@ -83,8 +84,6 @@ header {
   @include box-shadow(2px, 2px, 5px, $theme-clr-accent);
 
   padding: 1.75rem;
-
-  // text-shadow: 2px 5px $theme-clr-dark;
   grid-area: header;
 
   // nav menus on (top level here) desktop
