@@ -1,3 +1,5 @@
+@use "sass:map";
+@use "sass:color";
 @use "../01-abstracts/index" as *;
 
 // hide the checkbox
@@ -15,9 +17,8 @@ label {
   padding: 1rem;
   position: relative;
 
-
   @media (prefers-color-scheme: dark) {
-    @include clr-lighten(bc, $theme-clr-dark, 50%);
+    @include clr-darken(bgc, $theme-clr-accent, 10%);
   }
 }
 
@@ -31,21 +32,28 @@ label {
 .accordion-content {
   box-shadow: var(--box-shadow-light);
   display: block;
-  
+
   // why 3 values? ... a mistake?
   margin: 0 0 1rem;
   padding: 10px 25px;
 
   // outline: 1px solid $theme-clr-dark;
 
-  a { color: $theme-clr-main; }
+  a {
+    color: $theme-clr-main;
+  }
 
+  // basically the sidebar link section color in dark mode
   @media (prefers-color-scheme: dark) {
     background-color: #333;
+
+    a {
+      @include clr-darken(c, $theme-clr-light, 10%);
+    }
   }
 }
 
-// why do i have things broken out like this? ... 
+// why do i have things broken out like this? ...
 @media ($breakpoint-lg) {
   label {
     &::before {
@@ -55,17 +63,15 @@ label {
     }
   }
 
-
   // default on small screens
   input + .accordion-label::before {
-      content: var(--fa-arrow-right);
+    content: var(--fa-arrow-right);
   }
 
   // down arrow
   input:checked + .accordion-label::before {
-      content: var(--fa-arrow-down);
+    content: var(--fa-arrow-down);
   }
-
 
   // default unchecked: hide menu
   input ~ .accordion-content {
@@ -78,24 +84,22 @@ label {
   // checked: show menu
   input:checked ~ .accordion-content {
     height: auto;
-    transition: .8s;
+    transition: 0.8s;
 
     a {
       margin: 2rem;
     }
   }
 
-
   .accordion-content {
     padding: 1rem 0;
   }
-
 }
 
 // @include themify($current-theme) {
 //   label:hover {
 //     // background-color: $theme-clr-accent;
-    
+
 //     background-color: themify['accent'];
 //   }
 // }

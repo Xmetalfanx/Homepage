@@ -1,3 +1,4 @@
+@use "sass:map";
 @use "sass:color";
 @use "../01-abstracts/index" as *;
 
@@ -7,7 +8,13 @@ header,
 footer {
   @include flex;
   @include color-theme($theme-clr-main, $theme-clr-light);
-  @include color-theme-dark($theme-clr-dark, $theme-clr-light);
+
+  //@include color-theme-dark($theme-clr-dark, $theme-clr-light);
+
+
+  @media (prefers-color-scheme: dark) {
+    @include clr-darken(bgc, $theme-clr-main, 10%);
+  }
 
   font-family: var(--ffamily-helvetica);
   font-weight: 900;
@@ -27,12 +34,12 @@ footer {
     &:hover,
     &:focus {
       @include border-radius-single(10%);
+      @include clr-lighten(bgc, $theme-clr-main, 10%);
 
-      background-color: color.adjust($theme-clr-main, $lightness: 10%);
       outline: 1px dotted $theme-clr-light;
 
       @media (prefers-color-scheme: dark) {
-        @include clr-lighten(bc, $theme-clr-dark, 50%);
+        @include clr-darken(bgc, $theme-clr-main, 40%);
       }
     }
   }
@@ -92,87 +99,56 @@ header {
 
   // nav menus on (top level here) desktop
   nav {
-    position: relative;
+    // just for the bars now
+    // this shows only on small layouts .. whether on focus or not
 
-    .hamburger-menu {
-      @include flex(row, nowrap);
+    // idea: only get the li's of the hamburger menu
+    ul.hamburger-menu > li {
+      display: none;
 
-      list-style-type: none;
+      @media ($breakpoint-lg) {
+        @include flex;
+
+        width: 200px;
+        background-color: aquamarine;
+        height: 1px;
+      }
     }
 
-    // the menus on smaller screen
-    // this should appear when NOT clicked
-    // (I may have to do more work on "when" this displays (say an onclick?)
-    @media ($breakpoint-lg) {
-      @include border-radius-single;
+    .hamburger-menu {
+      // the actual menu with items
+      .menu {
+        @include flex;
 
-      background-color: $theme-clr-accent;
-      height: 50px;
-      width: 75px;
-      margin: 0 auto;
+        list-style-type: none;
+        font-size: 1.3rem;
 
-      // idea to keep it in front 
-      z-index: 1;
-
-      // for the full hamburger menu
-      // (note to self: this is on a UL )
-      .hamburger-menu {
-        transform: translate(0, 2rem);
-        transition: 0.75ms;
-
-        // for each item in the menu
-        .bar {
-          margin: 0;
-        }
-
-        // idea: the hamburger menu ... the breakpoint means on smaller screens
-        // ?? is this for the non-clicked menu itself? I think so
-          // this would be just for the menu .. not the positioning OF IT
+        // the menu on smaller screens when .hamburger-menu is not :focus'ed
         @media ($breakpoint-lg) {
-          @include flex(column wrap);
-
-          background-color: $theme-clr-main;
-          padding: 1rem;
-          position: absolute;
-
-          // menu items on smaller layouts
-          .bar {
-            padding: 1.5rem 0;
-            margin: unset;
-          }
+          // to move it off screen when .hamburger-menu is not clicked
+          transform: translateY(10rem);
         }
       }
 
-      &::before,
-      &::after {
-        content: "";
-        display: inline-block;
-        height: 2px;
-        width: 75%;
-        background-color: $theme-clr-light;
-        margin: 0 auto;
-        position: absolute;
-      }
+      // main hamburger menu from this breakpoint and below
+      @media ($breakpoint-lg) {
+        @include flex(row, nowrap);
 
-      &::before {
-        top: 30%;
-      }
+        list-style-type: none;
+        width: 100px;
+        height: 20px;
+        background-color: red;
 
-      &::after {
-        top: 70%;
-      }
+        ul > li {
+          @include clr-darken(bg, $theme-clr-accent, 40%);
 
-      &:focus {
-        // hamburger menu when clicked
-        .hamburger-menu {
-          // for each item in the menu
-          .bar {
-            margin: 0;
-          }
+          width: 50%;
+          height: 1px;
+        }
 
-          // idea: the hamburger menu ... the breakpoint means on smaller screens
-          // this is the list of menu items "when clicked"
-          @media ($breakpoint-lg) {
+        &:focus {
+          // hamburger menu when clicked
+          .menu {
             @include flex(column, wrap);
 
             align-items: center;
@@ -184,22 +160,16 @@ header {
 
             // test .. .no clue what this will end up doing
             bottom: 5rem;
-
-            // z-index: 1;
-            transform: translate(-50%, 0);
-            transition: 0.75ms;
-
-            // height: 80vh;
             width: 90vw;
-
-            // menu ITEMS on smaller layouts
-            .bar {
-              padding: 1.5rem 0;
-              margin: unset;
-            }
+            transform: translateY(-10rem);
           }
         }
       }
+    }
+
+    // entire nav on this breakpoint or below
+    @media ($breakpoint-lg) {
+      height: 3rem;
     }
   }
 
@@ -215,22 +185,16 @@ header {
     }
 
     @media ($breakpoint-lg) {
-      // only hides graphic
-
-      display: none;
-    }
-
-    @media ($breakpoint-md) {
-      // hides both graphic and text
       display: none;
     }
   }
 
+  // for "header" itself from this breakpoint and lower
   @media ($breakpoint-lg) {
+    position: absolute;
     bottom: 0;
-    position: fixed;
     width: 100vw;
-    z-index: 100;
+    z-index: 1;
   }
 }
 
@@ -247,10 +211,3 @@ header {
 //         outline: 1px dotted themed['bg'];
 //       }
 //   }
-
-//   // Nov 2024: is this needed?  couldn't I do a more global option to not need this?
-//   header .topnav a :hover, :active {
-//     background-color: themed['bg'];
-//     color: themed['main'];
-//   }
-// }
