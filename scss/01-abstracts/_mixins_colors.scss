@@ -6,7 +6,7 @@
 // I know there has to be a better way but i can refactor later
 
 @mixin clr-lighten($location, $color, $amount: 10%) {
-  @if $location == "bg" {
+  @if $location == "bgc" {
     background-color: color.adjust($color, $lightness: $amount);
   }
 
@@ -16,12 +16,12 @@
 }
 
 @mixin clr-darken($location, $color, $amount: 10%) {
-  @if $location == "bg" {
-    background-color: color.adjust($color, $lightness: -$amount);
+  @if $location == "bgc" {
+    background-color: color.adjust($color, $lightness: - $amount);
   }
 
   @if $location == "c" {
-    color: color.adjust($color, $lightness: -$amount);
+    color: color.adjust($color, $lightness: - $amount);
   }
 }
 
