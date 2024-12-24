@@ -13,6 +13,11 @@
     font-size: var(--fs-normal) !important;
     padding: 0 !important;
     margin: .5rem 0 !important;
+
+
+    @media (prefers-color-scheme: dark) {
+      @include clr-lighten(c, $theme-clr-main, 20%);
+    }
   }
 
   @media ($breakpoint-lg) {

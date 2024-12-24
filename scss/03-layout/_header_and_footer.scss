@@ -30,6 +30,10 @@ footer {
 
       background-color: color.adjust($theme-clr-main, $lightness: 10%);
       outline: 1px dotted $theme-clr-light;
+
+      @media (prefers-color-scheme: dark) {
+        @include clr-lighten(bc, $theme-clr-dark, 50%);
+      }
     }
   }
 }

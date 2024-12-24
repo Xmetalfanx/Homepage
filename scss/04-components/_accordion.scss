@@ -14,6 +14,11 @@ label {
   font-weight: 700;
   padding: 1rem;
   position: relative;
+
+
+  @media (prefers-color-scheme: dark) {
+    @include clr-lighten(bc, $theme-clr-dark, 50%);
+  }
 }
 
 // @include themify($current-theme) {
@@ -34,6 +39,10 @@ label {
   // outline: 1px solid $theme-clr-dark;
 
   a { color: $theme-clr-main; }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: #333;
+  }
 }
 
 // why do i have things broken out like this? ... 
