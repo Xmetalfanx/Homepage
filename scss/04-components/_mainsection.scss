@@ -12,6 +12,12 @@
   line-height: 1.6;
   padding: 1.5rem;
 
+  @media (prefers-color-scheme: dark) {
+    @include clr-lighten(bg, $theme-clr-dark, 10%);
+
+    color: $theme-clr-light;
+  }
+
 
   // card everywhere else is flex... why grid here? ... shouldn't i just switch them all to flex?
   // was there a need for grid? ...
