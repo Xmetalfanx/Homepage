@@ -34,6 +34,8 @@ $theme-clr-dark-l20: hsl(0deg 0% 40%);
 $current-theme: $tropical-theme1;
 $theme-clr-main: map.get($current-theme, main);
 $theme-clr-accent: map.get($current-theme, accent);
+
+// idea: keep this for now in case L and D changes and i add them back to arrays
 $theme-clr-light: $theme-clr-default-light;
 $theme-clr-dark: $theme-clr-default-dark;
 
