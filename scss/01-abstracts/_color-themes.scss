@@ -53,7 +53,7 @@ $theme-clr-dark-l20: hsl(0deg 0% 40%);
 $current-theme: $tropical-theme1;
 $theme-clr-main: map.get($current-theme, main);
 $theme-clr-accent: map.get($current-theme, accent);
-$theme-clr-light: map.get($current-theme, light);
-$theme-clr-dark: map.get($current-theme, dark);
+$theme-clr-light: $theme-clr-default-light;
+$theme-clr-dark: $theme-clr-default-dark;
 
 // things will have to move to map.get now
