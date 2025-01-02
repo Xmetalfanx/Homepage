@@ -87,21 +87,6 @@ figcaption {
 }
 
 
-// @include themify($current-theme) {
-//   header {
-//     color: themed("fg");
-//     background-color: themed("bg");
-//   }
-// }
-
-
-// @include themify($current-theme) {
-//   .hamburger-menu .bar {
-//     // if i remember this shouldn't change based on the l/d theme
-//     background-color: themify['light']
-//   }
-// }
-
 // JUST an idea
 .cardContainer {
   @include flex(row, wrap, space-evenly);

@@ -81,18 +81,3 @@ code, kbd {
   padding: .75rem;
 }
 
-// @include themify($current-theme) {
-//   a {
-//     color: themed['accent'];
-
-//     &:hover,
-//     &:focus {
-//       color: themed['fg'];
-//     }
-//   }
-
-//   code, kbd {
-//     background-color: themed['bg'];
-//     color: themed['fg'];
-//   }
-// }

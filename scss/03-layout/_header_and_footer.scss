@@ -225,17 +225,3 @@ header {
     z-index: 1;
   }
 }
-
-// @include themify($current-theme) {
-//   header,
-//   footer {
-//     color: themed['main'];
-//     background-color: themed['light'];
-
-//     a &:hover,
-//       &:focus {
-//         background-color: themed['main'];
-//         color: themed['fg'];
-//         outline: 1px dotted themed['bg'];
-//       }
-//   }

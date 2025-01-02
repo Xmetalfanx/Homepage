@@ -38,19 +38,3 @@
     color: $fg;
   }
 }
-
-////////////////////////////////////////////////////////////////
-// Themings got goofy with git feature branch mishaps and i dont reconginze the code below
-
-// @mixin themify($current-theme) {
-//   @each $name, $values in $current-theme {
-//     .#{$name}-theme {
-//       $theme-map: $values !global;
-//       @content;
-//     }
-//   }
-// }
-
-// @function themed($key) {
-//   @return map.get($current-theme, $key);
-// }
