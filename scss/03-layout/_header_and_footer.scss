@@ -9,8 +9,7 @@ footer {
   @include flex;
   @include color-theme($theme-clr-main, $theme-clr-light);
 
-  //@include color-theme-dark($theme-clr-dark, $theme-clr-light);
-
+  // @include color-theme-dark($theme-clr-dark, $theme-clr-light);
 
   @media (prefers-color-scheme: dark) {
     @include clr-darken(bgc, $theme-clr-main, 10%);
@@ -92,84 +91,100 @@ footer {
 }
 
 header {
+  @include flex;
+
+  align-items: start;
+
   @include box-shadow(2px, 2px, 5px, $theme-clr-accent);
 
   padding: 1.75rem;
   grid-area: header;
 
-  // nav menus on (top level here) desktop
   nav {
-    // just for the bars now
-    // this shows only on small layouts .. whether on focus or not
+    margin: 0 auto;
+  }
 
-    // idea: only get the li's of the hamburger menu
-    ul.hamburger-menu > li {
-      display: none;
+  // on desktop (root here)
+  .hamburger-menu {
+    @include flex;
 
-      @media ($breakpoint-lg) {
-        @include flex;
+    flex-flow: row nowrap;
+    list-style-type: none;
 
-        width: 200px;
-        background-color: aquamarine;
-        height: 1px;
-      }
+    > .bar {
+      width: 80%;
+      height: 3px;
+      margin: 0.3rem auto;
+      background-color: $theme-clr-light;
     }
 
-    .hamburger-menu {
-      // the actual menu with items
-      .menu {
-        @include flex;
-
-        list-style-type: none;
-        font-size: 1.3rem;
-
-        // the menu on smaller screens when .hamburger-menu is not :focus'ed
-        @media ($breakpoint-lg) {
-          // to move it off screen when .hamburger-menu is not clicked
-          transform: translateY(10rem);
-        }
-      }
-
-      // main hamburger menu from this breakpoint and below
-      @media ($breakpoint-lg) {
-        @include flex(row, nowrap);
-
-        list-style-type: none;
-        width: 100px;
-        height: 20px;
-        background-color: red;
-
-        ul > li {
-          @include clr-darken(bg, $theme-clr-accent, 40%);
-
-          width: 50%;
-          height: 1px;
-        }
-
-        &:focus {
-          // hamburger menu when clicked
-          .menu {
-            @include flex(column, wrap);
-
-            align-items: center;
-            justify-content: center;
-            background-color: $theme-clr-main;
-            padding: 1rem;
-            position: absolute;
-            outline: 1px solid pink;
-
-            // test .. .no clue what this will end up doing
-            bottom: 5rem;
-            width: 90vw;
-            transform: translateY(-10rem);
-          }
-        }
-      }
-    }
-
-    // entire nav on this breakpoint or below
+    // main nav menu from this breakpoint and below
     @media ($breakpoint-lg) {
-      height: 3rem;
+      @include border(1px, solid, $theme-clr-light);
+
+      flex-direction: column;
+      justify-content: center;
+
+      // background-color: red;
+      height: 85px;
+      width: 125px;
+      margin: 0 auto;
+      padding: 0.5rem 0;
+
+      @include border-radius-single;
+
+      @media ($breakpoint-md) {
+        width: 100px;
+      }
+    }
+
+    &:focus .menu {
+      align-items: center;
+      background-color: $theme-clr-main;
+      flex-direction: column;
+      padding: 1rem;
+      transform: translateY(-20rem);
+      transition: 0.5s;
+
+      // width: 90%;
+      position: absolute;
+      left: 0.5rem;
+
+      > li {
+        margin: 2.5rem 0;
+      }
+    }
+
+    @media ($breakpoint-sm) {
+      &:focus .menu {
+        bottom: 10%;
+        transform: unset;
+        left: 0;
+
+
+      }
+    }
+  }
+
+  // the actua; menu
+  .menu {
+    @include flex;
+
+    list-style-type: none;
+    position: absolute;
+    right: 2%;
+    z-index: 1;
+
+    // menu items
+    > span {
+      margin: 0 2rem;
+      flex-direction: column;
+      right: unset;
+    }
+
+    @media ($breakpoint-lg) {
+      flex-direction: row;
+      transform: translateY(10rem);
     }
   }
 
@@ -191,9 +206,14 @@ header {
 
   // for "header" itself from this breakpoint and lower
   @media ($breakpoint-lg) {
-    position: absolute;
+    // puts it at the bottom
+    position: fixed;
     bottom: 0;
+
+    // spans the full view port width
     width: 100vw;
+
+    // brings it to the front
     z-index: 1;
   }
 }

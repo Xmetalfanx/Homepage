@@ -3,12 +3,12 @@ header
     a(href='/linuxHQ/index.php')
       i.fa-brands.fa-linux(aria-hidden='true')
       .d-inline-block LinuxHQ
-  nav(tabindex='0')
+  nav
     //  Hamburger Menu 
-    ul.hamburger-menu
-      li
-      li
-      li
+    .hamburger-menu(tabindex='0')
+      span.bar
+      span.bar
+      span.bar
       //  Actual Menu - nested inside Hamburger  
       ul.menu(role='menubar')
         li(role='menuitem' aria-label='Linux Distributions')
