@@ -5,8 +5,9 @@
 // consider moving sm to 480px
 $breakpoint-sm: "width <= 576px";
 $breakpoint-md: "width <= 768px";
-$breakpoint-lg: "width <= 1024px";
+$breakpoint-lg: "width <= 992px";
 $breakpoint-xl: "width <= 1200px";
+$breakpoint-xxl: "width <= 1400px";
 
 :root {
   ///////////////////////////////////
