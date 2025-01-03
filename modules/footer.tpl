@@ -23,7 +23,7 @@
   </div>
 
   <div class="contacts">
-    <span class="pr-4 d-none d-lg-inline-block">Xmetal/Xmetalfanx 2013-*</span>
+    <span class="copyright">Xmetal/Xmetalfanx 2013-*</span>
 
     <!-- Gitlab -->
     <a href="https://gitlab.com/Xmetal" aria-label="Xmetalfanx Gitlab Page" target="_blank" rel="noopener">
