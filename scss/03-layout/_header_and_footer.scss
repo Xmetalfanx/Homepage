@@ -76,11 +76,19 @@ footer {
     }
   }
 
-  // hides site-made on md-to-lg layouts but the site will still show contacts class
-  @media ($breakpoint-lg) {
-    .site-made {
+  .copyright {
+    padding-right: 1.5rem;
+    display: inline-block;
+
+    @media ($breakpoint-xl) {
       display: none;
     }
+  }
+
+  @media ($breakpoint-xxl) {
+    justify-content: center;
+    
+    .site-made { display: none; }
   }
 
   // hides the ENTIRE footer on lower than a md layout
