@@ -1,0 +1,21 @@
+header
+    .section-header
+        a(href='/techHQ/index.php')
+            i.fa-brands.fa-linux(aria-hidden='true')
+            .d-inline-block TechHQ
+    nav
+        //  Hamburger Menu
+        .hamburger-menu(tabindex='0')
+            span.bar
+            span.bar
+            span.bar
+            //   Actual Menu - nested inside Hamburger
+            ul.menu(role='menubar')
+                li(role='menuitem' aria-label='Software')
+                    a(href='/techHQ/software/softwareIndex.php') Software
+                li(role='menuitem' aria-label='Tech Center')
+                    a(href='/techHQ/techcenter/techCenterIndex.php') Tech Center
+                li(role='menuitem' aria-label='Web Browsing')
+                    a(href='/techHQ/browsers/browserIndex.php') Web Browsing
+                li(role='menuitem' aria-label='Security')
+                    a(href='/techHQ/security/securityIndex.php') Security
