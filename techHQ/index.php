@@ -81,6 +81,4 @@
 
 </div>
 
-
-
 <?php include $siteRoot . '/modules/tech/baseTechFooter.tpl'; ?>
