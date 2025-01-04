@@ -17,3 +17,5 @@
   include $siteRoot . "/templates/tech/baseTechCenter.tpl";
 
 ?>
+
+<?php include $siteRoot . '/modules/tech/baseTechFooter.tpl'; ?>

@@ -313,4 +313,5 @@
     <img src="../graphics/computer/ordinateur-47.gif" alt="Happy Computer" width="106" height="117" class="center" />
   </p>
 
-  <?php require $siteRoot ."/modules/footer.tpl"; ?>
+
+<?php include $siteRoot . '/modules/tech/baseTechFooter.tpl'; ?>
