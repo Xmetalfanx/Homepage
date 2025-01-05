@@ -42,8 +42,15 @@ $tropical-theme1: (
 
 );
 
-// assign theme idea 
-$current-theme: $dec-theme;
+$theme-clr-default-light: hsl(0deg 0% 94%);
+$theme-clr-light-d20: hsl(0deg 0% 74%);
+$theme-clr-default-dark: hsl(0deg 0% 20%);
+$theme-clr-dark-l20: hsl(0deg 0% 30%);
+$theme-clr-dark-l20: hsl(0deg 0% 40%);
+
+
+// assign theme idea
+$current-theme: $tropical-theme1;
 $theme-clr-main: map.get($current-theme, main);
 $theme-clr-accent: map.get($current-theme, accent);
 $theme-clr-light: map.get($current-theme, light);
