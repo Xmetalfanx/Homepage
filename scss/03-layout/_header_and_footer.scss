@@ -127,13 +127,11 @@ header {
     }
 
     // main nav menu from this breakpoint and below
-    @media ($breakpoint-lg) {
+    @media ($breakpoint-md) {
       @include border(1px, solid, $theme-clr-light);
 
       flex-direction: column;
       justify-content: center;
-
-      // background-color: red;
       height: 85px;
       width: 125px;
       margin: 0 auto;
@@ -174,7 +172,7 @@ header {
     }
   }
 
-  // the actua; menu
+  // the actual menu
   .menu {
     @include flex;
 
@@ -191,6 +189,11 @@ header {
     }
 
     @media ($breakpoint-lg) {
+      margin: unset;
+    }
+
+    // pretty sure this is when it's in mobile mode but i want the menu off screen (aka hamburger menu  not clicked)
+    @media ($breakpoint-md) {
       flex-direction: row;
       transform: translateY(10rem);
     }
@@ -213,7 +216,7 @@ header {
   }
 
   // for "header" itself from this breakpoint and lower
-  @media ($breakpoint-lg) {
+  @media ($breakpoint-md) {
     // puts it at the bottom
     position: fixed;
     bottom: 0;
