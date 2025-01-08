@@ -1,24 +1,8 @@
 <?php
-
   $pageTitle = "TechHQ Frontpage";
 
-  switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html/';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-    }
-
-  include $siteRoot . "templates/tech/open/baseTechMAIN.tpl";
-
+  include __DIR__ . "/../templates/tech/open/baseTechMAIN.tpl";
 ?>
-
-
 
 <div class="d-flex">
   <div class="card--outline">
@@ -77,8 +61,11 @@
       </div>
     </div>
   </div>
-  <?php include $siteRoot . '/techHQ/modules/gaotd.tpl'; ?>
+  <?php include __DIR__ . '/modules/gaotd.tpl'; ?>
 
-</div>
 
-<?php include $siteRoot . '/modules/tech/baseTechFooter.tpl'; ?>
+</div> <!-- should end pContent type (or primary-content) class -->
+</div> <!-- should end main-section class -->
+
+<?php include __DIR__ . '/../modules/tech/baseTechFooter.tpl'; ?>
+

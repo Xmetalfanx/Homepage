@@ -1,18 +1,15 @@
 <?php
-
 	$sectionTitle= 'Web Browser Section - ';
 	
-  include $siteRoot . '/modules/tech/baseTechHead.tpl';
-
+  include __DIR__ . '/../../modules/tech/baseTechHead.tpl';
 ?>
 
 <body>
-
-    <?php include $siteRoot . '/modules/tech/techHQNavMenus.tpl'; ?>
+    <?php include __DIR__ . '/../../modules/tech/techHQNavMenus.tpl'; ?>
 
     <div class="main-section">
       <div class="sidebar">
-        <?php include $siteRoot . '/techHQ/modules/sections/techBrowsersCol1.tpl'; ?>
+        <?php include __DIR__. '/../../techHQ/modules/sections/techBrowsersCol1.tpl'; ?>
       </div>
 
       <div id="browserSection" class="primary-content">

@@ -1,20 +1,7 @@
 <?php
-
   $pageTitle ='Guide Summary';
-  
-  switch ($_SERVER['HTTP_HOST']) {
-      case 'xmetal.x10.mx':
-          $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-          break;
-      case 'xmetal.awardspace.us':
-          $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-          break;
-      default:
-          $siteRoot = 'local.domain';
-          break;
-    }
 
-  include $siteRoot . "/templates/tech/baseTechCenter.tpl";
+  include __DIR__ . "/../../templates/tech/baseTechCenter.tpl";
 ?>
 
   <p>This is a short (hopefully) guide with the tips I list to the left, all in one location. This would be the steps I would take (assuming its not infected with
@@ -314,4 +301,4 @@
   </p>
 
 
-<?php include $siteRoot . '/modules/tech/baseTechFooter.tpl'; ?>
+<?php include __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>

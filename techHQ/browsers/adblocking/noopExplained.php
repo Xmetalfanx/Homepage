@@ -1,21 +1,7 @@
 <?php
+	$pageTitle = 'Ad/Content Blocking - Noop Filters Explained';
 
-	 $pageTitle = 'Ad/Content Blocking - Noop Filters Explained';
-
-	 switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-	 include $siteRoot . "/templates/tech/open/baseTechBrowser.tpl";
-
+  include __DIR__ . "/../../../templates/tech/open/baseTechBrowser.tpl";
 ?>
 
 <div class="card w-95 mx-auto">
@@ -46,4 +32,8 @@
 
 <div>Also remember as I said on another Ublock Origin page I have .. there are Global (this would apply for that domain no matter the page you are on) and local (only applies to that current website you are on, for the domain you are setting a rule for), rules</div>
 
-<?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>
+
+</div> <!-- closes pcontent class -->
+</div> <!-- closes main-section class -->
+
+<?php include __DIR__ . '/../../../modules/tech/baseTechFooter.tpl'; ?>

@@ -1,11 +1,8 @@
 <?php
-
     // This should be moved to the SystemTools Section
-  $title = 'Software Section - Drive Imaging and Partitioning';
+    $title = 'Software Section - Drive Imaging and Partitioning';
 
-  
-  include($siteRoot . "/templates/tech/baseTechSoftware.tpl");
-
+    include __DIR__ . "/../../templates/tech/baseTechSoftware.tpl";
 ?>
 
     <p class="justify"> <span class="boldText"> </span> I have recently tried a program I downloaded awhile back and alot of Linux users say they love, called <span class="red-text">PartImage</span><span class="italics"> (think of a better Norton Ghost)</span> for more File systems.. </p>
@@ -25,4 +22,9 @@
     <p class="justify">Remember if you get a bootable CD with either <span class="red-text">PartImage</span> or <span class="red-text">GParted</span> on them ... YOU DON'T HAVE TO USE LINUX necessarily ... meaning you can adjust and change a bunch of NTFS partitions with a bootable copy of GParted, and install Windows only. ... Don't think &quot;I have to install full blown Linux to use either of these </p>
     <p class="justify">I hope to have a review of PartImage backing up Windows NTFS up soon, so you all can know if that's as good as I think it is. </p>
     </div>
-    <?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>
+
+
+    </div> <!-- closes pcontent class -->
+</div> <!-- closes main-section class -->
+
+<?php include __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>

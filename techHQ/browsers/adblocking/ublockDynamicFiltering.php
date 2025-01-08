@@ -1,23 +1,8 @@
 <?php
+  $pageTitle = 'Ad/Content Blocking - Dynamic Filters in Ublock Explained';
 
-    $pageTitle = 'Ad/Content Blocking - Dynamic Filters in Ublock Explained';
-    
-  switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-    include $siteRoot . "/templates/tech/open/baseTechBrowser.tpl";
-
+  include __DIR__ . "/../../../templates/tech/open/baseTechBrowser.tpl";
 ?>
-
 
 <h2>Dynamic Filtering</h2>
 <div class="card">
@@ -88,4 +73,8 @@
 <div>Remember you can set these things Globally (effects that domain's connection on all/any sites you visit), or locally (JUST the current website/domain you are currently on, for the domain that you are setting the rule for)</div>
 <div>Years ago I use to not understand Noop, and I would just set Dynamic Filters to Allow (Green), and now I think that was a bad idea ... well not "bad" ... but it's better to use Noop as it will ALLOW the connection, and only block it stuff if some ad/tracking list has that domain listed in it.</div>
 
-<?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>
+
+</div> <!-- closes pcontent class -->
+</div> <!-- closes main-section class -->
+
+<?php include __DIR__ . '/../../../modules/tech/baseTechFooter.tpl'; ?>

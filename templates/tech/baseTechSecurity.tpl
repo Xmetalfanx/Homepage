@@ -1,15 +1,14 @@
 <?php
-
 	$sectionTitle = 'Security Section - ';
 
-	include($siteRoot .'/modules/tech/baseTechHead.tpl');
-
+	include __DIR__ . '/../../modules/tech/baseTechHead.tpl';
 ?>
+
 <div class="main-section--right-wide">
   <div class="sidebar">
-    <?php include $siteRoot . '/techHQ/modules/sections/techSecurityCol1.tpl'; ?>
+    <?php include __DIR__ . '/../../techHQ/modules/sections/techSecurityCol1.tpl'; ?>
   </div>
   <div class="primary-content"> </div>
 
-<?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>
+<?php require __DIR__ . "/../../modules/tech/baseTechFooter.tpl"; ?>
 </div>

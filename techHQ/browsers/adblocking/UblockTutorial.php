@@ -1,21 +1,7 @@
 <?php
+	$pageTitle = 'Ad/Content Blocking - Ublock Tutorial';
 
-	 $pageTitle = 'Ad/Content Blocking - Ublock Tutorial';
-
-	 switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-	 include $siteRoot . "/templates/tech/open/baseTechBrowser.tpl";
-
+  include __DIR__ . "/../../../templates/tech/open/baseTechBrowser.tpl";
 ?>
 
 <div class="card w-75 mx-auto border">
@@ -40,4 +26,8 @@
   </div>
 </div>
 
-<?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>
+
+</div> <!-- closes pcontent class -->
+</div> <!-- closes main-section class -->
+
+<?php include __DIR__ . '/../../../modules/tech/baseTechFooter.tpl'; ?>
