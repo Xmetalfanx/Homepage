@@ -109,5 +109,5 @@
     "micromatch": "^4.0.8",
     "yarn-audit-fix": "^10.1.1"
   },
-  "packageManager": "yarn@4.5.1"
+  "packageManager": "yarn@1.22.22"
 }
