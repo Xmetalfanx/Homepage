@@ -1,22 +1,8 @@
 <?php
-
 	$pageTitle = 'Live Version Information';
-
-	switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-	include $siteRoot . "/templates/linux/open/baseLinuxTutorBlank.tpl";
-
-  ?>
+  
+  include_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+?>
 
 <div class="d-flex flex-wrap">
   <div class="card">
@@ -44,4 +30,7 @@
 </div>
 
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+</div> <!-- ends pcontent -->
+</div> <!-- ends main-section -->
+
+<?php include_once __DIR__ ."/../../../modules/footer.tpl"; ?>

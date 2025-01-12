@@ -1,12 +1,10 @@
-<?php
-  include $siteRoot . '/modules/linux/linuxBaseHeader.tpl';
-?>
+<?php require_once __DIR__ . '/../../../modules/linux/linuxBaseHeader.tpl'; ?>
 
-<body onload="getDistroData()">
-  <?php include $siteRoot . '/modules/linux/linuxNavMenu.tpl'; ?>
+<body onload="getDistroData()" >
+  <?php require_once __DIR__ . '/../../../modules/linux/linuxNavMenu.tpl'; ?>
   <div class="main-section--right-wide">
     <div class="sidebar">
-      <?php include $siteRoot . '/linuxHQ/modules/sections/linuxDistroCol1.tpl'; ?>
+      <?php require_once __DIR__ . '/../../../linuxHQ/modules/sections/linuxDistroCol1.tpl'; ?>
     </div>
 
     <!-- flex stuff here to keep layout working -->
@@ -19,4 +17,4 @@
 
 <script src="/linuxHQ/scripts/distrosFrontpage-min.js"></script>
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+<?php require_once __DIR__ . "/../../../modules/footer.tpl"; ?>

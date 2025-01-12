@@ -1,21 +1,7 @@
 <?php
-
   $pageTitle = 'Desktop Envirnoments';
 
-	switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-	include $siteRoot . "/templates/linux/open/baseLinuxTutorBlank.tpl";
-
+	include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
 
@@ -26,4 +12,7 @@
   <h4>Desktop Environment </h4>
   <p>These may be refered to as &quot;D.E.&quot; 's for short, include things such as the Menus, context (right-click on the mouse)  menu and much more in Windows &hellip; it controls HOW you interact with the Operating System. </p>
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+  </div> <!-- ends pcontent -->
+</div> <!-- ends main-section -->
+
+<?php require __DIR__ ."/../../../modules/footer.tpl"; ?>

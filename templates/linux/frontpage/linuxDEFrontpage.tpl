@@ -1,18 +1,17 @@
 <?php
-
   $sectionTitle='Desktop Section - ';
 
-  require($siteRoot . '/modules/linux/linuxBaseHeader.tpl');
+  include_once __DIR__ . '/../../../modules/linux/linuxBaseHeader.tpl';
 
 ?>
 
-<body onload="getDesktopData()">
+<body onload="getDesktopData()" >
 
-    <?php include ($siteRoot . '/modules/linux/linuxNavMenu.tpl'); ?>
+    <?php include_once __DIR__ . '/../../../modules/linux/linuxNavMenu.tpl'; ?>
 
     <div class="main-section--right-wide">
       <div class="sidebar">
-        <?php include($siteRoot . '/linuxHQ/modules/sections/linuxDECol1.tpl'); ?>
+        <?php include __DIR__ . '/../../../linuxHQ/modules/sections/linuxDECol1.tpl'; ?>
       </div>
       <div class="primary-content d-flex flex-wrap" id="desktopSection">
 
@@ -21,4 +20,4 @@
 
     <script src="/linuxHQ/scripts/desktopsFrontpage-min.js"></script>
 
-  <?php include($siteRoot . "/modules/footer.tpl"); ?>
+  <?php include_once __DIR__ . "/../../../modules/footer.tpl"; ?>

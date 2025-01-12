@@ -1,20 +1,7 @@
 <?php
-
 	$pageTitle = 'Linux versus Windows';
 
-	switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-	include $siteRoot . "/templates/linux/open/baseLinuxTutorBlank.tpl";
+  require_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
     <p><img src="../graphics/peguin/th.jpg" width="160" height="170"  alt="linux peguin clipart"/></p>
@@ -180,4 +167,8 @@
       </ul>
     </blockquote>
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+    </div> <!-- ends pcontent -->
+</div> <!-- ends main-section -->
+
+
+<?php require __DIR__ ."/../../../modules/footer.tpl"; ?>
