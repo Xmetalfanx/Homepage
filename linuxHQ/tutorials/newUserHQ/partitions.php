@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Partitions... What are they?';
 
-  include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+  require_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
 
@@ -24,4 +24,4 @@
   </div>
 </div>
 
-<?php require __DIR__ ."/../../../modules/footer.tpl"; ?>
+<?php require __DIR__."/../../../modules/footer.tpl"; ?>

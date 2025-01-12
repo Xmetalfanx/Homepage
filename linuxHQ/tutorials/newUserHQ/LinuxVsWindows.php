@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Linux versus Windows';
 
-  include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+  require_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
     <p><img src="../graphics/peguin/th.jpg" width="160" height="170"  alt="linux peguin clipart"/></p>

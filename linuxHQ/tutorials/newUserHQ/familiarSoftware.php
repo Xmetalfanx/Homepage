@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Familiar Software that you may use in Window';
 
-  include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+  require_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 
 ?>
 

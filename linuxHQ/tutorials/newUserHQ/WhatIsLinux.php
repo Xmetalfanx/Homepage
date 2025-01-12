@@ -2,7 +2,7 @@
 
   $pageTitle = 'What is Linux';
 
-  include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+  require_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 
 ?>
 
