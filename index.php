@@ -3,14 +3,7 @@
   <head>
     <title>Xmetal&apos;s Homepage</title>
 
-    <?php
-
-    $headerInc = "modules/headerInclude.tpl";
-    $headerInc = filter_var($headerInc, FILTER_SANITIZE_STRING);
-
-    require $headerInc;
-
-    ?>
+    <?php require __DIR__ . '/modules/headerInclude.tpl'; ?>
   </head>
   <body>
     <header>
