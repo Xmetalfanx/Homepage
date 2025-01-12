@@ -1,12 +1,7 @@
 <?php
 
 $pageTitle = 'Adding PPAs to any Ubuntu Based Distro';
-include_once __DIR__ . '/../../templates/linux/baseLinuxAPP.tpl';
-
-  //echo "test: " . __DIR__ . '/template/baseLinuxApp.tpl';
-
-  // echo "__DIR__: " . __DIR__;
-  // echo "__FILE__:" . __FILE__;
+require_once __DIR__ . '/../../templates/linux/baseLinuxAPP.tpl';
 
 ?>
 
