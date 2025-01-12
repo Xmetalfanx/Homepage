@@ -1,20 +1,7 @@
 <?php
-
 	$pageTitle = 'Familiar Software that you may use in Window';
 
-	switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-	include $siteRoot . "/templates/linux/open/baseLinuxTutorBlank.tpl";
+  include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 
 ?>
 
@@ -36,4 +23,4 @@
   <p>Program like DEVEDE (video ~&gt; DVD  program), I never got working on Windows EVER.  In Linux, its my &ldquo;go  to&rdquo; program for the task (Creating DVDs playable in DVD Players from various video files) </p>
 </h3>
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+<?php require __DIR__ ."/../../../modules/footer.tpl"; ?>

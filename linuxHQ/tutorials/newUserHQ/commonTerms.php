@@ -1,22 +1,9 @@
 <?php
-
 	$pageTitle = 'Common Terms in Linux';
 
-switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
+  include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 
-  include $siteRoot . "/templates/linux/open/baseLinuxTutorBlank.tpl";
 ?>
-
 
 <div class="card"> 
   <div class="card__header">Versions, Distributions, Code-names</div>
@@ -70,4 +57,4 @@ switch ($_SERVER['HTTP_HOST']) {
   </div>
 </div>
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+<?php require __DIR__ ."/../../../modules/footer.tpl"; ?>

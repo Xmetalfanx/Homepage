@@ -27,4 +27,4 @@ in two different sections of the same site, and hopefully clear up some misconce
 <p>I also plan to show the pros and cons of Linux, proving even I know Linux &quot;is not perfect&quot; </p>
 
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+<?php require __DIR__ ."/../../../modules/footer.tpl"; ?>
