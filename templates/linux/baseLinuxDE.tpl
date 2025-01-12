@@ -1,14 +1,14 @@
 <?php
-    require($siteRoot . '/modules/linux/linuxBaseHeader.tpl');
+    include_once __DIR__ . '/../../modules/linux/linuxBaseHeader.tpl';
 ?>
 
 <body onload="getDesktopData()">
 
-  <?php require($siteRoot . '/modules/linux/linuxNavMenu.tpl'); ?>
+  <?php include_once_once __DIR__ . '/../../modules/linux/linuxNavMenu.tpl'; ?>
 
   <div class="main-section main-section--right-wide">
     <div class="sidebar">
-      <?php require($siteRoot . '/linuxHQ/modules/sections/linuxDECol1.tpl'); ?>
+      <?php include_once __DIR__ . '/../../linuxHQ/modules/sections/linuxDECol1.tpl'); ?>
     </div>
     <div id="desktopSection" class="primary-content" >
 
@@ -17,4 +17,4 @@
 
 <script src="http://xmetal.x10.mx/linuxHQ/scripts/desktops-min.js"></script>
 
-<?php require($siteRoot . "/modules/footer.tpl"); ?>
+<?php include_once __DIR__ . '/../../modules/footer.tpl"; ?>
