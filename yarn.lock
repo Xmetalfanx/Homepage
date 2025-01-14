@@ -2245,7 +2245,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"core-js@npm:^3.39.0":
+"core-js@npm:^3.40.0":
   version: 3.40.0
   resolution: "core-js@npm:3.40.0"
   checksum: 10c0/db7946ada881e845d8b157061945b1187618fa45cf162f392a151e8a497962aed2da688c982eaa1d444c864be97a70f8be4d73385294b515d224dd164d19f1d4
@@ -3900,7 +3900,7 @@ __metadata:
     caniuse-lite: "npm:^1.0.30001690"
     chalk: "npm:^5.4.1"
     colorguard: "npm:^1.2.1"
-    core-js: "npm:^3.39.0"
+    core-js: "npm:^3.40.0"
     corepack: "npm:^0.30.0"
     css: "npm:^3.0.0"
     cssnano: "npm:^7.0.6"
