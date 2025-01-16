@@ -11,7 +11,7 @@
 	$UblockChromeicon = '<a href="https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en">
 				<img src="/techHQ/browsers/adblocking/icons/ublockO.png" alt="Ublock Origins Icon">Ublock Origin</a>';
 
-	$AdGuardFFicon =  '<a href="https://addons.mozilla.org/en-us/firefox/addon/adguard-adblocker/">
+	$AdGuardFFicon = '<a href="https://addons.mozilla.org/en-us/firefox/addon/adguard-adblocker/">
 		<img src="/techHQ/browsers/adblocking/icons/adguard.jpg" /> Ad-guard</a>';
 
 	$AdGuardOperaicon = '<a href="https://addons.opera.com/en/extensions/details/adguard/?display=en">

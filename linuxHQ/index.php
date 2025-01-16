@@ -1,6 +1,6 @@
 <?php
-    $sectionTitle='';
-    $pageTitle="LinuxHQ Frontpage";
+    $sectionTitle = '';
+    $pageTitle = "LinuxHQ Frontpage";
 
     include_once __DIR__ . '/../templates/linux/open/baseLinuxTemplateL.tpl';
 ?>

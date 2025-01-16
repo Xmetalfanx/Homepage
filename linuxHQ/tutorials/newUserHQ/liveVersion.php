@@ -1,6 +1,6 @@
 <?php
 	$pageTitle = 'Live Version Information';
-  
+
   include_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
@@ -11,7 +11,7 @@
       <p>A-ha !... This is one of the many places where a “Live Version ” comes in. You can try Linux and see how you like it before you commit to anything.  IN FACT, I'd recommend experiencing a distro in live mode, for awhile and seeing if you like it before you do anything to your system.</p>
     </div>
   </div>
-  
+
   <div class="card">
     <div class="card__header">
       Another way Linux (installed or not) can be VERY helpful

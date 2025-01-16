@@ -3,7 +3,7 @@
     $localdistroname = 'mint';
 
     $pageTitle = 'Linux Mint';
-    
+
     include __DIR__ . "/../../../templates/linux/baseLinuxDistro.tpl";
 ?>
 

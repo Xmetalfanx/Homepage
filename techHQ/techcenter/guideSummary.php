@@ -1,5 +1,5 @@
 <?php
-  $pageTitle ='Guide Summary';
+  $pageTitle = 'Guide Summary';
 
   include __DIR__ . "/../../templates/tech/baseTechCenter.tpl";
 ?>
