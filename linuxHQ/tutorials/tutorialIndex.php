@@ -10,7 +10,7 @@
 
 <p>I am not totally sure what is going in this section yet, since I refactored some things </p>
 
-</div> <!-- ends pcontent -->
+</div> <!-- ends primary-content -->
 </div> <!-- ends main-section -->
 
 <?php require __DIR__ . "/../../modules/footer.tpl"; ?>

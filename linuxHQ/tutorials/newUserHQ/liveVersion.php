@@ -30,7 +30,7 @@
 </div>
 
 
-</div> <!-- ends pcontent -->
+</div> <!-- ends primary-content -->
 </div> <!-- ends main-section -->
 
 <?php include_once __DIR__ ."/../../../modules/footer.tpl"; ?>

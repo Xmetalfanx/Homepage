@@ -12,7 +12,7 @@
   <h4>Desktop Environment </h4>
   <p>These may be refered to as &quot;D.E.&quot; 's for short, include things such as the Menus, context (right-click on the mouse)  menu and much more in Windows &hellip; it controls HOW you interact with the Operating System. </p>
 
-  </div> <!-- ends pcontent -->
+  </div> <!-- ends primary-content -->
 </div> <!-- ends main-section -->
 
 <?php require __DIR__ ."/../../../modules/footer.tpl"; ?>

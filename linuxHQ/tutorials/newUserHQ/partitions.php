@@ -24,7 +24,7 @@
   </div>
 </div>
 
-</div> <!-- ends pcontent -->
+</div> <!-- ends primary-content -->
 </div> <!-- ends main-section -->
 
 <?php require __DIR__."/../../../modules/footer.tpl"; ?>

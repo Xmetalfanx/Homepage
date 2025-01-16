@@ -74,7 +74,7 @@
 <div>Years ago I use to not understand Noop, and I would just set Dynamic Filters to Allow (Green), and now I think that was a bad idea ... well not "bad" ... but it's better to use Noop as it will ALLOW the connection, and only block it stuff if some ad/tracking list has that domain listed in it.</div>
 
 
-</div> <!-- closes pcontent class -->
+</div> <!-- closes primary-content class -->
 </div> <!-- closes main-section class -->
 
 <?php include __DIR__ . '/../../../modules/tech/baseTechFooter.tpl'; ?>

@@ -16,7 +16,7 @@
   <p>Microsoft Windows, no matter which version, and Apple's  Mac OS's are known to many people  &hellip; though some people
   overlook Linux as a  	100% FREE  alternative to Microsoft or Apple Operating Systems. </p>
 
-  </div> <!-- ends pcontent -->
+  </div> <!-- ends primary-content -->
   </div> <!-- ends main-section -->
 
   <?php require __DIR__ ."/../../../modules/footer.tpl"; ?>

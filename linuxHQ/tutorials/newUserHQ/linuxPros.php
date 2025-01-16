@@ -64,7 +64,7 @@
     </li>
   </ul>
 
-  </div> <!-- ends pcontent -->
+  </div> <!-- ends primary-content -->
 </div> <!-- ends main-section -->
 
 

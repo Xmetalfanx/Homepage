@@ -36,7 +36,7 @@
   <p>Updating via pacman is planned for an entirely other section, by the way</p>
 </ul>
 
-</div> <!-- ends pcontent -->
+</div> <!-- ends primary-content -->
 </div> <!-- ends main-section -->
 
 

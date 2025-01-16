@@ -33,7 +33,7 @@
 <div>Also remember as I said on another Ublock Origin page I have .. there are Global (this would apply for that domain no matter the page you are on) and local (only applies to that current website you are on, for the domain you are setting a rule for), rules</div>
 
 
-</div> <!-- closes pcontent class -->
+</div> <!-- closes primary-content class -->
 </div> <!-- closes main-section class -->
 
 <?php include __DIR__ . '/../../../modules/tech/baseTechFooter.tpl'; ?>

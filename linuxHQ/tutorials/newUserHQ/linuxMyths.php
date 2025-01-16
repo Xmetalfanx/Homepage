@@ -20,7 +20,7 @@ with your hardware, WITHOUT installing a thing.</p>
 <p>IF YOU WANT to install the distribution  at that point, there is usually a &quot;Install &lt;distribution name here&gt;&quot;
 icon right on the desktop to get the install started.</p>
 
-</div> <!-- ends pcontent -->
+</div> <!-- ends primary-content -->
 </div> <!-- ends main-section -->
 
 

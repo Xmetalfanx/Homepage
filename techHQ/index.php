@@ -64,7 +64,7 @@
   <?php include __DIR__ . '/modules/gaotd.tpl'; ?>
 
 
-</div> <!-- should end pContent type (or primary-content) class -->
+</div> <!-- should end primary-content type (or primary-content) class -->
 </div> <!-- should end main-section class -->
 
 <?php include __DIR__ . '/../modules/tech/baseTechFooter.tpl'; ?>
