@@ -1,7 +1,7 @@
 <?php
   $sectionTitle='Distrobution Section - ';
 
-  require_once __DIR__ . '/modules/linux/linuxBaseHeader.tpl';
+  require_once __DIR__ . '/../../modules/linux/linuxBaseHeader.tpl';
 ?>
 
 <body onload="getDistroData()" >
