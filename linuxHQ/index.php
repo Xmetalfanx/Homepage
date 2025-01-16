@@ -2,7 +2,7 @@
     $sectionTitle = '';
     $pageTitle = "LinuxHQ Frontpage";
 
-    include_once __DIR__ . '/../templates/linux/open/baseLinuxTemplateL.tpl';
+    require_once __DIR__ . '/../templates/linux/open/baseLinuxTemplateL.tpl';
 ?>
 
 
@@ -36,4 +36,4 @@
 
   </div><!-- Ends the mainSection div....flexContainer's div is closed IN the footer file below  -->
 
-  <?php include_once __DIR__ . "/../modules/footer.tpl"; ?>
+  <?php require_once __DIR__ . "/../modules/footer.tpl"; ?>

@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Live Version Information';
 
-  include_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+  require_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
 <div class="d-flex flex-wrap">
@@ -33,4 +33,4 @@
 </div> <!-- ends primary-content -->
 </div> <!-- ends main-section -->
 
-<?php include_once __DIR__ ."/../../../modules/footer.tpl"; ?>
+<?php require_once __DIR__ ."/../../../modules/footer.tpl"; ?>

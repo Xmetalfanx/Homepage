@@ -14,6 +14,6 @@
     ?>
   </title>
 
-    <?php include_once __DIR__ . '/../../modules/headerInclude.tpl'; ?>
+    <?php require_once __DIR__ . '/../../modules/headerInclude.tpl'; ?>
 
 </head>

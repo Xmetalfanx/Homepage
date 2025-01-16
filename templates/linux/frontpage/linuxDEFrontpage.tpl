@@ -1,13 +1,13 @@
 <?php
   $sectionTitle='Desktop Section - ';
 
-  include_once __DIR__ . '/../../../modules/linux/linuxBaseHeader.tpl';
+  require_once __DIR__ . '/../../../modules/linux/linuxBaseHeader.tpl';
 
 ?>
 
 <body onload="getDesktopData()" >
 
-    <?php include_once __DIR__ . '/../../../modules/linux/linuxNavMenu.tpl'; ?>
+    <?php require_once __DIR__ . '/../../../modules/linux/linuxNavMenu.tpl'; ?>
 
     <div class="main-section--right-wide">
       <div class="sidebar">
@@ -20,4 +20,4 @@
 
     <script src="/linuxHQ/scripts/desktopsFrontpage-min.js"></script>
 
-  <?php include_once __DIR__ . "/../../../modules/footer.tpl"; ?>
+  <?php require_once __DIR__ . "/../../../modules/footer.tpl"; ?>

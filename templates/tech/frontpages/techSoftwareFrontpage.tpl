@@ -23,4 +23,4 @@
 <script src="/techHQ/scripts/software-min.js"></script>
 
 <!-- include baseTechFooter -->
-<?php include $siteRoot . '/modules/footer.tpl'; ?>
+<?php require_once __DIR__ . '/../../modules/footer.tpl'; ?>

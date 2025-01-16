@@ -21,4 +21,4 @@
 	<!~~ at this point the main row with the menu on the left and the right column is CLOSED -->
 
 <!-- include baseTechFooter -->
-<?php include($siteRoot . '/modules/tech/baseTechFooter.tpl'); ?>
+<?php require_once __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>

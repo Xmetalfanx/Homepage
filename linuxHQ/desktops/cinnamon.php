@@ -7,5 +7,5 @@
 	$sectionTitle = "Desktop Environments - ";
 	$pageTitle = 'Cinnamon ';
 
-    include_once __DIR__ . '/../../templates/linux/baseLinuxDE.tpl';
+    require_once __DIR__ . '/../../templates/linux/baseLinuxDE.tpl';
 ?>

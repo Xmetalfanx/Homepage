@@ -71,4 +71,4 @@ require_once __DIR__ . '/../../templates/linux/baseLinuxAPP.tpl';
       <a href="/linuxHQ/apps/MorePPAsMD.php">Click here to get more PPAs</a>
     </h1>
 
-		<?php include_once __DIR__ . '/../../modules/footer.tpl'; ?>
+		<?php require_once __DIR__ . '/../../modules/footer.tpl'; ?>
