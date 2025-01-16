@@ -53,4 +53,4 @@
     </div>  <!-- Closes second col -->
     </div> <!-- Closes Row -->
 
-<?php include __DIR__ . "/../../modules/footer.tpl"; ?>
+<?php require __DIR__ . "/../../modules/footer.tpl"; ?>

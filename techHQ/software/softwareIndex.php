@@ -9,4 +9,4 @@ not sure what to put here atm ... and this MAY BE below the footer for some reas
 </div> <!-- closes primary-content class -->
 </div> <!-- closes main-section class -->
 
-<?php include __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>
+<?php require __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>

@@ -27,11 +27,11 @@
 
 
 <!-- OMGUbuntu RSS feed/news -->
-<?php include __DIR__ . "/../linuxHQ/modules/omgubuntu.tpl"; ?>
+<?php require __DIR__ . "/../linuxHQ/modules/omgubuntu.tpl"; ?>
 </div>
   <div class="sidebar d-none d-md-block">
     <!-- Distrowatch RSS Feed -->
-    <?php include __DIR__ . "/../linuxHQ/modules/distrowatch.tpl"; ?>
+    <?php require __DIR__ . "/../linuxHQ/modules/distrowatch.tpl"; ?>
   </div>
 
   </div><!-- Ends the mainSection div....flexContainer's div is closed IN the footer file below  -->

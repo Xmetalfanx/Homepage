@@ -11,7 +11,7 @@
 
     <div class="main-section--right-wide">
       <div class="sidebar">
-        <?php include __DIR__ . '/../../../linuxHQ/modules/sections/linuxDECol1.tpl'; ?>
+        <?php require __DIR__ . '/../../../linuxHQ/modules/sections/linuxDECol1.tpl'; ?>
       </div>
       <div class="primary-content d-flex flex-wrap" id="desktopSection">
 

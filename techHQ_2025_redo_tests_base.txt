@@ -1,0 +1,81 @@
+techHQ
+├── browsers
+│   ├── adblocking
+│   │   ├── exampleCases.php
+│   │   ├── noopExplained.php
+│   │   ├── ublockDynamicFiltering.php
+│   │   ├── UblockTutorial.php
+│   ├── addons
+│   │   ├── browserAddons.php
+│   ├── browserIndex.php
+│   ├── browserList.php
+├── index.php (The TechHQ frontpage)
+│   ├── sections
+│   │   ├── techBrowsersCol1.tpl
+│   │   ├── techCenterCol1.tpl
+│   │   ├── techMainCol1.tpl
+│   │   ├── techSecurityCol1.tpl
+│   │   └── techSoftwareCol1.tpl
+├── security
+│   ├── blockWebTracking.php
+│   ├── infectionProtection.php
+│   ├── infections
+│   │   └── rogueScanners
+│   │       └── rogueScanner_Software.php
+│   ├── internetProtection.php
+│   ├── modules
+│   │   ├── pug
+│   │   │   └── securityBrowserAddons.pug
+│   │   └── securityBrowserAddons.php
+│   ├── pug
+│   │   ├── infectionProtection.pug
+│   │   ├── internetProtection.pug
+│   │   └── securityIndex.pug
+│   ├── sections
+│   │   ├── freeAVScanners.php
+│   │   ├── malwareScanners.php
+│   │   └── specialityScanners.php
+│   └── securityIndex.php
+├── software
+│   ├── driveImagesAndPartitions.php
+│   ├── graphics
+│   │   ├── editors.php
+│   │   ├── optimizers.php
+│   │   └── viewers.php
+│   ├── internet
+│   │   └── browsers.php
+│   ├── multimedia
+│   │   ├── media_players_audio.php
+│   │   ├── media_players_video.php
+│   │   ├── multimediaVarious.php
+│   │   └── videoEditing.php
+│   ├── product
+│   │   ├── coding.php
+│   │   ├── office.php
+│   │   ├── pdfRelated.php
+│   │   ├── txteditor.php
+│   │   └── various.php
+│   ├── pug
+│   │   └── softwareIndex.pug
+│   ├── RogueScanner_software_removal.php
+│   ├── security
+│   │   ├── firewalls.php
+│   │   └── threatDetection.php
+│   ├── softwareIndex.php
+│   ├── softwareJSON.php
+│   └── sTools
+│       ├── archivers.php
+│       ├── burners.php
+│       ├── cleaners.php
+│       ├── defrag.php
+│       ├── file_managers.php
+│       ├── systemSuites.php
+│       └── taskManagers.php
+└── techcenter
+    ├── guideSummary.php
+    ├── multimedia
+    │   ├── id3tags.php
+    ├── system
+    └── techCenterIndex.php
+
+94 directories, 422 files

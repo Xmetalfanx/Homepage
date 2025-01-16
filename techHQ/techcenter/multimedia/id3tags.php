@@ -51,4 +51,4 @@
 </div> <!-- closes primary-content class -->
 </div> <!-- closes main-section class -->
 
-<?php include __DIR__ . '/../../../modules/tech/baseTechFooter.tpl'; ?>
+<?php require __DIR__ . '/../../../modules/tech/baseTechFooter.tpl'; ?>

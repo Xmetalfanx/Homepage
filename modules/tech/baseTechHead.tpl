@@ -19,6 +19,6 @@
 
 
   <!-- this works but seems wrong .. like it shouldn't be two levels up -->
-  <?php include __DIR__ . "/../../modules/headerInclude.tpl"; ?>
+  <?php require __DIR__ . "/../../modules/headerInclude.tpl"; ?>
 
 </head>

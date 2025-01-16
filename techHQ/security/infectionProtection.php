@@ -30,4 +30,4 @@
 </div>
 </div>
 
-<?php include __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>
+<?php require __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>

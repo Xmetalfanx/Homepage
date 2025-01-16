@@ -6,7 +6,7 @@
 
 <div class="main-section--right-wide">
   <div class="sidebar">
-    <?php include __DIR__ . '/../../techHQ/modules/sections/techSecurityCol1.tpl'; ?>
+    <?php require __DIR__ . '/../../techHQ/modules/sections/techSecurityCol1.tpl'; ?>
   </div>
   <div class="primary-content"> </div>
 

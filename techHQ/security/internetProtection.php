@@ -28,9 +28,9 @@
 </div>
 
 
-<?php include __DIR__ . "/../../techHQ/security/modules/securityBrowserAddons.php"; ?>
+<?php require __DIR__ . "/../../techHQ/security/modules/securityBrowserAddons.php"; ?>
 
 <!-- needed -->
 </div>
 
-<?php include __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>
+<?php require __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>

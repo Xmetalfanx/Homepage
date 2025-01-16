@@ -3,11 +3,11 @@
 ?>
 
 <body>
- <?php include __DIR__ . '/../../../modules/linux/linuxNavMenu.tpl'; ?>
+ <?php require __DIR__ . '/../../../modules/linux/linuxNavMenu.tpl'; ?>
 
   <div class="main-section main-section--right-wide">
     <div class="sidebar">
-        <?php include __DIR__ . '/../../../linuxHQ/modules/sections/linuxTICCol1.tpl'; ?>
+        <?php require __DIR__ . '/../../../linuxHQ/modules/sections/linuxTICCol1.tpl'; ?>
     </div>
 
     <div class="primary-content">
