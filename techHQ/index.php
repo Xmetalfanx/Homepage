@@ -1,7 +1,7 @@
 <?php
   $pageTitle = "TechHQ Frontpage";
 
-  include __DIR__ . "/../templates/tech/open/baseTechMAIN.tpl";
+  require __DIR__ . "/../templates/tech/open/baseTechMAIN.tpl";
 ?>
 
 <div class="d-flex">

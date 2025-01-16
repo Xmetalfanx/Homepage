@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = ' Rogue Scanners ';
 
-  include __DIR__ . "/../../../../templates/tech/open/baseTechSecurity.tpl";
+  require __DIR__ . "/../../../../templates/tech/open/baseTechSecurity.tpl";
 ?>
 
     <h3>Common Programs needed to remove these infections</h3>

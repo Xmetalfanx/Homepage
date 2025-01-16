@@ -5,7 +5,7 @@
       <a href="http://torrent.fedoraproject.org/" target="_blank">http://torrent.fedoraproject.org/</a><br>
       <a href="http://mirrors.fedoraproject.org/publiclist" target="_blank">http://mirrors.fedoraproject.org/publiclist</a> ' ;
 
-    include __DIR__ . "/../../../templates/linux/baseLinuxDistro.tpl";
+    require __DIR__ . "/../../../templates/linux/baseLinuxDistro.tpl";
 ?>
 
 <script type="text/javascript">

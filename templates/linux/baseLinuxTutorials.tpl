@@ -1,7 +1,7 @@
 <?php
     $sectionTitle = 'Linux Tutorial Section - ';
 
-    include __DIR__ . '/../../modules/linux/linuxBaseHeader.tpl';
+    require __DIR__ . '/../../modules/linux/linuxBaseHeader.tpl';
 ?>
 <body>
 

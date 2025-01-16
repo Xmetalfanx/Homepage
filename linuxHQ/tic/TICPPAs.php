@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Frontpage';
 
-  include __DIR__ . "/../../templates/linux/baseLinuxTIC.tpl";
+  require __DIR__ . "/../../templates/linux/baseLinuxTIC.tpl";
 ?>
 
 <img src="/linuxHQ/graphics/mac_win_lin.jpg" alt="Mac Windows and  Linux with Tux Graphic"/><br/>This section will contain Themes, Icon pack, and cursor information.

@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Adding PPAs to any Ubuntu Based Distro';
 
-	include __DIR__ . '/../../templates/linux/open/baseLinuxTutorBlank.tpl';
+	require __DIR__ . '/../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
 <h2>Optimizing Pacman Mirrors</h2>

@@ -1,7 +1,7 @@
 <?php
   $pageTitle = 'TechCenter Section Frontpage ';
 
-  include __DIR__ . "/../../templates/tech/open/baseTechCenter.tpl";
+  require __DIR__ . "/../../templates/tech/open/baseTechCenter.tpl";
 ?>
 
     <div>TechHQ Tech Center Landing page (placeholder) </div>

@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'ID3 Tags';
 
-  include __DIR__ . "/../../../templates/tech/open/baseTechCenter.tpl";
+  require __DIR__ . "/../../../templates/tech/open/baseTechCenter.tpl";
 ?>
 
 

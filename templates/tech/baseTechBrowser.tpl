@@ -1,6 +1,6 @@
 <?php
 	$sectionTitle= 'Web Browser Section - ';
-  include __DIR__ . '/../../modules/tech/baseTechHead.tpl';
+  require __DIR__ . '/../../modules/tech/baseTechHead.tpl';
 ?>
 
 <body onload="browserData()">

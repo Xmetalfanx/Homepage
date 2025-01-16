@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'linux Pros/Positives things about linux';
 
-	include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+	require __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
   <p class="boldUnderline">Advantages to linux </p>

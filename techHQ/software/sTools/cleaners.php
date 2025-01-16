@@ -2,7 +2,7 @@
 
   $pageTitle = 'System Tools - Cleaners';
 
-  include __DIR__ . "/../../../templates/tech/baseTechSoftware.tpl";
+  require __DIR__ . "/../../../templates/tech/baseTechSoftware.tpl";
 
 ?>
 

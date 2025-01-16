@@ -1,7 +1,7 @@
 <?php
   $pageTitle = 'Desktop Envirnoments';
 
-	include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+	require __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
 

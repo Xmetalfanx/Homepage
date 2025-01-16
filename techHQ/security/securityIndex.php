@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = ' Security Section Frontpage';
 
-  include __DIR__ . "/../../templates/tech/open/baseTechSecurity.tpl";
+  require __DIR__ . "/../../templates/tech/open/baseTechSecurity.tpl";
 ?>
 
 <h3>Overall Security Tips</h3>
@@ -12,9 +12,9 @@
 </ul>
 
 <?php
-  include __DIR__ . "/../../techHQ/security/sections/freeAVScanners.php";
-  include __DIR__ . "/../../techHQ/security/sections/malwareScanners.php";
-  include __DIR__ . "/../../techHQ/security/sections/specialityScanners.php";
+  require __DIR__ . "/../../techHQ/security/sections/freeAVScanners.php";
+  require __DIR__ . "/../../techHQ/security/sections/malwareScanners.php";
+  require __DIR__ . "/../../techHQ/security/sections/specialityScanners.php";
 ?>
 
 </div>

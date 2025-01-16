@@ -1,7 +1,7 @@
 <?php
   $pageTitle = 'Guide Summary';
 
-  include __DIR__ . "/../../templates/tech/baseTechCenter.tpl";
+  require __DIR__ . "/../../templates/tech/baseTechCenter.tpl";
 ?>
 
   <p>This is a short (hopefully) guide with the tips I list to the left, all in one location. This would be the steps I would take (assuming its not infected with

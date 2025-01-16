@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Ad/Content Blocking - Ublock Tutorial';
 
-  include __DIR__ . "/../../../templates/tech/open/baseTechBrowser.tpl";
+  require __DIR__ . "/../../../templates/tech/open/baseTechBrowser.tpl";
 ?>
 
 <div class="card w-75 mx-auto border">

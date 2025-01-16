@@ -1,7 +1,7 @@
 <?php
   $pageTitle = 'Ad/Content Blocking - Dynamic Filters in Ublock Explained';
 
-  include __DIR__ . "/../../../templates/tech/open/baseTechBrowser.tpl";
+  require __DIR__ . "/../../../templates/tech/open/baseTechBrowser.tpl";
 ?>
 
 <h2>Dynamic Filtering</h2>

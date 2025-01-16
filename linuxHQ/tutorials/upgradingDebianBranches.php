@@ -2,7 +2,7 @@
 
 	$pageTitle = 'Upgrading Debian Branches';
 
-	include __DIR__ . '/../../templates/linux/open/baseLinuxTutorBlank.tpl';
+	require __DIR__ . '/../../templates/linux/open/baseLinuxTutorBlank.tpl';
 
 ?>
 

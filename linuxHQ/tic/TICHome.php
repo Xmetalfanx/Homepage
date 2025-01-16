@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'LinuxHQ - Theme Section - Frontpage';
 
-    include __DIR__ . "/../../templates/linux/open/baseLinuxTIC.tpl";
+    require __DIR__ . "/../../templates/linux/open/baseLinuxTIC.tpl";
 ?>
 
 <img src="/linuxHQ/graphics/mac_win_lin.jpg" alt="Mac Windows and  Linux with Tux Graphic"/>

@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Software and Package Management in Linux';
 
-	include __DIR__ . '/../../templates/linux/open/baseLinuxTutorBlank.tpl';
+	require __DIR__ . '/../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
 <h5>Graphical (GUI) Software Centers</h5>

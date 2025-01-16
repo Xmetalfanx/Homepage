@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'My Recommended Distros for New Users';
 
-	include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+	require __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
 	<p>*** THESE ARE ALL BASED ON MY OPINIONS ... ** </p>

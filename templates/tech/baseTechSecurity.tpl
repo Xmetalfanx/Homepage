@@ -1,7 +1,7 @@
 <?php
 	$sectionTitle = 'Security Section - ';
 
-	include __DIR__ . '/../../modules/tech/baseTechHead.tpl';
+	require __DIR__ . '/../../modules/tech/baseTechHead.tpl';
 ?>
 
 <div class="main-section--right-wide">

@@ -1,7 +1,7 @@
 <?php
   $pageTitle = 'Productivity/Office Programs - Various';
 
-  include __DIR__ . "/../../../templates/tech/baseTechSoftware.tpl";
+  require __DIR__ . "/../../../templates/tech/baseTechSoftware.tpl";
 ?>
 
 <script type="text/javascript">

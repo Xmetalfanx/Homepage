@@ -1,7 +1,7 @@
 <?php
 	$sectionTitle = 'Software Section - ';
 
-	include __DIR__ . '/../../modules/tech/baseTechHead.tpl';
+	require __DIR__ . '/../../modules/tech/baseTechHead.tpl';
 ?>
 
 <body onload="softwareData()" >

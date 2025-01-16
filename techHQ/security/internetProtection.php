@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = ' Security Section - Internet Protection';
 
-  include __DIR__ . "/../../templates/tech/open/baseTechSecurity.tpl";
+  require __DIR__ . "/../../templates/tech/open/baseTechSecurity.tpl";
 ?>
 
 

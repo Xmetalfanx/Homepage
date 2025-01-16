@@ -1,7 +1,7 @@
 <?php
   $the_title = 'Software Section - Common Software to remove Rogue AV and Malware Scanners';
 
-  include __DIR__ . "/../../templates/tech/baseTechSoftware.tpl";
+  require __DIR__ . "/../../templates/tech/baseTechSoftware.tpl";
 ?>
 
     <p class="header">Common Programs needed to remove these infections</p>

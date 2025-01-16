@@ -4,7 +4,7 @@
     $download = '<a href="http://www.debian.org/distrib/ftplist" target="_blank">http://www.debian.org/distrib/ftplist</a> <br />
     <a href="http://www.debian.org/CD/" target="_blank">Debian on CD</a> ';
 
-    include __DIR__ . "/../../../templates/linux/baseLinuxDistro.tpl";
+    require __DIR__ . "/../../../templates/linux/baseLinuxDistro.tpl";
 ?>
 
 <script type="text/javascript">

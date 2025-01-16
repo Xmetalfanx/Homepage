@@ -2,7 +2,7 @@
     // This should be moved to the SystemTools Section
     $title = 'Software Section - Drive Imaging and Partitioning';
 
-    include __DIR__ . "/../../templates/tech/baseTechSoftware.tpl";
+    require __DIR__ . "/../../templates/tech/baseTechSoftware.tpl";
 ?>
 
     <p class="justify"> <span class="boldText"> </span> I have recently tried a program I downloaded awhile back and alot of Linux users say they love, called <span class="red-text">PartImage</span><span class="italics"> (think of a better Norton Ghost)</span> for more File systems.. </p>

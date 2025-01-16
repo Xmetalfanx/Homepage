@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Linux Cons/Negitive Things about Linux';
 
-	include __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+	require __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
   <p>

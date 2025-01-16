@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Tutorial Index Page';
 
-	include __DIR__ . '/../../templates/linux/open/baseLinuxTutorBlank.tpl';
+	require __DIR__ . '/../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
 <i class="fa-brands fa-4x fa-linux" aria-hidden="true" /></i>

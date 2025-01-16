@@ -1,7 +1,7 @@
 <?php
 	$pageTitle = 'Distribution Section -  Gentoo';
 
-    include __DIR__ . "/../../../templates/linux/baseLinuxDistro.tpl";
+    require __DIR__ . "/../../../templates/linux/baseLinuxDistro.tpl";
 ?>
 
 <script type="text/javascript">
