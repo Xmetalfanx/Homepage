@@ -17,7 +17,7 @@
       </div>
 
       <!-- include baseTechFooter -->
-      <?php require $siteRoot . '/modules/tech/baseTechFooter.tpl'; ?>
+      <?php require __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>
 
     </div>
 
