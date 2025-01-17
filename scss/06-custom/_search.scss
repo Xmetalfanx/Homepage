@@ -20,7 +20,7 @@
 .searchbar-container {
   @include flex(row, nowrap, center);
 
-  align-items: center
+  align-items: center;
 
   /* ?? isn't this for grid, not flex? ... or is the mixin for both? */
   @include span2;
