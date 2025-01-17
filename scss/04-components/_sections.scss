@@ -6,7 +6,9 @@
 // wait ... should this NOT be on anything other than the frontpages ?
 // ?? IS this id (forget the css) needed so the js knows where to place the content? - answer: based on prior comment i left:  YES
 #linux-primary-content {
-  @include flex(row, wrap, normal);
+  display: flex;
+  flex-wrap: wrap;
+
   @include place-content(flex-start, space-evenly);
 
   // Nov 2023: is this width needed? ... something seems off
@@ -21,8 +23,8 @@
     display: unset;
     flex-wrap: unset;
 
-    @include place-content(unset, unset);
-
+    //@include place-content(unset, unset);
+    place-content: unset;
     margin: 1.2rem 0;
 
     .card {
