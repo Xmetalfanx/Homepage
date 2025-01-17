@@ -1,16 +1,15 @@
 <?php
     $sectionTitle = 'Linux Tutorial Section - ';
 
-    include $siteRoot . '/modules/linux/linuxBaseHeader.tpl';
-
+    require __DIR__ . '/../../modules/linux/linuxBaseHeader.tpl';
 ?>
 <body>
 
-    <?php include $siteRoot . '/modules/linux/linuxNavMenu.tpl'; ?>
+    <?php require __DIR__ . '/../../modules/linux/linuxNavMenu.tpl'; ?>
 
     <div class="main-section main-section--right-wide">
       <div class="sidebar">
-        <?php include $siteRoot . '/linuxHQ/modules/sections/linuxTutorCol1.tpl'; ?>
+        <?php require __DIR__ . '/../../linuxHQ/modules/sections/linuxTutorCol1.tpl'; ?>
       </div>
 
       <div class="primary-content">

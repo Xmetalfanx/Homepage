@@ -38,14 +38,19 @@
     <h5>Arch Based Tutorials</h5>
     <a href="/linuxHQ/tutorials/addingAURtoArch.php ">Adding AUR Support</a>
     <a href="/linuxHQ/tutorials/optimizingPacman.php">Optimizing Pacman</a>
-    (Manjaro or Arch)<br/><br/>
+    (Manjaro or Arch)
+    <br/><br/>
     
     <h5>Debian based</h5>
     <a href="http://debgen.simplylinux.ch/" target="_blank">Source List Generator</a>
-    <a href="https://sites.google.com/site/mydebiansourceslist" target="_blank">Additional Sources</a><a href="upgradingDebianBranches.php">Upgrading Debian Branches</a><br/><br/>
+    <a href="https://sites.google.com/site/mydebiansourceslist" target="_blank">Additional Sources</a>
+    <a href="/linuxHQ/tutorials/upgradingDebianBranches.php">Upgrading Debian Branches</a>
+    <br/><br/>
+    
     Ubuntu based
     &quot;Dirty&quot; Upgrading
     
-    <h4>Command Line Package Management</h4>Searching for Package<br>Installing Package
+    <h4>Command Line Package Management</h4>
+    Searching for Package<br>Installing Package
   </div>
 </div>

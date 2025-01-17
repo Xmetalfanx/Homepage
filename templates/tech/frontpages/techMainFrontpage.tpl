@@ -1,18 +1,16 @@
 <?php
-
 	$sectionTitle = 'Software Section - ';
 
-	include $siteRoot . '/modules/tech/baseTechHead.tpl';
+	require __DIR__ . '/../../../modules/tech/baseTechHead.tpl';
 ?>
 
-
 <body>
-	<div >
-		<?php include $siteRoot . '/modules/tech/techHQNavMenus.tpl'; ?>
+	<div>
+		<?php require __DIR__  . '/../../../modules/tech/techHQNavMenus.tpl'; ?>
 
 			<div class="main-section main-section--right-wide">
 				<div class="sidebar">
-					<?php include $siteRoot . '/techHQ/modules/sections/techSoftwareCol1.tpl'; ?>
+					<?php require __DIR__ . '/../../../techHQ/modules/sections/techSoftwareCol1.tpl'; ?>
 				</div>
 
 
@@ -22,4 +20,4 @@
 
 
 	<!-- include baseTechFooter -->
-	<?php include $siteRoot . '/modules/tech/baseTechFooter.tpl'; ?>
+	<?php require_once __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>

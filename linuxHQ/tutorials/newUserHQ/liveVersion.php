@@ -1,22 +1,8 @@
 <?php
-
 	$pageTitle = 'Live Version Information';
 
-	switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-	include $siteRoot . "/templates/linux/open/baseLinuxTutorBlank.tpl";
-
-  ?>
+  require_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
+?>
 
 <div class="d-flex flex-wrap">
   <div class="card">
@@ -25,7 +11,7 @@
       <p>A-ha !... This is one of the many places where a “Live Version ” comes in. You can try Linux and see how you like it before you commit to anything.  IN FACT, I'd recommend experiencing a distro in live mode, for awhile and seeing if you like it before you do anything to your system.</p>
     </div>
   </div>
-  
+
   <div class="card">
     <div class="card__header">
       Another way Linux (installed or not) can be VERY helpful
@@ -43,5 +29,7 @@
   </div>
 </div>
 
+</div> <!-- ends primary-content -->
+</div> <!-- ends main-section -->
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+<?php require_once __DIR__ ."/../../../modules/footer.tpl"; ?>

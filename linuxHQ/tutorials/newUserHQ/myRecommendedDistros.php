@@ -1,20 +1,7 @@
 <?php
-
 	$pageTitle = 'My Recommended Distros for New Users';
 
-	switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-	include $siteRoot . '/templates/linux/open/baseLinuxTutorBlank.tpl';
+	require __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
 	<p>*** THESE ARE ALL BASED ON MY OPINIONS ... ** </p>
@@ -60,4 +47,8 @@
 	  </p>
 	</p>
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+	</div> <!-- ends primary-content -->
+</div> <!-- ends main-section -->
+
+
+	<?php require __DIR__ ."/../../../modules/footer.tpl"; ?>

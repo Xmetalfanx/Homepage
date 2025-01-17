@@ -1,21 +1,19 @@
 <?php
-
 	$sectionTitle = 'TechHQ Section - ';
-	include $siteRoot . '/modules/tech/baseTechHead.tpl';
-
+	require __DIR__ . '/../../modules/tech/baseTechHead.tpl';
 ?>
+
 <body>
 
-		<?php include $siteRoot . '/modules/tech/techHQNavMenus.tpl'; ?>
+	<?php require __DIR__ . '/../../modules/tech/techHQNavMenus.tpl'; ?>
 
 		<div class="main-section--right-wide">
 			<div class="sidebar">
-				<?php include $siteRoot .'/techHQ/modules/sections/techCenterCol1.tpl'; ?>
+				<?php require __DIR__ .'/../../techHQ/modules/sections/techCenterCol1.tpl'; ?>
 			</div>
 
 			<div class="primary-content">
 
 			</div>
 
- 
     </div>

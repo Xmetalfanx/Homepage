@@ -1,5 +1,6 @@
 <?php
 	$the_title = 'Xmetalfanx\'s Security Section - How to block web advertisers from tracking you';
+
 ?>
 
 p
@@ -213,5 +214,4 @@ ul
 
 
 
-
-	<?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>
+  <?php require __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>

@@ -8,6 +8,6 @@
 
   <div class="main-section">
     <div class="col-xs-12 col-md-2">
-      <?php include $siteRoot.'/linuxHQ/modules/linuxNAppCol1.php'; ?>
+      <?php require $siteRoot.'/linuxHQ/modules/linuxNAppCol1.php'; ?>
 
   </div>

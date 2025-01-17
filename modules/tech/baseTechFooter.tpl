@@ -8,9 +8,9 @@
 
 
 <!-- Include search box -->
-<!-- <?php include $siteRoot . "/modules/ddg.tpl"; ?> -->
+<!-- <?php require __DIR__ . "/modules/ddg.tpl"; ?> -->
 
 <!-- Idea ending div -?? ends main section  -->
 </div>
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+<?php require __DIR__ . "/../../modules/footer.tpl"; ?>

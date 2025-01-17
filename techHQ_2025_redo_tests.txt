@@ -1,0 +1,53 @@
+techHQ
+
+
+├── browsers
+│   ├── adblocking
+│   │   ├── ublockDynamicFiltering.php - works but needs CSS fixing
+
+
+│   ├── sections
+│   │   ├── techMainCol1.tpl
+││   │   └── techSoftwareCol1.tpl - minor tweak needed to add a space in the media players entries
+
+├── security
+│   ├── blockWebTracking.php (not linked? ... was i going to redo this page to so i removed the link?)
+
+
+│   ├── infections
+│   │   └── rogueScanners
+│   │       └── rogueScanner_Software.php
+│   ├── modules
+│   │   └── securityBrowserAddons.php
+│   ├── sections
+│   │   ├── freeAVScanners.php
+│   │   ├── malwareScanners.php
+│   │   └── specialityScanners.php
+
+
+
+// header and footer are not loading .... css loading SO the head tags do 
+
+├── software
+│   ├── driveImagesAndPartitions.php (unknown status)
+│   ├── internet
+│   │   └── browsers.php (should i delete since the browsers are in their own section now?)
+
+
+│   ├── RogueScanner_software_removal.php (unknown status)
+
+│   ├── security
+│   │   ├── firewalls.php (totally works but all progicons need fixing)
+│   │   └── threatDetection.php
+│   └── sTools
+│       ├── cleaners.php (404... did i move this to /security out of /software? .. .check the link)
+│       ├── file_managers.php (not linked in sidebar ...did i do that intending to update the page from being out of date content? )
+│       └── taskManagers.php  (404... check the link )
+
+
+
+└── techcenter
+    ├── guideSummary.php (how to get the best out of windows) - since i am so out of date Windows wise and i wanted to tidy this up i unlinked it 
+
+
+94 directories, 422 files

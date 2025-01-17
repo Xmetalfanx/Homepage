@@ -1,10 +1,10 @@
 
-<?php include $rootDir . '/modules/linux/linuxBaseHeader.tpl'; ?>
+<?php require $rootDir . '/modules/linux/linuxBaseHeader.tpl'; ?>
 
 
 // Look over this to slim it down
 
-<?php include $rootDir . ('/linuxHQ/modules/linuxNDistroTemplateCol1.php'); ?>
+<?php require $rootDir . ('/linuxHQ/modules/linuxNDistroTemplateCol1.php'); ?>
 
 
 <?php
@@ -92,7 +92,7 @@ $tweakPL = '<a href=" ' . $display[tweakPL] . ' " > '  . $display[distroName] . 
   .card-header Reviews 
   .card-block       
     .card-text
-      <?php include $rootDir . ('/linuxHQ/modules/linuxDistroReviewer.php'); ?>
+      <?php require $rootDir . ('/linuxHQ/modules/linuxDistroReviewer.php'); ?>
 
 ##################################################################################33
 
@@ -132,4 +132,4 @@ echo "<div class=\"distRevTitle\"> USB Drive Creation Experience </div> <br />";
 
 
 #######################################################	 
-<?php include $rootDir . ('/linuxHQ/modules/usb.php'); ?>
+<?php require $rootDir . ('/linuxHQ/modules/usb.php'); ?>

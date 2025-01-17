@@ -2,23 +2,7 @@
 
   $pageTitle = 'Adding PPAs to any Ubuntu Based Distro';
 
-  // WHY is this here? ... one is not needed   
-  #include $siteRoot . '/templates/linux/massLinuxInclude.tpl';
-
-switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-  include $siteRoot . "/templates/linux/baseLinuxAPP.tpl";
-
+  require_once __DIR__ . '/../../templates/linux/baseLinuxAPP.tpl';
 ?>
 
 <h2>
@@ -67,4 +51,4 @@ switch ($_SERVER['HTTP_HOST']) {
    
     </ul>
 
-<?php require $siteRoot ."/modules/footer.tpl"; ?>
+<?php require __DIR__ . "/../../modules/footer.tpl"; ?>

@@ -1,32 +1,7 @@
 <?php
-
   $the_title = 'Software Section - Common Software to remove Rogue AV and Malware Scanners';
 
-switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-  switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
- include $siteRoot . "/templates/tech/baseTechSoftware.tpl";
-
+  require __DIR__ . "/../../templates/tech/baseTechSoftware.tpl";
 ?>
 
     <p class="header">Common Programs needed to remove these infections</p>
@@ -75,4 +50,4 @@ switch ($_SERVER['HTTP_HOST']) {
     </blockquote>
     </div>
 
-<?php require $siteRoot . "/modules/tech/baseTechFooter.tpl"; ?>
+    <?php require __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>

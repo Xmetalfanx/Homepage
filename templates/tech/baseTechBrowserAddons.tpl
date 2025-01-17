@@ -1,16 +1,15 @@
 <?php
+	$sectionTitle= 'Web Browser Section - Browser Addon Section - ';
 
-	$sectionTitle= 'Web Browser Section - ';
-  include($siteRoot . '/modules/tech/baseTechHead.tpl');
-
+  require __DIR__ . '/../../modules/tech/baseTechHead.tpl';
 ?>
 
 <body onload="browserAddonData()">
-    <?php include $siteRoot . '/modules/tech/techHQNavMenus.tpl'; ?>
+    <?php require __DIR__ . '/../../modules/tech/techHQNavMenus.tpl'; ?>
 
     <div class="main-section--right-wide">
       <div class="sidebar">
-        <?php include $siteRoot . '/techHQ/modules/sections/techBrowsersCol1.tpl'; ?>
+        <?php require __DIR__ . '/../../techHQ/modules/sections/techBrowsersCol1.tpl'; ?>
       </div>
 
       <div id="browserSection" class="primary-content">
@@ -18,7 +17,7 @@
       </div>
 
       <!-- include baseTechFooter -->
-      <?php include $siteRoot . '/modules/tech/baseTechFooter.tpl'; ?>
+      <?php require __DIR__ . '/../../modules/tech/baseTechFooter.tpl'; ?>
 
     </div>
 

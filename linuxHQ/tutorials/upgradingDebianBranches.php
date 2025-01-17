@@ -2,19 +2,7 @@
 
 	$pageTitle = 'Upgrading Debian Branches';
 
-	switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
-
-	include $siteRoot . "/templates/linux/open/baseLinuxTutorBlank.tpl";
+	require __DIR__ . '/../../templates/linux/open/baseLinuxTutorBlank.tpl';
 
 ?>
 
@@ -71,5 +59,4 @@
   <p>CONFUSED YET? </p>
   <p>&quot;  What should I do?&quot;... HONESTLY it doesn't matter either way ... its a piece of cake to change, as you will find out further in this section</p>
 
-
-	<?php require $siteRoot ."/modules/footer.tpl"; ?>
+  <?php require __DIR__ ."/../../modules/footer.tpl"; ?>

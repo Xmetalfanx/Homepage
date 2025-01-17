@@ -1,20 +1,7 @@
 <?php
-
 	$pageTitle = 'Partitions... What are they?';
-	
-	switch ($_SERVER['HTTP_HOST']) {
-    case 'xmetal.x10.mx':
-        $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html';
-        break;
-    case 'xmetal.awardspace.us':
-        $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-        break;
-    default:
-        $siteRoot = 'local.domain';
-        break;
-  }
 
-	include $siteRoot . "/templates/linux/open/baseLinuxTutorBlank.tpl";
+  require_once __DIR__ . '/../../../templates/linux/open/baseLinuxTutorBlank.tpl';
 ?>
 
 
@@ -35,4 +22,9 @@
       <p>Accidentally removing Windows is a common mistake (when there is one), that I personally see new users make during the partitioning step &hellip; ... mainly just because they did not simply pay attention to what was going on and read what the installer was telling them.  ALSO NOTE: Installers can detect Windows typically and will default to "install Linux along side Windows", but it is a good idea to backup important data in/from Windows "just in case" beforehand.</p>
     </div>
   </div>
-</div><?php require $siteRoot ."/modules/footer.tpl"; ?>
+</div>
+
+</div> <!-- ends primary-content -->
+</div> <!-- ends main-section -->
+
+<?php require __DIR__."/../../../modules/footer.tpl"; ?>

@@ -1,21 +1,8 @@
 <?php
+    $sectionTitle = '';
+    $pageTitle = "LinuxHQ Frontpage";
 
-    $sectionTitle='';
-    $pageTitle="LinuxHQ Frontpage";
-
-    switch ($_SERVER['HTTP_HOST']) {
-      case 'xmetal.x10.mx':
-          $siteRoot = '/home/xmetalx1/domains/xmetal.x10.mx/public_html/';
-          break;
-      case 'xmetal.awardspace.us':
-          $siteRoot = '/srv/disk1/xmetalfanx/www/xmetal.awardspace.us/';
-          break;
-      default:
-          $siteRoot = 'local.domain';
-          break;
-    }
-
-    include ($siteRoot . 'templates/linux/open/baseLinuxTemplateL.tpl');
+    require_once __DIR__ . '/../templates/linux/open/baseLinuxTemplateL.tpl';
 ?>
 
 
@@ -40,13 +27,13 @@
 
 
 <!-- OMGUbuntu RSS feed/news -->
-<?php include $siteRoot . "/linuxHQ/modules/omgubuntu.tpl"; ?>
+<?php require __DIR__ . "/../linuxHQ/modules/omgubuntu.tpl"; ?>
 </div>
   <div class="sidebar d-none d-md-block">
     <!-- Distrowatch RSS Feed -->
-    <?php include $siteRoot . "/linuxHQ/modules/distrowatch.tpl"; ?>
+    <?php require __DIR__ . "/../linuxHQ/modules/distrowatch.tpl"; ?>
   </div>
 
   </div><!-- Ends the mainSection div....flexContainer's div is closed IN the footer file below  -->
 
-  <?php include $siteRoot . "/modules/footer.tpl"; ?>
+  <?php require_once __DIR__ . "/../modules/footer.tpl"; ?>

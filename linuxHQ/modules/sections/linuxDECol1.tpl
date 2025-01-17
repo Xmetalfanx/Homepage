@@ -9,7 +9,7 @@
     <a href="/linuxHQ/desktops/mate.php">Mate</a>
     <a href="/linuxHQ/desktops/openbox.php">Openbox</a>
     <a href="/linuxHQ/desktops/LXDE.php">LXDE</a>
-    <a href="/linuxHQ/desktop/LXQT.php">LXQT</a>
+    <a href="/linuxHQ/desktops/LXQT.php">LXQT</a>
     <a href="/linuxHQ/desktops/XFCE.php">XFCE</a>
   </div>
 </div>
