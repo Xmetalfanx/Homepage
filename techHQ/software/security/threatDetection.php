@@ -1,6 +1,6 @@
 <?php
-  $the_title= 'Xmetalfanx Security Section - Backing up updates from Avast, Avira, and Malwarebytes via Bat File and 7-zip';
-  
+  $the_title = 'Xmetalfanx Security Section - Backing up updates from Avast, Avira, and Malwarebytes via Bat File and 7-zip';
+
   require __DIR__ . "/../../../templates/tech/baseTechSoftware.tpl";
 ?>
 

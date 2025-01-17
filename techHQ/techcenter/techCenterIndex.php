@@ -1,5 +1,5 @@
 <?php
-  $pageTitle = 'TechCenter Section Frontpage ';
+  $pageTitle = 'TechCenter Section Frontpage';
 
   require __DIR__ . "/../../templates/tech/open/baseTechCenter.tpl";
 ?>

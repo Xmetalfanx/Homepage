@@ -1,7 +1,7 @@
 <?php
-	$the_title= 'Security Section - Software Firewall';
+	$the_title = 'Security Section - Software Firewall';
 
-    require __DIR__ . "/../../../templates/tech/baseTechSoftware.tpl";
+  require __DIR__ . "/../../../templates/tech/baseTechSoftware.tpl";
 ?>
 
 <script type="text/javascript">
