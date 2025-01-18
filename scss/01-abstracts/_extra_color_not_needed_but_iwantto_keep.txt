@@ -1,0 +1,20 @@
+
+// darken bg color
+mixin color-theme-bg-darken(color: $color, $amount: $amount){
+  background-color: color.adjust($theme-clr-accent, $lightness: 15%);
+}
+
+// darken fg color
+mixin color-theme-fg-darken(){
+  color: color.adjust($theme-clr-accent, $lightness: 15%);
+}
+
+// lighten bg color
+mixin color-theme-bg-lighten(){
+  background-color: color.adjust($theme-clr-accent, $lightness: 15%);
+}
+
+// lighten fg color
+mixin color-theme-fg-lighten(){
+  color: color.adjust($theme-clr-accent, $lightness: 15%);
+}

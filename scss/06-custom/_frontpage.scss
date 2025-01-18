@@ -13,34 +13,33 @@
 .frontpage-section {
   display: grid;
   grid-template-areas:
-      "site-sections"
-      "git-section"
-  ;
+    "site-sections"
+    "git-section";
 
   // grid-template-rows: repeat(2, 1fr);
   gap: 1rem;
 
   @media ($breakpoint-lg) {
     grid-template-areas:
-      'site-sections'
-      'git-section'
-      ;
-  };
+      "site-sections"
+      "git-section";
+  }
 
-  .site-sections, .git-section {
+  .site-sections,
+  .git-section {
     width: 90%;
     margin: 0 auto;
   }
 
-  // main class, for both site sections 
+  // main class, for both site sections
   .site-sections {
-      grid-area: site-sections;
-      width: 70%;
+    grid-area: site-sections;
+    width: 70%;
 
-      @media ($breakpoint-lg) {
-        grid-column: span 2;
-        width: 90%;
-      }
+    @media ($breakpoint-lg) {
+      grid-column: span 2;
+      width: 90%;
+    }
   }
 
   // git section, at the bottom
@@ -57,7 +56,6 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 5rem;
 
-
       @media ($breakpoint-lg) {
         grid-template-rows: repeat(2, 1fr);
         grid-template-columns: unset;
@@ -65,11 +63,11 @@
       }
 
       .git-group {
-        @include border;
-        @include box-shadow;
+        @include outline(1px, solid, var(--theme-clr-accent-500));
+        @include box-shadow(0, 0.25rem, 1rem, var(--theme-clr-accent-500));
         @include border-radius-single(20px);
 
-        background-color: var(--clr-white);
+        background-color: var(--bg-color-600);
         padding: 2rem;
         margin: 0 auto;
         width: clamp(50%, 80%, 72ch);
@@ -84,10 +82,12 @@
           margin-bottom: 0.5rem;
 
           a {
-            color: $theme-clr-accent;
+            color: var(--theme-clr-accent-500);
             margin: auto 1rem;
 
-            &:hover { color: $theme-clr-main;}
+            &:hover {
+              color: var(--theme-clr-main-500);
+            }
           }
         }
 
@@ -95,14 +95,13 @@
           height: fit-content;
         }
 
+       
       }
-
-
     }
 
     // for the divider in the middle of the page (for now)
     // should i move this into the git-section due to my new idea to use grid?
-   .frontpage-title {
+    .frontpage-title {
       font-size: var(--h3);
       font-weight: 600;
       margin: 1rem auto;
@@ -112,8 +111,5 @@
     @media ($breakpoint-md) {
       @include flex(column, nowrap, normal);
     }
-
   }
-
-
 }

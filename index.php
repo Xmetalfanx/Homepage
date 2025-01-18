@@ -8,6 +8,11 @@
   <body>
     <header>
       <div class="frontpage-header-title">Xmetal's Homepage</div>
+      <select data-theme-picker name="themepicker" id="theme">
+    <option value="system">System</option>
+    <option value="light">Light</option>
+    <option value="dark">Dark</option>
+  </select>
     </header>
 
 

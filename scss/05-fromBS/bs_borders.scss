@@ -1,7 +1,7 @@
 @use "../01-abstracts/index" as *;
 
 .border {
-  border: 1px solid $theme-clr-accent;
+  border: 1px solid var(--theme-clr-accent-500);
 }
 
 

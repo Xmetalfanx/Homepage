@@ -4,7 +4,7 @@
 
 :is(h1,.h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 ) {
   font-weight: 800;
-  color: $theme-clr-accent;
+  color: var(--theme-clr-accent-500);
   text-wrap: balance;
 }
 
@@ -71,7 +71,6 @@ a {
   background-color: transparent;
 
 }
-
 
 code, kbd {
   display: inline-block;

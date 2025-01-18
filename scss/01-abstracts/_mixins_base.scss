@@ -7,7 +7,7 @@
   $xaxis: 0,
   $yaxis: 0.5rem,
   $blur: 1rem,
-  $color: $theme-clr-main
+  $color: var(--theme-clr-main-500)
 ) {
   box-shadow: $xaxis $yaxis $blur $color;
 }
@@ -16,7 +16,7 @@
   $xaxis: 0,
   $yaxis: 0.5rem,
   $blur: 1rem,
-  $color: $theme-clr-dark
+  $color: var(--theme-clr-dark-500)
 ) {
   filter: drop-shadow($xaxis $yaxis $blur $color);
 }
@@ -46,7 +46,7 @@
 @mixin outline(
   $outline-size: 1px,
   $outline-style: solid,
-  $outline-color: $theme-clr-main
+  $outline-color: var(--theme-clr-main-500)
 ) {
   outline: $outline-color;
   outline-style: $outline-style;
@@ -56,7 +56,7 @@
 @mixin border(
   $border-size: 1px,
   $border-style: solid,
-  $border-color: $theme-clr-main
+  $border-color: var(--theme-clr-main-500)
 ) {
   border: $border-size $border-style $border-color;
 }

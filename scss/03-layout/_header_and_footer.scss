@@ -7,14 +7,9 @@
 header,
 footer {
   @include flex;
-  @include color-theme($theme-clr-main, $theme-clr-light);
 
-  // @include color-theme-dark($theme-clr-dark, $theme-clr-light);
-
-  @media (prefers-color-scheme: dark) {
-    @include clr-darken(bgc, $theme-clr-main, 10%);
-  }
-
+  background-color: var(--main-bg-500);
+  color: var(--main-accent-fg);
   font-family: var(--ffamily-helvetica);
   font-weight: 900;
 
@@ -22,24 +17,14 @@ footer {
 
   a {
     padding: 1.5rem;
-
-    // Oct 2023 ... didn't i just add these for the mobile menu issue?
-    // commit: https://github.com/Xmetalfanx/website/commit/3c525894078d4cc5d8fe22bcae5213e26dfc0790
-    // why?
-    // margin: -.5rem;
-    // padding: .5rem;
-    @include color-theme(transparent, $theme-clr-light);
+    color: var(--theme-clr-light-500);
 
     &:hover,
     &:focus {
       @include border-radius-single(10%);
-      @include clr-lighten(bgc, $theme-clr-main, 10%);
 
-      outline: 1px dotted $theme-clr-light;
-
-      @media (prefers-color-scheme: dark) {
-        @include clr-darken(bgc, $theme-clr-main, 40%);
-      }
+      outline: 1px dotted var(--theme-clr-light-500);
+      background-color: var(--theme-clr-main-600);
     }
   }
 }
@@ -48,6 +33,7 @@ footer {
   padding: 1.5rem;
   grid-area: footer;
   flex-wrap: wrap;
+  font-size: var(--fs-normal);
 
   img {
     display: inline;
@@ -87,8 +73,10 @@ footer {
 
   @media ($breakpoint-xxl) {
     justify-content: center;
-    
-    .site-made { display: none; }
+
+    .site-made {
+      display: none;
+    }
   }
 
   // hides the ENTIRE footer on lower than a md layout
@@ -103,13 +91,14 @@ header {
 
   align-items: start;
 
-  @include box-shadow(2px, 2px, 5px, $theme-clr-accent);
+  @include box-shadow(2px, 2px, 5px, var(--theme-clr-accent-500));
 
   padding: 1.75rem;
   grid-area: header;
 
   nav {
     margin: 0 auto;
+    font-size: var(--fs-large);
   }
 
   // on desktop (root here)
@@ -123,12 +112,12 @@ header {
       width: 80%;
       height: 3px;
       margin: 0.3rem auto;
-      background-color: $theme-clr-light;
+      background-color: var(--theme-clr-light-500);
     }
 
     // main nav menu from this breakpoint and below
     @media ($breakpoint-lg) {
-      @include border(1px, solid, $theme-clr-light);
+      @include border(1px, solid, var(--theme-clr-light-500));
 
       flex-direction: column;
       justify-content: center;
@@ -148,7 +137,7 @@ header {
 
     &:focus .menu {
       align-items: center;
-      background-color: $theme-clr-main;
+      background-color: var(--theme-clr-main-500);
       flex-direction: column;
       padding: 1rem;
       transform: translateY(-20rem);
@@ -168,8 +157,6 @@ header {
         bottom: 10%;
         transform: unset;
         left: 0;
-
-
       }
     }
   }
@@ -198,9 +185,9 @@ header {
 
   // Xmetal Homepage, LinuxHQ or TechHQ title section
   .section-header {
-    font-size: var(--h3);
+    font-size: var(--h2);
     margin: 1rem;
-    text-shadow: 1px 1px 1px $theme-clr-accent;
+    text-shadow: 1px 1px 1px var(--theme-clr-accent-500);
 
     i {
       transform: scale(2);

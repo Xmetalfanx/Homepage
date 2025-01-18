@@ -10,40 +10,35 @@ input {
 // ?? is this too global now?
 label {
   @include border-radius(10px 10px 0 0);
-  @include color-theme($theme-clr-accent, $theme-clr-light);
 
+  background-color: var(--accent-bg-600);
+  color: var(--main-accent-fg);
   display: block;
+  font-size: var(--h4);
   font-weight: 700;
   padding: 1rem;
   position: relative;
 
-  @media (prefers-color-scheme: dark) {
-    @include clr-darken(bgc, $theme-clr-accent, 10%);
-  }
 }
-
-
 
 .accordion-content {
   box-shadow: var(--box-shadow-light);
   display: block;
+  background-color: var(--bg-color-600);
+  color: var(--fg-color-600);
 
   // why 3 values? ... a mistake?
   margin: 0 0 1rem;
   padding: 10px 25px;
 
-  // outline: 1px solid $theme-clr-dark;
+  // outline: 1px solid var(--theme-clr-dark-500);
 
   a {
-    color: $theme-clr-main;
-  }
+    color: var(--theme-clr-main-500);
 
-  // basically the sidebar link section color in dark mode
-  @media (prefers-color-scheme: dark) {
-    background-color: #333;
-
-    a {
-      @include clr-darken(c, $theme-clr-light, 10%);
+    &:hover,
+    &:focus {
+      background-color: var(--theme-clr-light-900);
     }
   }
 }
@@ -90,7 +85,6 @@ label {
     padding: 1rem 0;
   }
 }
-
 
 @media ($breakpoint-md) {
   .accordion {

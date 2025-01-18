@@ -23,7 +23,7 @@
     display: unset;
     flex-wrap: unset;
 
-    //@include place-content(unset, unset);
+    // @include place-content(unset, unset);
     place-content: unset;
     margin: 1.2rem 0;
 
@@ -58,20 +58,17 @@
   .versionTitle {
     margin-right: 0.5rem;
   }
-
-
 }
 
 #browser-frontpage {
   // max-width: 100vw;
-
 
   h3 {
     margin: 1rem 0;
   }
 
   h4 {
-    color: $theme-clr-main;
+    color: var(--theme-clr-main-500);
   }
 
   // useful in a few sections below
@@ -82,7 +79,7 @@
 
   ul {
     // @include flex(row, wrap, space-evenly);
-    @include outline(1px, solid, $theme-clr-dark);
+    @include outline(1px, solid, var(--theme-clr-dark-500));
 
     li {
       font-weight: 800;
@@ -96,7 +93,7 @@
     }
   }
 
-  // the list of browsers at the top of the browser frontpage 
+  // the list of browsers at the top of the browser frontpage
   #browser-engines-container {
     @include flex(row, wrap, space-around);
 
@@ -105,12 +102,18 @@
       display: block;
     }
 
+    ul {
+      outline-width: unset;
+      outline-color: unset;
+      outline-style: unset;
+      padding: 0.75rem;
+    }
+
     ul li {
       &:hover,
       &:focus {
-        // background-color: $theme-clr-accent;
-        color: $theme-clr-light;
-        background-color: $theme-clr-accent;
+        color: var(--theme-clr-light-500);
+        background-color: var(--theme-clr-accent-500);
         transition: 0.25s;
       }
     }
@@ -194,18 +197,15 @@
       display: flex;
       justify-content: space-evenly;
 
+      img {
+        padding: 1rem;
+      }
+
       @media ($breakpoint-md) {
         align-items: center;
         flex-direction: column;
         gap: 5rem;
       }
     }
-
-    // img {
-
-    //   @media ($breakpoint-sm) {
-    //     margin: 3rem 0;
-    //   }
-    // }
   }
 }

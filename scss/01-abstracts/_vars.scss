@@ -33,22 +33,33 @@ $breakpoint-xxl: "width <= 1400px";
   //  "Liberation Mono", "Courier New", monospace;
 
   // inspired by OMGUbuntu's Header fonts (June 2023)
-  --ffamily-omgubuntu: "Rubik", "Ubuntu", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  --ffamily-omgubuntu: "Rubik", "Ubuntu", "Helvetica Neue", "Helvetica",
+    "Arial", sans-serif;
 
   // this should be named better
   // this was snagged from OMGUbuntu"s sit e
-  --test: -apple-system, blinkmacsystemfont, "Segoe UI", helvetica, arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji";
+  --test: -apple-system, blinkmacsystemfont, "Segoe UI", helvetica, arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
 
   ///////////////////////////////////////////////////////////////////////////////////
   // font sizes
+  // like with colors ... "500" should be "default" or "normal"
+  --fs-100: 0.92rem;
+  --fs-200: 1rem;
+  --fs-300: 1.05rem;
+  --fs-400: 1.15rem;
+  --fs-500: 1.25rem;
+  --fs-600: 1.35rem;
+  --fs-700: 1.5rem;
+  --fs-800: 2rem;
+
   // i think the idea here (wait until webhost is back online to test this) is
   // to consolidate font sizes instead of having CSS for all different sections that are
   // slightly different sizes .. i may still have font-size: HOWEVER they will be one of these vars
   // since i cant test this right now ... I am not sure what to use where though
-  --fs-small: 0.75rem;
-  --fs-normal: 1.05rem;
-  --fs-large: 1.15rem;
+  --fs-small: var(--fs-300);
+  --fs-normal: var(--fs-500);
+  --fs-large: var(--fs-700);
 
   //////////////////////////////////////
   // header font sizes
@@ -64,14 +75,68 @@ $breakpoint-xxl: "width <= 1400px";
   --fa-arrow-right: "\f105";
   --fa-arrow-down: "\f107";
 
-// idea for later - fork awesome 
-$fork-awesome: (
-  left-arrow: "\f107",
-  right-arrow: "\f105",
-);
+  // idea for later - fork awesome
+  $fork-awesome: (
+    left-arrow: "\f107",
+    right-arrow: "\f105",
+  );
 
-  // box shadow i saw that I like on Kaspersky's site in 2023 
+  // box shadow i saw that I like on Kaspersky's site in 2023
+  // 2025: i need to refactor this (color wise0 
   --box-shadow-light: 0 4px 24px rgb(29 29 27 / 16%);
-  --box-shadow-dark: 0 0.5rem 1rem $theme-clr-main; 
+  --box-shadow-dark: 0 0.5rem 1rem var(--theme-clr-main-500);
 
+  // (browser support is at 87%) idea from Kevin Powell video on dark theme
+  // ref: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
+
+  --bg-color-500: light-dark(
+    var(--theme-clr-light-500),
+    var(--theme-clr-dark-700)
+  );
+  --bg-color-600: light-dark(
+    var(--theme-clr-light-600),
+    var(--theme-clr-dark-600)
+  );
+  --bg-color-700: light-dark(
+    var(--theme-clr-light-700),
+    var(--theme-clr-dark-400)
+  );
+  --fg-color-500: light-dark(
+    var(--theme-clr-dark-500),
+    var(--theme-clr-light-500)
+  );
+  --fg-color-600: light-dark(
+    var(--theme-clr-dark-400),
+    var(--theme-clr-light-400)
+  );
+  --fg-color-700: light-dark(
+    var(--theme-clr-dark-300),
+    var(--theme-clr-light-300)
+  );
+  --main-bg-500: light-dark(
+    var(--theme-clr-main-500),
+    var(--theme-clr-main-700)
+  );
+  --main-bg-600: light-dark(
+    var(--theme-clr-main-500),
+    var(--theme-clr-main-700)
+  );--main-bg-700: light-dark(
+    var(--theme-clr-main-500),
+    var(--theme-clr-main-800)
+  );
+  --main-accent-fg: light-dark(
+    var(--theme-clr-light-500),
+    var(--theme-clr-light-500)
+  );
+  --accent-bg-500: light-dark(
+    var(--theme-clr-accent-500),
+    var(--theme-clr-accent-700)
+  );
+  --accent-bg-600: light-dark(
+    var(--theme-clr-accent-500),
+    var(--theme-clr-accent-700)
+  );--accent-bg-700: light-dark(
+    var(--theme-clr-accent-500),
+    var(--theme-clr-accent-800)
+  );
 }

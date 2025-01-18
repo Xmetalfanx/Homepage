@@ -1,42 +1,53 @@
 @use "sass:map";
-
+@use "sass:color";
 
 $amazon-main-darker-green: hsl(174deg 100% 14%);
 $amzon-sub-lighter-green: hsl(173deg 56% 22%);
 $oct-theme: (
-    main: hsl(18deg 80% 35%),
-    // accent: hsl(120, 50%, 20%),
-    accent: hsl(120, 50%, 30%),
-    // light: hsl(0deg 0% 94%),
-    // dark: hsl(120deg 30% 15%),
+  main: hsl(18deg 80% 35%),
+  // accent: hsl(120, 50%, 20%),
+  accent: hsl(120, 50%, 30%),
+  // light: hsl(0deg 0% 94%),
+   // dark: hsl(120deg 30% 15%),
 );
 $nov-theme: (
-    main:hsl(29deg 69% 40%),
-    accent: hsl(20deg 86% 30%),
+  main: hsl(29deg 69% 40%),
+  accent: hsl(20deg 86% 30%),
+  light: hsl(0deg 0% 94%),
+  dark: hsl(0deg 0% 20%),
 );
 $dec-theme: (
-    main: hsl(120deg 100% 20%),
-    accent: hsl(0deg 100% 25%),
+  main: hsl(120deg 100% 20%),
+  accent: hsl(0deg 100% 25%),
+  light: hsl(0deg 0% 94%),
+  dark: hsl(0deg 0% 20%),
 );
 $tropical-theme1: (
-    main: hsl(34deg 100% 38%),
-    accent: hsl(160deg 100% 25%),
+  main: hsl(34deg 90% 45%),
+  accent: hsl(160deg 100% 25%),
+  light: hsl(0deg 0% 94%),
+  dark: hsl(0deg 0% 20%),
 );
-
-$theme-clr-default-light: hsl(0deg 0% 94%);
-$theme-clr-light-d20: hsl(0deg 0% 74%);
-$theme-clr-default-dark: hsl(0deg 0% 20%);
-$theme-clr-dark-l20: hsl(0deg 0% 30%);
-$theme-clr-dark-l20: hsl(0deg 0% 40%);
-
 
 // assign theme idea
 $current-theme: $tropical-theme1;
-$theme-clr-main: map.get($current-theme, main);
-$theme-clr-accent: map.get($current-theme, accent);
 
-// idea: keep this for now in case L and D changes and i add them back to arrays
-$theme-clr-light: $theme-clr-default-light;
-$theme-clr-dark: $theme-clr-default-dark;
 
-// things will have to move to map.get now
+
+// my idea/trial
+// 500 - normal  (like kevin powells)
+@each $key, $value in $tropical-theme1
+{
+  :root
+    {
+    --theme-clr-#{$key}-100: #{color.adjust($value, $lightness: 25%)};
+    --theme-clr-#{$key}-200: #{color.adjust($value, $lightness: 15%)};
+    --theme-clr-#{$key}-300: #{color.adjust($value, $lightness: 10%)};
+    --theme-clr-#{$key}-400: #{color.adjust($value, $lightness: 5%)};
+    --theme-clr-#{$key}-500: #{$value};
+    --theme-clr-#{$key}-600: #{color.adjust($value, $lightness: -5%)};
+    --theme-clr-#{$key}-700: #{color.adjust($value, $lightness: -10%)};
+    --theme-clr-#{$key}-800: #{color.adjust($value, $lightness: -15%)};
+    --theme-clr-#{$key}-900: #{color.adjust($value, $lightness: -25%)};
+  }
+}

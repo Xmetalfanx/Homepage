@@ -1,12 +1,12 @@
 @forward "mixins_colors";
 @forward "mixins_base";
 
-// still needed here? 
+// still needed here?
 @use "sass:map";
 @use "color-themes" as *;
 
 
-@mixin section-title($font-size: 24px, $font-weight: 700, $color: $theme-clr-accent) {
+@mixin section-title($font-size: 24px, $font-weight: 700, $color: var(--theme-clr-accent-500)) {
   color: $color;
   font-size: $font-size;
   font-weight: $font-weight;

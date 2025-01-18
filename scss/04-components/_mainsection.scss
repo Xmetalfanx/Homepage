@@ -1,4 +1,4 @@
-@use 'sass:color';
+@use "sass:color";
 @use "../01-abstracts/index" as *;
 
 /*********** Main Section in middle of page, between the header and footer *****/
@@ -12,20 +12,17 @@
   line-height: 1.6;
   padding: 1.5rem;
 
-  @media (prefers-color-scheme: dark) {
-    @include clr-lighten(bgc, $theme-clr-dark, 10%);
-
-    color: $theme-clr-light;
-  }
-
-
   // card everywhere else is flex... why grid here? ... shouldn't i just switch them all to flex?
   // was there a need for grid? ...
   .card {
+    // background on dark themes and .card
+    background-color: var(--bg-color-600);
+    color: var(--fg-color-600);
+
     @include border-radius-single(10px);
 
     // i forgot if i have a mixin for this
-    // border: 1px solid $theme-clr-accent;
+    // border: 1px solid var(--theme-clr-accent-500);
 
     box-shadow: var(--box-shadow-light);
     margin: 1.2rem auto;
@@ -37,22 +34,30 @@
     &--outline {
       @extend .card;
 
-      outline: 1px solid $theme-clr-main;
-
+      outline: 1px solid var(--theme-clr-main-500);
     }
 
     .card__header {
-      @include flex(row, nowrap, space-between);
+      // @include flex(row, nowrap, space-between);
+      display: flex;
+      flex-wrap: nowrap;
 
-      align-items: center;
-      border-color: $theme-clr-main;
+      @include align-items-justify-content(baseline, flex-start);
+
+      // align-items: center;
+      border-color: var(--theme-clr-main-500);
       border-radius: 10px 10px 0 0;
       font-weight: bold;
       font-size: var(--h4);
       padding: 1rem;
 
-      a:focus, a:hover { 
-        color: color.adjust($theme-clr-accent, $lightness: 15%);
+      a {
+        color: var(--theme-clr-accent-500);
+
+        &:focus,
+        &:hover {
+          color: var(--theme-clr-main-500);
+        }
       }
 
       // FOR ALL child divs of card__header
@@ -81,17 +86,26 @@
       }
     }
 
-
     .card__body,
     .card__text {
       padding: 1rem;
     }
 
+    // consider switching this to card__title
+    .card-title {
+      padding: 1rem;
+    }
+
+ 
+
+    a {
+      color: var(--fg-color-500);
+    }
   }
 
-
   // idea: overall container for "row of btns"
-  .btn-container, .list-container {
+  .btn-container,
+  .list-container {
     @include flex(row, wrap, space-around);
 
     /* this should be generic (more detailed css can build on this) */
@@ -107,11 +121,10 @@
       }
     }
 
-   .btn {
+    .btn {
       outline-width: 1px;
       outline-style: solid;
     }
-
   }
 
   :is(.h1, .h2, .h3, .h4, .h5) {
@@ -119,7 +132,7 @@
       padding: 0.25rem;
 
       &:hover {
-        outline: 1px solid $theme-clr-accent;
+        outline: 1px solid var(--theme-clr-accent-500);
         text-decoration: none;
       }
     }
@@ -158,23 +171,21 @@
       margin: 0.25rem 0 0.25rem 1.5rem;
 
       &:hover {
-        background-color: color.adjust($theme-clr-light, $lightness: -2%);
-
+        // background-color: color.adjust($theme-clr-light, $lightness: -2%);
+        background-color: var(--theme-clr-light-600);
 
         // works elsewhere
-        // background-color: color.adjust($theme-clr-main, $lightness: 10%);
-        
-        color: $theme-clr-accent;
-        outline: 1px solid $theme-clr-main;
-      }
+        // background-color: color.adjust(var(--theme-clr-main-500), $lightness: 10%);
 
+        color: var(--theme-clr-accent-500);
+        outline: 1px solid var(--theme-clr-main-500);
+      }
     }
 
     img {
       margin: 1rem 0;
       padding: 0;
     }
-
   }
 
   // the main sections of each side of the site

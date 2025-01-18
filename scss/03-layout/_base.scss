@@ -1,6 +1,13 @@
 @use "../01-abstracts/index" as *;
 
+html {
+  color-scheme: light dark;
+}
+
 body {
+  background-color: var(--bg-color-500);
+  color: var(--fg-color-500);
+  color-scheme: light dark;
   display: grid;
 
   // grid-template: row / column
@@ -11,47 +18,41 @@ body {
     "footer";
   min-height: 100%;
 
-  // color and font setup
-
+  // font setup
   font-family: var(--ffamily-roboto);
   font-size: var(--fs-normal);
   font-weight: 400;
 
   @media ($breakpoint-md) {
-      grid-template: auto 1fr / 1fr;
-      grid-template-areas:
-        "main-section"
-        "header";
+    grid-template: auto 1fr / 1fr;
+    grid-template-areas:
+      "main-section"
+      "header";
   }
 
+
+  //   // @include clr-darken(bgc, $theme-clr-dark, 10%);
+  //   background-color: var(--theme-clr-dark-600);
+  // }
 }
-
-.card {
-  .card__header {
-    @include align-items-justify-content(baseline, flex-start);
-  }
-}
-
-
-
 
 // putting this here for now
-ul, ol {
+ul,
+ol {
   margin: 1rem 2rem;
 
   // no need for both ... note to self: figure out which is not needed
   li {
     margin: 0 1rem;
 
-    // august 2023: why is this here?  i had a reason but it messes some things up 
-      // added https://github.com/Xmetalfanx/website/commit/a4eb1f6ec9d0bf0494a21292930d2f3f2ca4074a here 
+    // august 2023: why is this here?  i had a reason but it messes some things up
+    // added https://github.com/Xmetalfanx/website/commit/a4eb1f6ec9d0bf0494a21292930d2f3f2ca4074a here
     list-style-position: inside;
   }
 
   > * {
-    margin: .25rem;
+    margin: 0.25rem;
   }
-
 
   .list-wide {
     @include flex(row, wrap, center);
@@ -61,7 +62,5 @@ ul, ol {
       margin: 1rem;
       padding: 1rem;
     }
-
   }
-
 }

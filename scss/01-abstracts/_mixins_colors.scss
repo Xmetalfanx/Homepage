@@ -5,36 +5,47 @@
 // location for now means bg or c  for where to put this
 // I know there has to be a better way but i can refactor later
 
-@mixin clr-lighten($location, $color, $amount: 10%) {
-  @if $location == "bgc" {
-    background-color: color.adjust($color, $lightness: $amount);
-  }
+// @mixin clr-lighten($location, $color, $amount: 10%) {
+//   @if $location == "bgc" {
+//     background-color: color.adjust($color, $lightness: $amount);
+//   }
 
-  @if $location == "c" {
-    color: color.adjust($color, $lightness: $amount);
-  }
-}
+//   @if $location == "c" {
+//     color: color.adjust($color, $lightness: $amount);
+//   }
+// }
 
-@mixin clr-darken($location, $color, $amount: 10%) {
-  @if $location == "bgc" {
-    background-color: color.adjust($color, $lightness: - $amount);
-  }
+// @mixin clr-darken($location: c, $color, $amount: 10%) {
+//   @if $location == "bgc" {
+//     background-color: color.adjust($color, $lightness: - $amount);
+//   }
 
-  @if $location == "c" {
-    color: color.adjust($color, $lightness: - $amount);
-  }
-}
+//   @if $location == "c" {
+//     color: color.adjust($color, $lightness: - $amount);
+//   }
+// }
 
 ////////////////////////////////////////////////////////////
 
-@mixin color-theme($bg: $theme-clr-light, $fg: $theme-clr-dark) {
+@mixin color-theme($bg: var(--theme-clr-light-500), $fg: var(--theme-clr-dark-500)) {
   background-color: $bg;
   color: $fg;
 }
 
-@mixin color-theme-dark($bg: $theme-clr-dark, $fg: $theme-clr-light) {
-  @media (prefers-color-scheme: dark) {
-    background-color: $bg;
-    color: $fg;
+
+// trial for changing the colors .. NO CLUE if this makes sense
+// idea of why i am doing this this way .... for those when a swap is not the only thing
+  // idea: i can pass custom colors perhaps 220
+@mixin dark-data-theme($location: "c", $color: var(--theme-clr-main-500)) {
+  @if $location == "bgc" {
+    [data-theme="dark"] {
+      background-color: $color;
+    }
+  }
+
+  @if $location == "c" {
+    [data-theme="dark"] {
+      color: $color;
+    }
   }
 }
