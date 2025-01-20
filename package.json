@@ -23,7 +23,7 @@
     "eslint-plugin-html": "^8.1.2",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-prettier": "^5.2.3",
     "jshint": "^2.13.6",
     "jslint": "^0.12.1",
     "mqpacker": "^7.0.0",
