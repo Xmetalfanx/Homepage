@@ -35,52 +35,6 @@
     grid-template-columns: 18% auto;
   }
 
-  /****** Sidebar *****/
-  .sidebar {
-    // not sure about the placement here
-    a {
-      display: block;
-
-      // idea for better UX
-      line-height: 1.75;
-      margin: 0.25rem 0 0.25rem 1.5rem;
-
-      &:hover {
-        // background-color: color.adjust($theme-clr-light, $lightness: -2%);
-        background-color: var(--theme-clr-light-600);
-
-        // works elsewhere
-        // background-color: color.adjust(var(--theme-clr-main-500), $lightness: 10%);
-
-        color: var(--theme-clr-accent-500);
-        outline: 1px solid var(--theme-clr-main-500);
-      }
-    }
-
-    img {
-      margin: 1rem 0;
-      padding: 0;
-    }
-  }
-
-  // the main sections of each side of the site
-  .primary-content {
-    grid-area: pContent;
-
-    // idea
-    .card:nth-child(-n + 2 of .card) {
-      margin-top: 0;
-    }
-
-    // the idea is for readability as far as the ch unit
-    p {
-      max-width: 72ch;
-    }
-
-    // @media ($breakpoint-lg) {
-    //   margin: 0 .5rem;
-    // }
-  }
 
   @media ($breakpoint-lg) {
     &--left-wide,
