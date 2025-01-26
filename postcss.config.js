@@ -17,15 +17,15 @@ module.exports = {
   plugins: [
     // doiuse(""),
     postcssPresetEnv({stage: 2}),
-    postcssSorting({}),
-    postcssDiscardEmpty({}),
+    // postcssSorting({}),
+    // postcssDiscardEmpty({}),
     stylelint({
       /* your options */
       "fix": true
     }),
-    combineSelectors({
-      removeDuplicatedProperties: true
-    }),
+    // combineSelectors({
+    //   removeDuplicatedProperties: true
+    // }),
     // purgecss({
     //   content: [
     //     './**/*.php',
@@ -40,4 +40,4 @@ module.exports = {
       }],
     })
   ]
-}
+};
