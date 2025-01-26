@@ -1,4 +1,5 @@
 const cssnano = require('cssnano')
+const cssnanoPresetLite = require('cssnano-preset-lite')
 // const doiuse = require('doiuse')
 const postcssDiscardEmpty = require('postcss-discard-empty')
 // const postcssAutoreest = require('postcss-autoreset')
