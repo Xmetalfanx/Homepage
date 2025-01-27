@@ -7,6 +7,8 @@
 header,
 footer {
   @include flex;
+  @include include-light-dark-bg(--main-bg-500, --theme-clr-main-500, --theme-clr-main-600);
+  @include include-light-dark-fg(--main-accent-fg, --theme-clr-light-500, --theme-clr-light-600);
 
   font-family: var(--ffamily-helvetica);
   font-weight: 900;
