@@ -78,8 +78,8 @@
     </div>
   <div id="total-addons">
     <h3>Browser Addons</h3>
-    <div id="addons-container">
-      <div class="addon">
+    <div id="addons-container" class="d-flex flex-dir-rows jc-around">
+      <div class="addon w-fitcontent">
         <img class="icon" src="/techHQ/browsers/graphics/icons/ublock-origin.svg" alt="Ublock Origin SVG Icon">
         <div class="fw-800">Ublock Origin</div>
         <div class="fs-italics my-2">Ad/Content Blocker</div>

@@ -133,23 +133,14 @@
 
   #total-addons {
     #addons-container {
-      @include flex(row, wrap, space-around);
-
       // the class for EACH addon
       .addon {
         @include outline;
-
-        .browsers {
-          display: flex;
-        }
 
         // gap: 2rem;
         border-radius: 20px;
         padding: 3rem 1rem;
         text-align: center;
-
-        // width: max(20%, 200px);
-        width: fit-content;
 
         @media ($breakpoint-sm) {
           margin: 1rem 2rem;
