@@ -180,12 +180,6 @@
 
   #ytvideos {
     #yt-video-container {
-      margin: 0 auto;
-      width: fit-content;
-
-      ul>li {
-        margin: 0 auto;
-      }
     }
 
     @media ($breakpoint-sm) {

@@ -105,7 +105,7 @@
   <div id="ytvideos">
     <h3>Youtube Videos</h3>
     <div id="yt-video-container">
-      <ul>
+      <ul class="w-fitcontent mx-auto">
         <li>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLrh2y86lvcJfqnRKGlfY-dPzJMd59HZ43" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </li>
