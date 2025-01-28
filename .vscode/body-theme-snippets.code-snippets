@@ -12,6 +12,7 @@
 		"prefix": "body-theme-level-2",
 		"description": "Adds level 2 light and dark theming mixin with default values WITH FALLBACKS",
 		"scope": "sass,scss",
+		"description": "Adds level 2 light and dark theming mixin with default values WITH FALLBACKS",
 		"body": [
 			"@include include-light-dark-bg(var(--body-bg-level2), var(--theme-clr-light-600), var(--theme-clr-dark-500));",
 			"@include include-light-dark-fg(var(--light-fg-600), var(--theme-clr-dark-400), var(--theme-clr-light-400));"
