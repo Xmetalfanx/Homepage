@@ -8,9 +8,8 @@ header,
 footer {
   @include flex;
   @include include-light-dark-bg(var(--main-bg-500), var(--theme-clr-main-500), var(--theme-clr-main-600));
-  @include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-600));
-
-
+  
+  color: var(--theme-clr-light-500);
   font-family: var(--ffamily-helvetica);
   font-weight: 900;
 
