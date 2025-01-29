@@ -13,6 +13,7 @@
 		"description": "Adds level 2 accent color theming mixin with default values WITH FALLBACKS",
 		"scope": "sass,scss",
 		"description": "Adds level 2 accent color theming mixin with default values WITH FALLBACKS",
+		"scope": "sass,scss",
 		"body": [
 			"@include include-light-dark-bg(var(--accent-bg-600), var(--theme-clr-accent-500), var(--theme-clr-accent-700));",
 			"@include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-500));"
