@@ -112,8 +112,9 @@
     ul li {
       &:hover,
       &:focus {
-        color: var(--theme-clr-light-500);
-        background-color: var(--theme-clr-accent-500);
+        @include include-light-dark-bg(var(--main-bg-500), var(--theme-clr-main-500), var(--theme-clr-main-600));
+        @include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-600));
+
         transition: 0.25s;
       }
     }
@@ -182,7 +183,7 @@
       margin: 0 auto;
       width: fit-content;
 
-      ul > li {
+      ul>li {
         margin: 0 auto;
       }
     }

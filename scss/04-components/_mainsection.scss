@@ -12,13 +12,14 @@
   line-height: 1.6;
   padding: 1.5rem;
 
+   .sidebar > label {
+    @include include-light-dark-bg(var(--accent-bg-500), var(--theme-clr-accent-500), var(--theme-clr-accent-700));
+    @include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-500));
+  }
+
   // card everywhere else is flex... why grid here? ... shouldn't i just switch them all to flex?
   // was there a need for grid? ...
   .card {
-    // background on dark themes and .card
-    background-color: var(--bg-color-600);
-    color: var(--fg-color-600);
-
     @include border-radius-single(10px);
 
     // i forgot if i have a mixin for this
@@ -52,11 +53,29 @@
       padding: 1rem;
 
       a {
-        color: var(--theme-clr-accent-500);
+        @include include-light-dark-bg(
+          var(--accent-bg-500),
+          var(--theme-clr-accent-500),
+          var(--theme-clr-accent-700)
+        );
+        @include include-light-dark-fg(
+          var(--light-fg),
+          var(--theme-clr-light-500),
+          var(--theme-clr-light-500)
+        );
 
         &:focus,
         &:hover {
-          color: var(--theme-clr-main-500);
+          @include include-light-dark-bg(
+            var(--main-bg-500),
+            var(--theme-clr-main-500),
+            var(--theme-clr-main-600)
+          );
+          @include include-light-dark-fg(
+            var(--light-fg),
+            var(--theme-clr-light-500),
+            var(--theme-clr-light-600)
+          );
         }
       }
 
@@ -95,8 +114,6 @@
     .card-title {
       padding: 1rem;
     }
-
- 
 
     a {
       color: var(--fg-color-500);
@@ -171,12 +188,7 @@
       margin: 0.25rem 0 0.25rem 1.5rem;
 
       &:hover {
-        // background-color: color.adjust($theme-clr-light, $lightness: -2%);
         background-color: var(--theme-clr-light-600);
-
-        // works elsewhere
-        // background-color: color.adjust(var(--theme-clr-main-500), $lightness: 10%);
-
         color: var(--theme-clr-accent-500);
         outline: 1px solid var(--theme-clr-main-500);
       }

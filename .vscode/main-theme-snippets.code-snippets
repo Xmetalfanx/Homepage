@@ -1,0 +1,29 @@
+{
+	"add-main-theme-level-1": {
+		"prefix": "main-theme-level-1",
+		"description": "Adds level 1 main colortheming mixin with default values WITH FALLBACKS",
+		"scope": "sass,scss",
+		"body": [
+			"@include include-light-dark-bg(var(--main-bg-500), var(--theme-clr-main-500), var(--theme-clr-main-600));",
+			"@include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-600));"
+		]
+	},
+	"add-main-theme-level-2": {
+		"prefix": "main-theme-level-2",
+		"description": "Adds level 2 main color theming mixin with default values WITH FALLBACKS",
+		"scope": "sass,scss",
+		"body": [
+			"@include include-light-dark-bg(var(--main-bg-600), var(--theme-clr-main-500), var(--theme-clr-main-700));",
+			"@include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-500));"
+		]
+	},
+	"add-main-theme-level-3": {
+		"prefix": "main-theme-level-3",
+		"description": "Adds level 3 main color theming mixin with default values WITH FALLBACKS",
+		"scope": "scss,css",
+		"body": [
+			"@include include-light-dark-bg(var(--main-bg), var(--theme-clr-main-500), var(--theme-clr-main-800));",
+			"@include include-light-dark-fg(var(--light-fg-700), var(--theme-clr-light-500), var(--theme-clr-light-500));"
+		]
+	}
+}

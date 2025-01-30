@@ -102,7 +102,6 @@ section {
   margin: 1rem;
   outline: 1px solid var(--theme-clr-accent-500);
   padding: 0.5rem 0;
-  background-color: var(--bg-color-600);
 
   .section-title {
     @include section-title(var(--h3), 600, var(--theme-clr-accent-500));
@@ -152,15 +151,3 @@ section {
     }
   }
 }
-
-// 2025: new theme selector idea
-// select#theme {
-//   border-radius: 15px;
-//   background-color: inherit;
-//   color: inherit;
-
-//   > * {
-//     background-color: inherit;
-//     color: inherit;
-//   }
-// }

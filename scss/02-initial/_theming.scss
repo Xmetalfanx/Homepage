@@ -1,0 +1,66 @@
+@use "../01-abstracts/mixins_colors" as *;
+
+///////////////////////////////////////////////////////////////////////////
+// body theme (black and white .. so to speak)
+
+// body theme - level 2
+    // second later (600) of the body theme ("white" bg and "black" text on light-scheme and reversed on dark)
+section,
+.accordion-content,
+.git-container .git-group,
+.primary-content > .card {
+  @include include-light-dark-bg(
+    var(--body-bg-level2),
+    var(--theme-clr-light-600),
+    var(--theme-clr-dark-500)
+  );
+  @include include-light-dark-fg(
+    var(--light-fg-600),
+    var(--theme-clr-dark-400),
+    var(--theme-clr-light-400)
+  );
+}
+
+// body theme - level 3
+.main-section > * > .card {
+  @include include-light-dark-bg(
+    var(--body-bg-level3),
+    var(--theme-clr-light-700),
+    var(--theme-clr-dark-400)
+  );
+  @include include-light-dark-fg(
+    var(--light-fg-700),
+    var(--theme-clr-dark-300),
+    var(--theme-clr-light-300)
+  );
+}
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Main theme color 
+
+header,
+footer {
+    @include include-light-dark-bg(var(--main-bg-500), var(--theme-clr-main-500), var(--theme-clr-main-600));
+    @include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-600));
+}
+
+
+
+
+
+//////////////////////////////////////////////////////////////////////////
+///  Accent color theming
+// accent level 1
+label, 
+.primary-content .card > .card__header {
+  @include include-light-dark-bg(var(--accent-bg-500), var(--theme-clr-accent-500), var(--theme-clr-accent-700));
+  @include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-500));
+}
+
+.primary-content * > .card__header {
+@include include-light-dark-bg(var(--accent-bg-600), var(--theme-clr-accent-400), var(--theme-clr-accent-700));
+@include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-500));
+}
+
+

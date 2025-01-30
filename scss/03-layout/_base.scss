@@ -5,8 +5,9 @@ html {
 }
 
 body {
-  background-color: var(--bg-color-500);
-  color: var(--fg-color-500);
+  @include include-light-dark-bg;
+  @include include-light-dark-fg;
+
   color-scheme: light dark;
   display: grid;
 
@@ -29,11 +30,6 @@ body {
       "main-section"
       "header";
   }
-
-
-  //   // @include clr-darken(bgc, $theme-clr-dark, 10%);
-  //   background-color: var(--theme-clr-dark-600);
-  // }
 }
 
 // putting this here for now

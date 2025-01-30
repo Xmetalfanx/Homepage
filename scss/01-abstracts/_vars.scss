@@ -89,15 +89,15 @@ $breakpoint-xxl: "width <= 1400px";
   // (browser support is at 87%) idea from Kevin Powell video on dark theme
   // ref: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value/light-dark
 
-  --bg-color-500: light-dark(
+  --body-bg-color-level1: light-dark(
     var(--theme-clr-light-500),
-    var(--theme-clr-dark-700)
-  );
-  --bg-color-600: light-dark(
-    var(--theme-clr-light-600),
     var(--theme-clr-dark-600)
   );
-  --bg-color-700: light-dark(
+  --body-bg-color-level2: light-dark(
+    var(--theme-clr-light-600),
+    var(--theme-clr-dark-500)
+  );
+  --body-bg-color-level3: light-dark(
     var(--theme-clr-light-700),
     var(--theme-clr-dark-400)
   );
@@ -124,7 +124,7 @@ $breakpoint-xxl: "width <= 1400px";
     var(--theme-clr-main-500),
     var(--theme-clr-main-800)
   );
-  --main-accent-fg: light-dark(
+  --light-fg: light-dark(
     var(--theme-clr-light-500),
     var(--theme-clr-light-500)
   );

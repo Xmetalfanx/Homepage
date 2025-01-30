@@ -67,7 +67,6 @@
         @include box-shadow(0, 0.25rem, 1rem, var(--theme-clr-accent-500));
         @include border-radius-single(20px);
 
-        background-color: var(--bg-color-600);
         padding: 2rem;
         margin: 0 auto;
         width: clamp(50%, 80%, 72ch);

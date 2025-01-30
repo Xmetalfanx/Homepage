@@ -10,9 +10,7 @@ input {
 // ?? is this too global now?
 label {
   @include border-radius(10px 10px 0 0);
-
-  background-color: var(--accent-bg-600);
-  color: var(--main-accent-fg);
+  
   display: block;
   font-size: var(--h4);
   font-weight: 700;
@@ -24,8 +22,6 @@ label {
 .accordion-content {
   box-shadow: var(--box-shadow-light);
   display: block;
-  background-color: var(--bg-color-600);
-  color: var(--fg-color-600);
 
   // why 3 values? ... a mistake?
   margin: 0 0 1rem;

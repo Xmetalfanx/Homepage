@@ -26,3 +26,48 @@
 // }
 
 ////////////////////////////////////////////////////////////
+// for these next two the values in @supports are not important .. they are just to test valid values
+
+// for the background
+@mixin include-light-dark-bg(
+  $ld-bg-color: var(--bg-color-level1),
+  $light-bg-color: var(--theme-clr-light-500),
+  $dark-bg-color: var(--theme-clr-dark-600)
+) {
+  @supports (background-color: light-dark(#ffffff, #000000)) {
+    /// is a light-dark function
+    background-color: $ld-bg-color;
+  }
+
+  @supports not (background-color: light-dark(#ffffff, #000000)) {
+    @media (prefers-color-scheme: light) {
+      background-color: $light-bg-color;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      background-color: $dark-bg-color;
+    }
+  }
+}
+
+// for the foreground color
+@mixin include-light-dark-fg(
+  $ld-fg-color: var(--fg-color-500),
+  $light-fg-color: var(--theme-clr-dark-500),
+  $dark-fg-color: var(--theme-clr-light-500)
+) {
+  @supports (color: light-dark(#000000, #ffffff)) {
+    /// is a light-dark function
+    color: var(--fg-color-500);
+  }
+
+  @supports not (color: light-dark(#000000, #ffffff)) {
+    @media (prefers-color-scheme: light) {
+      color: $light-fg-color;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      color: $dark-fg-color;
+    }
+  }
+}

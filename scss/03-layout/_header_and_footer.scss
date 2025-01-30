@@ -8,8 +8,6 @@ header,
 footer {
   @include flex;
 
-  background-color: var(--main-bg-500);
-  color: var(--main-accent-fg);
   font-family: var(--ffamily-helvetica);
   font-weight: 900;
 
@@ -24,7 +22,9 @@ footer {
       @include border-radius-single(10%);
 
       outline: 1px dotted var(--theme-clr-light-500);
-      background-color: var(--theme-clr-main-600);
+      
+      // note to self: right now this has no fallback 
+      background-color: var(--main-bg-600);
     }
   }
 }
@@ -108,11 +108,14 @@ header {
     flex-flow: row nowrap;
     list-style-type: none;
 
+    // the "burgers" in the hamburger menu 
     > .bar {
       width: 80%;
       height: 3px;
       margin: 0.3rem auto;
-      background-color: var(--theme-clr-light-500);
+
+      @include include-light-dark-bg(var(--main-bg-500), var(--theme-clr-main-500), var(--theme-clr-main-600));
+      @include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-600));
     }
 
     // main nav menu from this breakpoint and below
@@ -121,8 +124,6 @@ header {
 
       flex-direction: column;
       justify-content: center;
-
-      // background-color: red;
       height: 85px;
       width: 125px;
       margin: 0 auto;
@@ -137,7 +138,10 @@ header {
 
     &:focus .menu {
       align-items: center;
-      background-color: var(--theme-clr-main-500);
+
+      //  include-light-dark-bg(var(--main-bg-500), var(--theme-clr-main-500), var(--theme-clr-main-600));
+      // @include include-light-dark-fg(var(--light-fg), var(--theme-clr-light-500), var(--theme-clr-light-600));
+
       flex-direction: column;
       padding: 1rem;
       transform: translateY(-20rem);
@@ -147,7 +151,7 @@ header {
       position: absolute;
       left: 0.5rem;
 
-      > li {
+      >li {
         margin: 2.5rem 0;
       }
     }
@@ -171,7 +175,7 @@ header {
     z-index: 1;
 
     // menu items
-    > span {
+    >span {
       margin: 0 2rem;
       flex-direction: column;
       right: unset;
