@@ -1,12 +1,11 @@
 const cssnano = require('cssnano')
-const cssnanoPresetLite = require('cssnano-preset-lite')
+// const cssnanoPresetLite = require('cssnano-preset-lite')
 // const doiuse = require('doiuse')
 const postcssDiscardEmpty = require('postcss-discard-empty')
-// const postcssAutoreest = require('postcss-autoreset')
 const postcssPresetEnv = require('postcss-preset-env')
 const postcssSorting = require('postcss-sorting')
 const stylelint = require('stylelint')
-const purgecss = require('@fullhuman/postcss-purgecss')
+// const purgecss = require('@fullhuman/postcss-purgecss')
 const combineSelectors = require('postcss-combine-duplicated-selectors')
 
 // is this "fs" needed? ... optimize-css-mq has it listed
@@ -17,7 +16,7 @@ module.exports = {
   plugins: [
     // doiuse(""),
     postcssPresetEnv({stage: 2}),
-    // postcssSorting({}),
+    postcssSorting({}),
     // postcssDiscardEmpty({}),
     stylelint({
       /* your options */
