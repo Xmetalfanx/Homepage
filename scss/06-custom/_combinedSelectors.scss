@@ -1,0 +1,12 @@
+// the point of this is to take things in multiple different selectors and put them in one 
+
+// some selectors are SO LONG and hyper specific when i dont feel they need to be 
+
+ol .list-wide > li,
+label,
+.card__header,
+.card .card-title, .card .card__body, .card .card__text,
+.header,
+#browser-frontpage #useful-links img {
+    padding: 1rem;
+}
