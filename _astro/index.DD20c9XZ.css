@@ -39,8 +39,7 @@ body {
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
-  -webkit-text-decoration-skip: ink;
-          text-decoration-skip-ink: auto;
+  text-decoration-skip-ink: auto;
 }
 
 /* Make images easier to work with */
@@ -213,8 +212,7 @@ footer a {
 }
 header a:visited,
 footer a:visited {
-  -webkit-text-decoration: dotted;
-          text-decoration: dotted;
+  text-decoration: dotted;
 }
 
 header {
@@ -314,10 +312,10 @@ html[data-theme=dark] .primary-container a:link:hover {
   margin: unset;
 }
 html[data-theme=light] .primary-container > *:nth-child(1) > aside .aside-section {
-  box-shadow: 0 0 0.6rem hsl(34, 90%, 45%);
+  box-shadow: 0 0 0.4rem hsl(34, 90%, 45%);
 }
 html[data-theme=dark] .primary-container > *:nth-child(1) > aside .aside-section {
-  box-shadow: 0 0 0.6rem hsl(0, 0%, 94%);
+  box-shadow: 0 0 0.4rem hsl(0, 0%, 94%);
 }
 .primary-container > *:nth-child(1) > aside input {
   display: none;
@@ -333,21 +331,15 @@ html[data-theme=dark] .primary-container > *:nth-child(1) > aside .aside-section
 .primary-container > *:nth-child(1) > aside label:hover {
   cursor: crosshair;
 }
-.primary-container > *:nth-child(1) > aside .accordion {
-  margin-bottom: 1rem;
-  padding: 1.25rem;
-}
-html[data-theme=light] .primary-container > *:nth-child(1) > aside .accordion {
-  border: 1px solid hsl(34, 90%, 45%);
-}
-html[data-theme=dark] .primary-container > *:nth-child(1) > aside .accordion {
-  border: 1px solid hsl(0, 0%, 94%);
-}
 html[data-theme=light] .primary-container > *:nth-child(1) > aside .accordion {
   background-color: hsl(0, 0%, 89%);
 }
 html[data-theme=dark] .primary-container > *:nth-child(1) > aside .accordion {
   background-color: hsl(0, 0%, 20%);
+}
+.primary-container > *:nth-child(1) > aside .accordion {
+  margin-bottom: 1rem;
+  padding: 1.25rem;
 }
 .primary-container > *:nth-child(1) > aside .accordion .accordion-content {
   display: flex;
@@ -428,11 +420,6 @@ html[data-theme=dark] .desktop_container .desktop-card {
   display: none;
 }
 @media (width <= 48em) {
-  .mobile_menu_related {
-    display: block;
-    margin: 1rem auto;
-    scroll-behavior: smooth;
-  }
   html[data-theme=light] .mobile_menu_related a,
   html[data-theme=light] .mobile_menu_related a:link {
     background-color: inherit;
@@ -465,4 +452,9 @@ html[data-theme=dark] .desktop_container .desktop-card {
     background-color: inherit;
     color: hsl(175, 95%, 29%);
   }
-}/*# sourceMappingURL=global-styles.css.map */
+  .mobile_menu_related {
+    display: block;
+    margin: 1rem auto;
+    scroll-behavior: smooth;
+  }
+}
